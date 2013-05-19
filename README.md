@@ -1,4 +1,6 @@
-dotfiles
-========
+# dotfiles
 
-My dot files
+My dotfiles
+
+## Sources
+- [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) 
