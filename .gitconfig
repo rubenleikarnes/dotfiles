@@ -4,4 +4,4 @@
 [credential]
 	helper = osxkeychain
 [core]
-	editor = nano
+	editor = "subl -n -w"
