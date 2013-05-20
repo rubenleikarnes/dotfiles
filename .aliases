@@ -136,4 +136,4 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 
 # Open file in Sublime Text
-alias slime="slime -n"
+alias slime="subl"
