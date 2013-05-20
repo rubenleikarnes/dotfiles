@@ -12,7 +12,7 @@ ln -s ~/Projects/dotfiles/.bash_profile ~/.bash_profile
 I'll hopefully find a better way to meke the symlinks in the future, but this will work until then.
 
 ## Terminal theme
-- [Mathias.terminal](https://github.com/mathiasbynens/dotfiles/blob/master/init/Mathias.terminal)
+- [Tomorrow Night](https://github.com/chriskempson/tomorrow-theme)
 
 ### Font
 - [Inconsolata](http://www.levien.com/type/myfonts/inconsolata.html) (Size 13pt)
