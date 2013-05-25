@@ -1,7 +1,18 @@
 {
 	"installed_packages":
 	[
+		"Base16 Color Schemes",
+		"Bower",
+		"BufferScroll",
+		"Emmet",
+		"Gist",
+		"Liquid",
 		"Package Control",
+		"Sass",
+		"SCSS",
+		"SideBarEnhancements",
+		"SmartMarkdown",
+		"Tag",
 		"Theme - Flatland",
 		"Theme - Soda"
 	]
