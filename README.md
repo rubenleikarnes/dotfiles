@@ -19,10 +19,7 @@ I'll hopefully find a better way to meke the symlinks in the future, but this wi
 
 ## Application lsit
 
-- [Homebrew](http://mxcl.github.io/homebrew/)
-- [Command Line Tools for Xcode](http://connect.apple.com)
-- [Sublime Text 3](http://www.sublimetext.com/3)
-- [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
+- [New computer application list (osx)](https://gist.github.com/rub1/5616029)
 
 ## Sources
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) 
