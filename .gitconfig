@@ -1,8 +1,6 @@
 [user]
 	name = rub1
 	email = ruben.leikarnes@gmail.com
-[credential]
-	helper = osxkeychain
 [core]
 	editor = "subl -w"
 	excludesfile = ~/.gitignore
