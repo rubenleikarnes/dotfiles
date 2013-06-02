@@ -20,6 +20,12 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 
+# Open file in Sublime Text
+alias slime="subl"
+
+#alias slime='open -a "Sublime Text"'
+alias mamp="cd /Applications/MAMP/htdocs/"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
@@ -80,7 +86,3 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "$method"="lwp-request -m '$method'"
 done
 
-# Open file in Sublime Text
-alias slime="subl"
-#alias slime='open -a "Sublime Text"'
-alias mamp="cd /Applications/MAMP/htdocs/"
