@@ -28,7 +28,7 @@ I'll hopefully find a better way to make the symlinks in the future, but this wi
 
 ## Application lsit
 
-- [New computer application list (osx)](https://gist.github.com/rub1/5616029)
+- [New computer application list (osx)](Applications.md)
 
 ## Sources
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) 
