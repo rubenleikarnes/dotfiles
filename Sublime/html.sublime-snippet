@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+	<title>${1:Title}</title>
+	
+	<link rel="stylesheet" href="${2:style.css}">
+	
+	<link rel="shortcut icon" href="icon.png">
+	<link rel="apple-touch-icon-precomposed" href="icon.png">
+	<meta name="apple-mobile-web-app-title" content="">
+</head>
+<body>
+	${3}
+</body>
+</html>]]></content>
+	<tabTrigger>html5</tabTrigger>
+    <description>HTML - HTML foundation</description>
+</snippet>
