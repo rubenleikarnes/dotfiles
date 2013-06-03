@@ -26,7 +26,7 @@ I'll hopefully find a better way to make the symlinks in the future, but this wi
 ### Font
 - [Inconsolata](http://www.levien.com/type/myfonts/inconsolata.html) (Size 13pt)
 
-## Application lsit
+## Application list
 
 - [New computer application list (osx)](Applications.md)
 
