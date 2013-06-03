@@ -16,7 +16,7 @@ ln -s <filepath> <linkpath>
 ln -s ~/Projects/dotfiles/.bash_profile ~/.bash_profile
 ```
 
-I'll hopefully find a better way to meke the symlinks in the future, but this will work until then.
+I'll hopefully find a better way to make the symlinks in the future, but this will work until then.
 
 ## Terminal settings
 
