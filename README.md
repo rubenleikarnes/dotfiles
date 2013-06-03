@@ -5,13 +5,22 @@ My start for getting some awesome dotfiles. My startingpoint is mostly a fork of
 ## Usage
 
 Make symlinks so you can use them with bash
+
+``` 
+ln -s <filepath> <linkpath> 
+```
+
+### Example
+
 ```
 ln -s ~/Projects/dotfiles/.bash_profile ~/.bash_profile
 ```
 
 I'll hopefully find a better way to meke the symlinks in the future, but this will work until then.
 
-## Terminal theme
+## Terminal settings
+
+### Theme
 - [Tomorrow Night](https://github.com/chriskempson/tomorrow-theme)
 
 ### Font
