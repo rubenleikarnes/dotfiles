@@ -26,9 +26,7 @@
 	],
 	"ignored_packages":
 	[
-		"Vintage",
-		"ZenCoding",
-		"SmartMarkdown"
+		"Vintage"
 	],
 	"indent_to_bracket": true,
 	"margin": 0,
