@@ -18,6 +18,10 @@ shopt -s nocaseglob
 # Use case-insensitive TAB autocompletion
 set completion-ignore-case on
 
+# his makes it unnecessary to press Tab twice when there is more than one match.
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
 
