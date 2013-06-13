@@ -32,8 +32,6 @@
 - Github GUI
 - MAMP
 - [Mixture](http://mixture.io)
-- [Skyfonts](http://www.fonts.com/web-fonts/google)
-
 
 ## Media
 - Adobe Photoshop
@@ -44,7 +42,7 @@
 - Spotify
 - Skype
 - Transmission
-- Tweetbot
+- Echofon
 - VLC
 
 ## Tools
@@ -52,19 +50,16 @@
 - Alfred
 - Dropbox
 - Mou
-- UnRarX
 
 ### Useful 
 - Bartender
 - coconutBattery
 - Moom (App Store)
-- Witch (App Store)
 
 ### System
 - Cleanmymac
 - DaisyDisk
 - inSSIDer
-- Littlesnitch
 - TeamViewer
 
 ## Inspiration
