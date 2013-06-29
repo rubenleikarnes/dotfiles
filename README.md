@@ -1,6 +1,6 @@
 # dotfiles
 
-My start for getting some awesome dotfiles. My startingpoint is mostly a fork of [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) dotfiles. Go check them out they're awesome, also make sure you check his [.osx file](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) it's ledgendary!
+My start for getting some awesome dotfiles. My startingpoint is mostly a fork of [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) dotfiles and a fork of [Harry Roberts'](https://github.com/csswizardry/dotfiles) vimrc for a startingpoint. Go check them out they're awesome, also make sure you check Mathias' [.osx file](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) it's ledgendary!
 
 ## Usage
 
@@ -33,3 +33,4 @@ I'll hopefully find a better way to make the symlinks in the future, but this wi
 ## Sources
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) 
 - [Artem Sapegin](https://github.com/sapegin/dotfiles)
+- [Harry Roberts](https://github.com/csswizardry/dotfiles)
