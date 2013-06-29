@@ -2,7 +2,7 @@
 	name = rub1
 	email = ruben.leikarnes@gmail.com
 [core]
-	editor = "subl -w"
+	editor = vim
 	excludesfile = /Users/ruben/.gitignore
 	attributesfile = ~/.gitattributes
 [color]
