@@ -31,7 +31,7 @@ filetype plugin on
 syntax enable
 " 256 colours, please
 set t_Co=256
-" Dark solarized scheme
+" Scheme
 set background=dark
 colorscheme Tomorrow-Night-Bright
 
