@@ -11,7 +11,7 @@ set clipboard=unnamed
 " Plugins
 execute pathogen#infect()
 
-
+	
 " NERDTree 
 autocmd vimenter * NERDTree
 let NERDTreeMinimalUI = 1
@@ -122,6 +122,7 @@ set wrapmargin=0
 map <silent> <C-m> :NERDTreeToggle<CR>
 map <silent> <C-n> :NERDTreeFocus<CR>
 map <silent> <C-b> :VimFocus<CR>
+map <silent> <C-M> :TagbarToggle<CR>
 
 " Use hjkl to change foucs to other buffers
 map <C-k> <C-w><Up>
