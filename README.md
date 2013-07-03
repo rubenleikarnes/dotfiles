@@ -20,15 +20,8 @@ I'll hopefully find a better way to make the symlinks in the future, but this wi
 
 ## Terminal settings
 
-### Bash
-![Bash screenshot](http://i.imgur.com/ArqJ6Hf.png)
-
-- Theme [Mathias.terminal](https://github.com/mathiasbynens/dotfiles/tree/master/init)
-
-### Vim
-![Vim screenshot](http://i.imgur.com/LW1A9Op.png)
-
-- Theme [Tomorrow Night](https://github.com/chriskempson/tomorrow-theme)
+### Theme
+- [Tomorrow Night](https://github.com/chriskempson/tomorrow-theme)
 
 ### Font
 - [Inconsolata](http://www.levien.com/type/myfonts/inconsolata.html) (Size 13pt)
