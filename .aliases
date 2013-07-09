@@ -1,4 +1,5 @@
 # Easier navigation: .., ..., ...., ....., ~ and -
+alias cd..="cd .."
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -24,7 +25,7 @@ alias oo="open ."
 alias slime="subl"
 #alias slime='open -a "Sublime Text"'
 
-alias mamp="cd /Applications/MAMP/htdocs/"
+alias mamp="cd ~/Projects/_htdocs/"
 alias wp="cd ~/Projects/_htdocs/wordpress/wp-content/themes/"
 
 # Detect which `ls` flavor is in use
