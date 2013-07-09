@@ -22,7 +22,8 @@
 	"ignore_regex":
 	[
 		".sass_cache",
-		".cache"
+		".cache",
+		".swp"
 	],
 	"ignored_packages":
 	[
