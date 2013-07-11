@@ -4,7 +4,7 @@
 	"bold_folder_labels": true,
 	"caret_style": "wide",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
+	"color_scheme": "Packages/Base16 Color Schemes/base16-solarized.dark.tmTheme",
 	"default_dir": "~/Dropbox/Koding/",
 	"detect_slow_plugins": true,
 	"ensure_newline_at_eof_on_save": true,

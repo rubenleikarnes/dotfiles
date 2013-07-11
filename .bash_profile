@@ -18,7 +18,7 @@ shopt -s nocaseglob
 # Use case-insensitive TAB autocompletion
 set completion-ignore-case on
 
-# his makes it unnecessary to press Tab twice when there is more than one match.
+# This makes it unnecessary to press Tab twice when there is more than one match.
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
 
