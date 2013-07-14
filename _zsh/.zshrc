@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/php54:/usr/local/opt/ruby/bin:$PATH"
+
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -30,7 +33,7 @@ ZSH_THEME="ys"
 # DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -42,6 +45,6 @@ ZSH_THEME="ys"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+# Run the following files
 source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
+source .zshalias
