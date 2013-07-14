@@ -47,4 +47,4 @@ plugins=(git)
 
 # Run the following files
 source $ZSH/oh-my-zsh.sh
-source .zshalias
+source $HOME/.zshalias

@@ -10,7 +10,7 @@ set clipboard=unnamed
 
 " Plugins
 execute pathogen#infect()
-
+set guifont=MyFont\ for\ Powerline
 	
 " NERDTree 
 autocmd vimenter * NERDTree
