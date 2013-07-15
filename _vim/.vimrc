@@ -10,8 +10,7 @@ set clipboard=unnamed
 
 " Plugins
 execute pathogen#infect()
-set guifont=MyFont\ for\ Powerline
-	
+
 " NERDTree 
 autocmd vimenter * NERDTree
 let NERDTreeMinimalUI = 1
@@ -34,7 +33,7 @@ set t_Co=256
 " Scheme
 set background=dark
 colorscheme Tomorrow-Night-Bright
-
+set guifont=Inconsolata\ for\ Powerline
 
 
 " Set relevant filetypes
