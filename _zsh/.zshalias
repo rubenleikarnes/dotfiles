@@ -7,6 +7,13 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 
+# Folders and path
+alias .="pwd"
+alias ....="cd ...."
+alias .....="cd ....."
+alias ......="cd ......"
+
+
 # Specific folder shortcuts
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
