@@ -46,6 +46,7 @@
 	"indent_to_bracket": true,
 	"margin": 0,
 	"open_files_in_new_window": false,
+	"rulers": [125],
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
 	"smart_indent": true,
