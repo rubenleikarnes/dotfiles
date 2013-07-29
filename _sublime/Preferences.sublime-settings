@@ -5,26 +5,35 @@
 	"caret_style": "wide",
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/Theme - Cobalt2/cobalt2.tmTheme",
-	"default_dir": "~/Dropbox/Koding/",
 	"detect_slow_plugins": true,
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
 	"fallback_encoding": "UTF-8",
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		"*.lib",
+		"*.log"
+	],
 	"find_selected_text": true,
 	"font_face": "Inconsolata",
 	"font_options":
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 13,
-	"highlight_line": true,
-	"highlight_modified_tabs": true,
-	"ignore_regex":
+	"folder_exclude_patterns":
 	[
-		".sass_cache",
+		".git",
+		".bundle",
+		".sass-cache",
+		".svn",
+		".hg",
 		".cache",
 		".swp"
 	],
+	"font_size": 13,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Vintage"
