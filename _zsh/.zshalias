@@ -28,6 +28,8 @@ alias slime="subl"
 # Jekyll shortcuts
 alias jk="jekyll"
 alias jks="jekyll serve --baseurl '' --watch"
+alias sassw="compass watch"
+alias sasswd="compass watch --debug-info"
 
 # List all files colorized in long format
 alias l="ls -l ${colorflag}"
