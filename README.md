@@ -1,6 +1,6 @@
 # dotfiles
 
-My start for getting some awesome dotfiles. My startingpoint is mostly a fork of [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) dotfiles and a fork of [Harry Roberts'](https://github.com/csswizardry/dotfiles) vimrc for a startingpoint. Go check them out they're awesome, also make sure you check Mathias' [.osx file](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) it's ledgendary!
+My start for getting some awesome dotfiles. My startingpoint ~~is~~ was mostly a fork of [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) bash files witch Ive now stopped using since Im now using Zsh. My Vim config is a fork of [Harry Roberts'](https://github.com/csswizardry/dotfiles) vimrc for a startingpoint. Go check them out they're awesome, also make sure you check Mathias' [.osx file](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) it's ledgendary! My Sublime config have been evolving over the past few years and i tend tot switch color scheme atleast once a month.
 
 ## Usage
 
