@@ -35,3 +35,7 @@
 	ca = !git add -A && git commit -av	
 [push]
 	default = simple
+	# Any GitHub repo with my username should be checked out r/w by default
+	# http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
+	[url "git@github.com:rub1/"]
+		insteadOf = "git://github.com/rub1/"
