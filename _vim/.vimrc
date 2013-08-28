@@ -116,7 +116,6 @@ set textwidth=0
 set wrapmargin=0
 
 
-
 " Hotkeys 
 map <silent> <C-m> :NERDTreeToggle<CR>
 map <silent> <C-n> :NERDTreeFocus<CR>
