@@ -18,8 +18,8 @@ let NERDTreeShowHidden=1
 " Focus file on open
 autocmd VimEnter * wincmd l
 " Close vim if only NERDTree is open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
+autocmd bufenter * if (winnr("$") == 1 &&exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let g:neocomplcache_enable_at_startup = 1
 
 
 " Syntax highlighting
