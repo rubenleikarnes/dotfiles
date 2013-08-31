@@ -12,13 +12,14 @@ set clipboard=unnamed
 execute pathogen#infect()
 
 " NERDTree 
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden=1
 " Focus file on open
 autocmd VimEnter * wincmd l
 " Close vim if only NERDTree is open
 autocmd bufenter * if (winnr("$") == 1 &&exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" Activates neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 
 
@@ -32,7 +33,7 @@ syntax enable
 set t_Co=256
 " Scheme
 set background=dark
-colorscheme Tomorrow-Night-Bright
+colorscheme Tomorrow-Night
 set guifont=Inconsolata\ for\ Powerline
 
 
@@ -118,6 +119,7 @@ set wrapmargin=0
 
 " Hotkeys 
 map <silent> <C-m> :NERDTreeToggle<CR>
+map <silent> <C-d> :NERDTreeToggle<CR>
 map <silent> <C-n> :NERDTreeFocus<CR>
 map <silent> <C-b> :VimFocus<CR>
 "map <silent> <C-M> :TagbarToggle<CR>
