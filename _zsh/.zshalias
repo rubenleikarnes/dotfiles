@@ -36,7 +36,7 @@ alias sasswd="compass watch --debug-info"
 alias l="ls -l ${colorflag}"
 
 # List all files colorized in long format, including dot files
-alias la="ls -la ${colorflag}"
+alias la="ls -lA ${colorflag}"
 
 # List only directories
 alias lsd='ls -l ${colorflag} | grep "^d"'
