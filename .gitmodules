@@ -1,0 +1,21 @@
+[submodule "_zsh/.oh-my-zsh"]
+	path = _zsh/.oh-my-zsh
+	url = git@github.com/robbyrussell/oh-my-zsh.git
+[submodule "_vim/.vim/bundle/delimitMate"]
+	path = _vim/.vim/bundle/delimitMate
+	url = git@github.com/Raimondi/delimitMate.git
+[submodule "_vim/.vim/bundle/nerdtree"]
+	path = _vim/.vim/bundle/nerdtree
+	url = git@github.com/scrooloose/nerdtree.git
+[submodule "_vim/.vim/bundle/neocomplcache.vim"]
+	path = _vim/.vim/bundle/neocomplcache.vim
+	url = git@github.com/Shougo/neocomplcache.vim.git
+[submodule "_vim/.vim/bundle/tagbar"]
+	path = _vim/.vim/bundle/tagbar
+	url = git@github.com/majutsushi/tagbar.git
+[submodule "_vim/.vim/bundle/vim-powerline"]
+	path = _vim/.vim/bundle/vim-powerline
+	url = git@github.com/Lokaltog/vim-powerline.git
+[submodule "_vim/.vim/bundle/vim-sensible"]
+	path = _vim/.vim/bundle/vim-sensible
+	url = git@github.com/tpope/vim-sensible.git
