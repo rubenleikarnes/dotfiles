@@ -10,4 +10,3 @@ DOTFILES=~/Projects/dotfiles/
 #rm -rf ~/.vim && ln -s $DOTFILES/vim ~/.vim
 
 cd $DOTFILES && git submodule update --init
-cd $DOTFILES/vim/bundle/jedi-vim && git submodule update --init
