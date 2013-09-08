@@ -19,3 +19,6 @@
 [submodule "_vim/.vim/bundle/vim-sensible"]
 	path = _vim/.vim/bundle/vim-sensible
 	url = git@github.com/tpope/vim-sensible.git
+[submodule "_zsh/pure"]
+	path = _zsh/pure
+	url = git@github.com/sindresorhus/pure.git
