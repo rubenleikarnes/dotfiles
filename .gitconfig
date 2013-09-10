@@ -27,12 +27,17 @@
 [alias]
 	# View the SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph
+	lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 	# View the current working tree status using the short format
 	s = status -s
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
 	# Commit all changes
 	ca = !git add -A && git commit -av	
+	# Undo
+	undo = "reset --hard HEAD~1"
+	# Shows unpushed files / commited files that havent been pushed
+	unpushed = "log --branches --not --remotes --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 [push]
 	default = simple
 	# Any GitHub repo with my username should be checked out r/w by default
