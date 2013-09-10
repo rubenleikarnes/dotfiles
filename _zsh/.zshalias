@@ -10,13 +10,13 @@ alias oo="open ."
 
 # Folders and path
 alias .="pwd"
-alias ..='cd ..'
 alias cd..='cd ..'
-alias cd...='cd ../..'
-alias cd....='cd ../../..'
-alias cd.....='cd ../../../..'
-alias cd......='cd ../../../../..'
-alias cd.......='cd ../../../../../..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias .......='cd ../../../../../..'
 alias cd/='cd /'
 
 alias 1='cd -'
