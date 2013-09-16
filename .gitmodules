@@ -13,9 +13,9 @@
 [submodule "_vim/.vim/bundle/tagbar"]
 	path = _vim/.vim/bundle/tagbar
 	url = git@github.com/majutsushi/tagbar.git
-[submodule "_vim/.vim/bundle/vim-powerline"]
-	path = _vim/.vim/bundle/vim-powerline
-	url = git@github.com/Lokaltog/vim-powerline.git
+[submodule "_vim/.vim/bundle/vim-airline"]
+	path = _vim/.vim/bundle/vim-airline
+	url = git@github.com/bling/vim-airline.git 
 [submodule "_vim/.vim/bundle/vim-sensible"]
 	path = _vim/.vim/bundle/vim-sensible
 	url = git@github.com/tpope/vim-sensible.git
