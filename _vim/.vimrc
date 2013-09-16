@@ -21,7 +21,8 @@ autocmd VimEnter * wincmd l
 autocmd bufenter * if (winnr("$") == 1 &&exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Activates neocomplcache
 let g:neocomplcache_enable_at_startup = 1
-
+" automatically populate the g:airline_symbols dictionary with the powerline symbols.
+let g:airline_powerline_fonts = 1
 
 " Syntax highlighting
 
@@ -129,4 +130,3 @@ map <C-k> <C-w><Up>
 map <C-j> <C-w><Down>
 map <C-l> <C-w><Right>
 map <C-h> <C-w><Left>
-
