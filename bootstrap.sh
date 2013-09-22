@@ -36,7 +36,6 @@ dep() {
 	return $installed
 }
 
-
 # Create custom oh-my-zsh theme folder
 # adds 
 
