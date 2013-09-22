@@ -22,3 +22,6 @@
 [submodule "_zsh/pure"]
 	path = _zsh/pure
 	url = https://github.com/sindresorhus/pure.git
+[submodule "_init/fonts"]
+	path = _init/fonts
+	url = git@github.com:Lokaltog/powerline-fonts.git
