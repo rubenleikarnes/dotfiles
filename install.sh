@@ -83,7 +83,7 @@ if [ -d $DOTFILES ]; then
 else
 	# Clone Repo
 	notice "Downloading"
-	git clone --recursive git://github.com/gf3/dotfiles.git $DOTFILES
+	git clone --recursive git://github.com/rub1/dotfiles.git $DOTFILES
 
 	pushd $DOTFILES
 
