@@ -36,9 +36,7 @@ dep() {
 	return $installed
 }
 
-# Create custom oh-my-zsh theme folder
-# adds 
-
+# Removes old files and makes new symlinks
 install() {
 	for file in "${files[@]}"; do
 		rm -rf $HOME/$file && c_list "removed $file"
@@ -46,6 +44,7 @@ install() {
 	done
 }
 
+# Makes oh-my-zsh custom theme folder and makes symlink to pure theme
 installpure() {
 	mkdir $ohmycustom
 	rm -rf $ohmycustom/pure.zsh-theme && c_list "removed pure"
@@ -67,8 +66,6 @@ if [ $not_met -gt 0 ]; then
 	error "$not_met dependencies not met!"
 	exit 1
 fi
-
-# Install
 
 cd $DOTFILES
 
