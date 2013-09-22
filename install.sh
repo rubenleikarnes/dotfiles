@@ -1,7 +1,7 @@
 #!/bin/zsh
 # This is a fork of https://github.com/davidfischer/dotfiles/blob/master/install.sh
 
-DOTFILES=~~/Projects/dotfiles/
+DOTFILES=~~/Projects/dotfiles
 dependencies=(git tree vim)
 
 # Notice title
