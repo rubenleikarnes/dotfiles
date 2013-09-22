@@ -79,7 +79,7 @@ fi
 
 # Install
 
-pushd $DOTFILES
+cd $DOTFILES
 
 # Update Repo
 notice "Updating repo"
