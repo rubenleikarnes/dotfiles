@@ -1,27 +1,24 @@
-[submodule "_zsh/.oh-my-zsh"]
-	path = _zsh/.oh-my-zsh
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "_vim/.vim/bundle/delimitMate"]
-	path = _vim/.vim/bundle/delimitMate
+[submodule ".vim/bundle/delimitMate"]
+	path = .vim/bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
-[submodule "_vim/.vim/bundle/nerdtree"]
-	path = _vim/.vim/bundle/nerdtree
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "_vim/.vim/bundle/neocomplcache.vim"]
-	path = _vim/.vim/bundle/neocomplcache.vim
+[submodule ".vim/bundle/neocomplcache.vim"]
+	path = .vim/bundle/neocomplcache.vim
 	url = https://github.com/Shougo/neocomplcache.vim.git
-[submodule "_vim/.vim/bundle/tagbar"]
-	path = _vim/.vim/bundle/tagbar
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule "_vim/.vim/bundle/vim-airline"]
-	path = _vim/.vim/bundle/vim-airline
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
-[submodule "_vim/.vim/bundle/vim-sensible"]
-	path = _vim/.vim/bundle/vim-sensible
+[submodule ".vim/bundle/vim-sensible"]
+	path = .vim/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
-[submodule "_zsh/pure"]
-	path = _zsh/pure
+[submodule "_init/pure"]
+	path = _init/pure
 	url = https://github.com/sindresorhus/pure.git
-[submodule "_init/fonts"]
-	path = _init/fonts
-	url = git@github.com:Lokaltog/powerline-fonts.git
