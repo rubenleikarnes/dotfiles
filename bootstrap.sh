@@ -5,6 +5,8 @@
 
 DOTFILES=~/Projects/dotfiles
 dependencies=(git tree vim)
+files=(.gitconfig .gitignore .oh-my-zsh .tmux.conf .vim .vimrc .zprofile .zshalias .zshrc)
+ohmycustom=~/Projects/dotfiles/.oh-my-zsh/custom/themes
 
 # Notice title
 # Output: => variabel
@@ -34,23 +36,21 @@ dep() {
 	return $installed
 }
 
-# Install function 
+
+# Create custom oh-my-zsh theme folder
+# adds 
 
 install() {
-	cd $HOME
+	for file in "${files[@]}"; do
+		rm -rf $HOME/$file && c_list "removed $file"
+		ln -s $DOTFILES/$file $HOME/$file && c_list "symlinked $file"
+	done
+}
 
-	notice "Making symlinks"
-	rm -f ~/.gitconfig && ln -s $DOTFILES/.gitconfig ~/.gitconfig && c_list "gitconfig"
-	rm -f ~/.gitignore && ln -s $DOTFILES/.gitignore ~/.gitignore && c_list "gitignore"
-	rm -f ~/.vimrc && ln -s $DOTFILES/_vim/.vimrc ~/.vimrc && c_list "vimrc"
-	rm -rf ~/.vim && ln -s $DOTFILES/_vim/.vim ~/.vim && c_list "vim"
-	rm -rf ~/.oh-my-zsh && ln -s $DOTFILES/_zsh/.oh-my-zsh ~/.oh-my-zsh && c_list "oh-my-zsh"
-	rm -rf ~/.zprofile && ln -s $DOTFILES/_zsh/.zprofile ~/.zprofile && c_list "zprofile"
-	rm -rf ~/.zshalias && ln -s $DOTFILES/_zsh/.zshalias ~/.zshalias && c_list "zshalias"
-	rm -rf ~/.zshrc && ln -s $DOTFILES/_zsh/.zshrc ~/.zshrc && c_list "zshrc"
-	rm -rf ~/.tmux.conf && ln -s $DOTFILES/_tmux/.tmux.conf ~/.tmux.conf && c_list "tmux"
-	mkdir $DOTFILES/_zsh/.oh-my-zsh/custom/themes
-	ln -s $DOTFILES/_zsh/pure/pure.zsh $DOTFILES/_zsh/.oh-my-zsh/custom/themes/pure.zsh-theme && c_list "pure"
+installpure() {
+	mkdir $ohmycustom
+	rm -rf $ohmycustom/pure.zsh-theme && c_list "removed pure"
+	ln -s $DOTFILES/_init/pure/pure.zsh $ohmycustom/pure.zsh-theme && c_list "symlinked pure"
 }
 
 # Dependencies
@@ -84,6 +84,7 @@ git submodule update
 # Install
 notice "Installing"
 install
+installpure
 
 # Finished
 
