@@ -1,5 +1,7 @@
 #!/bin/zsh
-# This is a fork of https://github.com/davidfischer/dotfiles/blob/master/install.sh
+# Lots of copy and paste from these:
+# https://github.com/gf3/dotfiles/blob/master/bootstrap.sh
+# https://github.com/davidfischer/dotfiles/blob/master/install.sh
 
 DOTFILES=~/Projects/dotfiles
 dependencies=(git tree vim)
@@ -80,9 +82,11 @@ fi
 pushd $DOTFILES
 
 # Update Repo
-notice "Updating"
+notice "Updating repo"
 git pull origin master
+notice "Init submodules"
 git submodule init
+notice "Updating submodules"
 git submodule update
 
 # Install
