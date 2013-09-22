@@ -1,7 +1,7 @@
 #!/bin/zsh
 # This is a fork of https://github.com/davidfischer/dotfiles/blob/master/install.sh
 
-DOTFILES=~~/Projects/dotfiles
+DOTFILES=~/Projects/dotfiles
 dependencies=(git tree vim)
 
 # Notice title
@@ -77,30 +77,17 @@ fi
 
 # Install
 
-# Assumes $HOME/.dotfiles is *ours*
-if [ -d $DOTFILES ]; then
-	pushd $DOTFILES
+pushd $DOTFILES
 
-	# Update Repo
-	notice "Updating"
-	git pull origin master
-	git submodule init
-	git submodule update
+# Update Repo
+notice "Updating"
+git pull origin master
+git submodule init
+git submodule update
 
-	# Install
-	notice "Installing"
-	install
-else
-	# Clone Repo
-	notice "Downloading"
-	git clone --recursive git://github.com/rub1/dotfiles.git $DOTFILES
-
-	pushd $DOTFILES
-
-	# Install
-	notice "Installing"
-	install
-fi
+# Install
+notice "Installing"
+install
 
 # Finished
 
