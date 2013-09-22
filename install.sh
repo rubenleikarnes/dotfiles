@@ -34,31 +34,23 @@ dep() {
 	return $installed
 }
 
-# Install function
+# Install function 
+
 install() {
 	cd $HOME
 
 	notice "Making symlinks"
-	rm -f ~/.gitconfig && ln -s $DOTFILES/.gitconfig ~/.gitconfig
-	c_list "gitconfig"
-	rm -f ~/.gitignore && ln -s $DOTFILES/.gitignore ~/.gitignore
-	c_list "gitignore"
-	rm -f ~/.vimrc && ln -s $DOTFILES/_vim/.vimrc ~/.vimrc
-	c_list "vimrc"
-	rm -rf ~/.vim && ln -s $DOTFILES/_vim/.vim ~/.vim
-	c_list "vim"
-	rm -rf ~/.oh-my-zsh && ln -s $DOTFILES/_zsh/.oh-my-zsh ~/.oh-my-zsh
-	c_list "oh-my-zsh"
-	rm -rf ~/.zprofile && ln -s $DOTFILES/_zsh/.zprofile ~/.zprofile
-	c_list "zprofile"
-	rm -rf ~/.zshalias && ln -s $DOTFILES/_zsh/.zshalias ~/.zshalias
-	c_list "zshalias"
-	rm -rf ~/.zshrc && ln -s $DOTFILES/_zsh/.zshrc ~/.zshrc
-	c_list "zshrc"
-	rm -rf ~/.tmux.conf && ln -s $DOTFILES/_tmux/.tmux.conf ~/.tmux.conf
-	c_list "tmux"
-	mkdir $DOTFILES/_zsh/.oh-my-zsh/custom/themes && ln -s $DOTFILES/_zsh/pure/pure.zsh $DOTFILES/_zsh/.oh-my-zsh/custom/themes/pure.zsh-theme
-	c_list "pure"
+	rm -f ~/.gitconfig && ln -s $DOTFILES/.gitconfig ~/.gitconfig && c_list "gitconfig"
+	rm -f ~/.gitignore && ln -s $DOTFILES/.gitignore ~/.gitignore && c_list "gitignore"
+	rm -f ~/.vimrc && ln -s $DOTFILES/_vim/.vimrc ~/.vimrc && c_list "vimrc"
+	rm -rf ~/.vim && ln -s $DOTFILES/_vim/.vim ~/.vim && c_list "vim"
+	rm -rf ~/.oh-my-zsh && ln -s $DOTFILES/_zsh/.oh-my-zsh ~/.oh-my-zsh && c_list "oh-my-zsh"
+	rm -rf ~/.zprofile && ln -s $DOTFILES/_zsh/.zprofile ~/.zprofile && c_list "zprofile"
+	rm -rf ~/.zshalias && ln -s $DOTFILES/_zsh/.zshalias ~/.zshalias && c_list "zshalias"
+	rm -rf ~/.zshrc && ln -s $DOTFILES/_zsh/.zshrc ~/.zshrc && c_list "zshrc"
+	rm -rf ~/.tmux.conf && ln -s $DOTFILES/_tmux/.tmux.conf ~/.tmux.conf && c_list "tmux"
+	mkdir $DOTFILES/_zsh/.oh-my-zsh/custom/themes
+	ln -s $DOTFILES/_zsh/pure/pure.zsh $DOTFILES/_zsh/.oh-my-zsh/custom/themes/pure.zsh-theme && c_list "pure"
 }
 
 # Dependencies
