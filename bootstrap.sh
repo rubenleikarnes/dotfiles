@@ -87,6 +87,8 @@ notice "Updating submodules"
 git submodule update
 
 # Install
+notice "Backup to $backupdir"
+backup
 notice "Installing"
 install
 installpure
