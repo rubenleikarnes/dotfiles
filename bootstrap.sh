@@ -7,6 +7,7 @@ DOTFILES=~/Projects/dotfiles
 dependencies=(git tree vim)
 files=(.gitconfig .gitignore .oh-my-zsh .tmux.conf .vim .vimrc .zprofile .zshalias .zshrc)
 ohmycustom=~/Projects/dotfiles/.oh-my-zsh/custom/themes
+backupdir="$HOME/.dotfiles-backup/$(date "+%Y%m%d-%H%M%S")"
 
 # Notice title
 # Output: => variabel
@@ -34,6 +35,14 @@ dep() {
 		e_list $1
 	fi
 	return $installed
+}
+
+# RCreates a new backup direcotry and copys files that will be symlinked
+backup() {
+	mkdir -p $backupdir
+	for file in "${files[@]}"; do
+		cp -Rf $HOME/$file $backupdir/$file && c_list "$file"
+	done
 }
 
 # Removes old files and makes new symlinks
