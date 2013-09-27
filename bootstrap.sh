@@ -37,7 +37,7 @@ dep() {
 	return $installed
 }
 
-# RCreates a new backup direcotry and copys files that will be symlinked
+# Creates a new backup direcotry and copys files that will be symlinked
 backup() {
 	mkdir -p $backupdir
 	for file in "${files[@]}"; do
