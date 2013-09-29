@@ -23,6 +23,14 @@ autocmd bufenter * if (winnr("$") == 1 &&exists("b:NERDTreeType") && b:NERDTreeT
 let g:neocomplcache_enable_at_startup = 1
 " automatically populate the g:airline_symbols dictionary with the powerline symbols.
 let g:airline_powerline_fonts = 1
+" Startify startscreen for vim
+let g:startify_list_order = ['dir', 'files', 'bookmarks', 'sessions']
+let g:startify_session_detection = 1
+let g:startify_skiplist = [
+           \ '.DS_Store',
+           \ '.git'
+           \ ]
+
 
 " Syntax highlighting
 
