@@ -11,6 +11,7 @@ set clipboard=unnamed
 " Plugins
 execute pathogen#infect()
 
+
 " NERDTree 
 " autocmd vimenter * NERDTree
 let NERDTreeMinimalUI = 1
