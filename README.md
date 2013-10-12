@@ -1,35 +1,21 @@
 # dotfiles
 
-My start for getting some awesome dotfiles. My startingpoint ~~is~~ was mostly a fork of [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) bash files witch Ive now stopped using since Im now using Zsh. My Vim config is a fork of [Harry Roberts'](https://github.com/csswizardry/dotfiles) vimrc for a startingpoint. Go check them out they're awesome, also make sure you check Mathias' [.osx file](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) it's ledgendary! My Sublime config have been evolving over the past few years and i tend tot switch color scheme atleast once a month.
+My start for getting some awesome dotfiles. My startingpoint ~~is~~ was mostly a fork of [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) bash files witch I've now stopped using since I've gone over to use Zsh. My Vim config ~~is~~ was a fork of [Harry Roberts'](https://github.com/csswizardry/dotfiles) vimrc for a startingpoint. Go check them out they're both awesome. My Sublime config have been evolving over the past few years and i tend to switch color scheme atleast once a month. Can't remember where I forked my tmux.conf, sorry.
 
-## Usage
-
-Make symlinks so you can use them with bash
+## Install
 
 ``` 
-ln -s <filepath> <linkpath> 
+mkdir -P ~/Projects
+git clone https://github.com/rub1/dotfiles.git ~/Projects/dotfiles
+cd ~/Projects/dotfiles
+sh bootstrap.sh
 ```
-
-### Example
-
-```
-ln -s ~/Projects/dotfiles/.bash_profile ~/.bash_profile
-```
-
-I'll hopefully find a better way to make the symlinks in the future, but this will work until then.
+Restart terminal session
 
 ## Terminal settings
 
-### Zsh
-![Zsh screenshot](http://i.imgur.com/lrsmWDI.png)
-
-### Vim
-![Vim screenshot](http://i.imgur.com/N59XkAM.png)
-
-- Theme [Tomorrow Night](https://github.com/chriskempson/tomorrow-theme)
-
-### Font
-- [Inconsolata](http://www.levien.com/type/myfonts/inconsolata.html) (Size 13pt)
+- Theme [Monokai Soda](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Monokai Soda.itermcolors)
+- [Inconsolata (Powerline)](https://github.com/Lokaltog/powerline-fonts/tree/master/Inconsolata) (Size 13pt)
 
 ## Application list
 

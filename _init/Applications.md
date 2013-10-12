@@ -2,48 +2,43 @@
 
 ## Command Line Tools
 - [Homebrew](http://mxcl.github.io/homebrew/)
-- [Command Line Tools for Xcode](http://connect.apple.com)
+- [Command Line Tools for Xcode](http://connect.apple.com) (Maybe Xcode)
 
 ### Brew list
 
+- Zsh
 - Git
 - Git Extras
-- Bash4
+- Tree
 - Node.js
+- NPM
+- Homebrew Cask
 - Upgrade Ruby
-- Ruby on Rails
+- Upgrade Vim
+- Upgrade Python
 
 ## Browsers
 - Google Chrome
 - Google Chrome Canary
 - Mozilla Firefox
-- Adobe Flash
-- Microsoft Silverlight
+- Airmail
 
 ## Webdeveloper applications
-- [Sublime Text 3](http://www.sublimetext.com/3) ([Package Control](http://wbond.net/sublime_packages/package_control) & [subl](http://stackoverflow.com/questions/10767738/how-do-i-add-bin-to-my-path))
-- Transmit
+- [Sublime Text 3](http://www.sublimetext.com/3) ([Package Control](sublime.wbond.net) & [subl](http://stackoverflow.com/questions/10767738/how-do-i-add-bin-to-my-path))
+- Forklift
 - Mysql Workbench
-- Java SDK and JDK
-- Eclipse
-
-### Webdeveloper tools
-- [ColorSnapper](http://colorsnapper.com/)
-- Github GUI
-- MAMP
-- [Mixture](http://mixture.io)
+- [ColorSnapper](http://colorsnapper.com/) (App Store)
+- Mou
 
 ## Media
-- Adobe Photoshop
-- Aperture
-- Hacky
-- LimeChat ([theme](https://gist.github.com/rub1/5650554) ([source](http://jstn.cc/post/42021604785)))
-- Reeder
+- Adobe Photoshop CC
 - Spotify
 - Skype
 - Transmission
-- Echofon
+- Tweetbot
 - VLC
+- Evernote 
+- Kuuva (App Store)
 
 ## Tools
 ### Essentails
@@ -55,6 +50,7 @@
 - Bartender
 - coconutBattery
 - Moom (App Store)
+- Pop
 
 ### System
 - Cleanmymac
