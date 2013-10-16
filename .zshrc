@@ -8,7 +8,6 @@ export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/opt/co
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# yzcustom can be found in ../_init/ (i then have a symlink in  ~/.oh-my-zsh/custom/themes/)
 ZSH_THEME="pure"
 
 # Example aliases
