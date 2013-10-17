@@ -10,12 +10,12 @@
 	
 	<link rel="stylesheet" href="${2:style.css}">
 	
-	<link rel="shortcut icon" href="icon.png">
+	<link rel="shortcut icon" href="favicon.png">
 	<link rel="apple-touch-icon-precomposed" href="icon.png">
-	<meta name="apple-mobile-web-app-title" content="">
+	<meta name="apple-mobile-web-app-title" content="${1:Title}">
 </head>
 <body>
-	${3}
+	
 </body>
 </html>]]></content>
 	<tabTrigger>html5</tabTrigger>
