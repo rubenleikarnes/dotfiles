@@ -4,10 +4,9 @@
 # https://github.com/davidfischer/dotfiles/blob/master/install.sh
 
 DOTFILES=~/Projects/dotfiles
-SUBLIME=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+SUBLIME=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 dependencies=(git tree vim)
 files=(.gitconfig .gitignore .oh-my-zsh .tmux.conf .vim .vimrc .zprofile .zshalias .zshrc)
-sublfiles=(Default\ \(OSX\).sublime-keymap Preferences.sublime-settings html.sublime-snippet)
 ohmycustom=~/Projects/dotfiles/.oh-my-zsh/custom/themes
 backupdir="$HOME/.dotfiles-backup/$(date "+%Y%m%d-%H%M%S")"
 
@@ -70,11 +69,9 @@ installfonts() {
 
 installsublime() {
 	mkdir -p $SUBLIME
-	for file in "${sublfiles[@]}"; do
-		cp -Rf $SUBLIME/$file $SUBLIME/backup/$file && c_list "backed up $file" && 
-		rm -rf $SUBLIME/$file && c_list "removed $file"
-		ln -s $DOTFILES/_sublime/$file $SUBLIME/$file && c_list "symlinked $file"
-	done
+	cp -Rf $SUBLIME/User $backupdir/User && c_list "backed up Sublime" && 
+	rm -rf $SUBLIME/User && c_list "removed Sublime" &&
+	ln -s $DOTFILES/_sublime/User $SUBLIME/User && c_list "symlinked Sublime"
 }
 
 # Dependencies
