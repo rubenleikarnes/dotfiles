@@ -73,7 +73,7 @@ installsublime() {
 	for file in "${sublfiles[@]}"; do
 		cp -Rf $SUBLIME/$file $backupdir/$file && c_list "backed up $file"
 		rm -rf $SUBLIME/$file && c_list "removed $file"
-		ln -s $DOTFILES/_sublime/$file $HOME/$file && c_list "symlinked $file"
+		ln -s $DOTFILES/_sublime/$file $SUBLIME/$file && c_list "symlinked $file"
 	done
 }
 
