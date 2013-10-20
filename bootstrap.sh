@@ -4,7 +4,7 @@
 # https://github.com/davidfischer/dotfiles/blob/master/install.sh
 
 DOTFILES=~/Projects/dotfiles
-SUBLIME=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+SUBLIME=~/Library/Application%20Support/Sublime%20Text%203/Packages/
 dependencies=(git tree vim)
 files=(.gitconfig .gitignore .oh-my-zsh .tmux.conf .vim .vimrc .zprofile .zshalias .zshrc)
 ohmycustom=~/Projects/dotfiles/.oh-my-zsh/custom/themes
