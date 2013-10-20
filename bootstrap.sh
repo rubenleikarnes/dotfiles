@@ -4,7 +4,7 @@
 # https://github.com/davidfischer/dotfiles/blob/master/install.sh
 
 DOTFILES=~/Projects/dotfiles
-SUBLIME=/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+SUBLIME=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 dependencies=(git tree vim)
 files=(.gitconfig .gitignore .oh-my-zsh .tmux.conf .vim .vimrc .zprofile .zshalias .zshrc)
 sublfiles=(Default\ \(OSX\).sublime-keymap Preferences.sublime-settings html.sublime-snippet)
