@@ -60,6 +60,12 @@ installpure() {
 	ln -s $DOTFILES/_init/pure/pure.zsh $ohmycustom/pure.zsh-theme && c_list "symlinked pure"
 }
 
+# Install powerline fonts
+installpure() {
+	cp -f $DOTFILES/_init/powerline-fonts/*/*.otf $HOME/Library/Fonts
+	cp -f $DOTFILES/_init/powerline-fonts/*/*.ttf $HOME/Library/Fonts
+}
+
 # Dependencies
 
 notice "Checking dependencies"
