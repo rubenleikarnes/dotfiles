@@ -61,7 +61,7 @@ installpure() {
 }
 
 # Install powerline fonts
-installpure() {
+installfonts() {
 	cp -f $DOTFILES/_init/powerline-fonts/*/*.otf $HOME/Library/Fonts
 	cp -f $DOTFILES/_init/powerline-fonts/*/*.ttf $HOME/Library/Fonts
 }
@@ -98,8 +98,9 @@ backup
 notice "Installing"
 install
 installpure
+notice "Copying fonts to library"
+installfonts
 
 # Finished
-
 notice "Finished"
 exec $SHELL -l
