@@ -4,7 +4,6 @@
 # https://github.com/davidfischer/dotfiles/blob/master/install.sh
 
 DOTFILES=~/Projects/dotfiles
-SUBLIME=~/Library/Application%20Support/Sublime%20Text%203/Packages/
 dependencies=(git tree vim)
 files=(.gitconfig .gitignore .oh-my-zsh .tmux.conf .vim .vimrc .zprofile .zshalias .zshrc)
 ohmycustom=~/Projects/dotfiles/.oh-my-zsh/custom/themes
@@ -67,13 +66,6 @@ installfonts() {
 	cp -f $DOTFILES/_init/powerline-fonts/*/*.ttf $HOME/Library/Fonts
 }
 
-installsublime() {
-	mkdir $SUBLIME
-	cp -R $SUBLIME/User $backupdir && c_list "backed up Sublime" && 
-	rm -rf $SUBLIME/User && c_list "removed Sublime" &&
-	ln -s $DOTFILES/_sublime/User $SUBLIME/User && c_list "symlinked Sublime"
-}
-
 # Dependencies
 
 notice "Checking dependencies"
@@ -106,7 +98,6 @@ backup
 notice "Installing"
 install
 installpure
-installsublime
 notice "Copying fonts to library"
 installfonts
 
