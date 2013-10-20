@@ -69,7 +69,7 @@ installfonts() {
 
 installsublime() {
 	mkdir -p $SUBLIME
-	cp -Rf $SUBLIME/User $backupdir/User && c_list "backed up Sublime" && 
+	cp -Rf $SUBLIME/User $backupdir && c_list "backed up Sublime" && 
 	rm -rf $SUBLIME/User && c_list "removed Sublime" &&
 	ln -s $DOTFILES/_sublime/User $SUBLIME/User && c_list "symlinked Sublime"
 }
