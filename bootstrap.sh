@@ -7,7 +7,7 @@ DOTFILES=~/Projects/dotfiles
 SUBLIME=/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 dependencies=(git tree vim)
 files=(.gitconfig .gitignore .oh-my-zsh .tmux.conf .vim .vimrc .zprofile .zshalias .zshrc)
-sublfiles=(Default\ (OSX).sublime-keymap Preferences.sublime-settings html.sublime-snippet)
+sublfiles=(Default\ \(OSX\).sublime-keymap Preferences.sublime-settings html.sublime-snippet)
 ohmycustom=~/Projects/dotfiles/.oh-my-zsh/custom/themes
 backupdir="$HOME/.dotfiles-backup/$(date "+%Y%m%d-%H%M%S")"
 
@@ -72,6 +72,7 @@ installsublime() {
 	mkdir -p $SUBLIME
 	for file in "${sublfiles[@]}"; do
 		cp -Rf $SUBLIME/$file $backupdir/$file && c_list "backed up $file"
+		rm -rf $SUBLIME/$file && c_list "removed $file"
 		ln -s $DOTFILES/_sublime/$file $HOME/$file && c_list "symlinked $file"
 	done
 }
