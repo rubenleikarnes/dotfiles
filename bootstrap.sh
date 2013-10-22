@@ -66,14 +66,6 @@ installfonts() {
 	cp -f $DOTFILES/_init/powerline-fonts/*/*.ttf $HOME/Library/Fonts
 }
 
-# Synmlink sublime
-installsublime() {
-	# symlink settings in
-	sublime_dir=~/Library/Application\ Support/Sublime\ Text\ 2/Packages
-	mv "$sublime_dir/User" "$sublime_dir/User.backup"
-	ln -s "$DOTFILES/_sublime/User" "$sublime_dir"
-}
-
 # Dependencies
 
 notice "Checking dependencies"
