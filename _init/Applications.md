@@ -28,7 +28,7 @@
 - Mozilla Firefox
 
 ## Webdeveloper applications
-- [Sublime Text 3](http://www.sublimetext.com/3) ([Package Control](sublime.wbond.net) & [subl](http://stackoverflow.com/questions/10767738/how-do-i-add-bin-to-my-path))
+- [Sublime Text 3](http://www.sublimetext.com/3) ([Package Control](http://sublime.wbond.net) & [subl](http://stackoverflow.com/questions/10767738/how-do-i-add-bin-to-my-path))
 - Forklift
 - Mysql Workbench
 - [ColorSnapper](http://colorsnapper.com/) (App Store)
