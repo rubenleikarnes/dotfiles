@@ -19,7 +19,7 @@ Restart terminal session
 
 ## Application list
 
-- [New computer application list (osx)](Applications.md)
+- [New computer application list (osx)](_init/Applications.md)
 
 ## Sources
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) 
