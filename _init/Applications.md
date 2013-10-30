@@ -16,21 +16,27 @@
 - Upgrade Ruby
 - Upgrade Vim
 - Upgrade Python
+- Upgrade Php
+- Sass
+- Compass
+- Grunt
+- Yo
 
 ## Browsers
 - Google Chrome
 - Google Chrome Canary
 - Mozilla Firefox
-- Airmail
 
 ## Webdeveloper applications
 - [Sublime Text 3](http://www.sublimetext.com/3) ([Package Control](sublime.wbond.net) & [subl](http://stackoverflow.com/questions/10767738/how-do-i-add-bin-to-my-path))
 - Forklift
 - Mysql Workbench
 - [ColorSnapper](http://colorsnapper.com/) (App Store)
+- Mamp
 - Mou
 
 ## Media
+- Airmail
 - Adobe Photoshop CC
 - Spotify
 - Skype
@@ -44,17 +50,21 @@
 ### Essentails
 - Alfred
 - Dropbox
+- Google Drive
 - Mou
+- The Unarchiver
 
 ### Useful 
 - Bartender
+- BTSync
 - coconutBattery
 - Moom (App Store)
 - Pop
+- VmWare Fusion
 
 ### System
 - Cleanmymac
-- DaisyDisk
+- Disk Inventory X
 - inSSIDer
 - TeamViewer
 
