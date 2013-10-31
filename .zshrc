@@ -23,7 +23,7 @@ export UPDATE_ZSH_DAYS=7
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins settings
-ZSH_TMUX_AUTOSTART="true"
+# ZSH_TMUX_AUTOSTART="true"
 
 # Which plugins would you like to load? 
 plugins=(git tmux brew battery osx sublime zsh-syntax-highlighting)
