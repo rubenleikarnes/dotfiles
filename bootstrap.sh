@@ -6,7 +6,8 @@
 DOTFILES=~/Projects/dotfiles
 dependencies=(git tree vim)
 files=(.gitconfig .gitignore .oh-my-zsh .tmux.conf .vim .vimrc .zprofile .zshalias .zshrc)
-ohmycustom=~/Projects/dotfiles/.oh-my-zsh/custom/themes
+ohmycustomthemes=~/Projects/dotfiles/.oh-my-zsh/custom/themes
+ohmycustomplugins=~/Projects/dotfiles/.oh-my-zsh/custom/plugins
 backupdir="$HOME/.dotfiles-backup/$(date "+%Y%m%d-%H%M%S")"
 
 # Notice title
@@ -55,9 +56,16 @@ install() {
 
 # Makes oh-my-zsh custom theme folder and makes symlink to pure theme
 installpure() {
-	mkdir $ohmycustom
-	rm -rf $ohmycustom/pure.zsh-theme && c_list "removed pure"
-	ln -s $DOTFILES/_init/pure/pure.zsh $ohmycustom/pure.zsh-theme && c_list "symlinked pure"
+	mkdir $ohmycustomthemes
+	rm -rf $ohmycustomthemes/pure.zsh-theme && c_list "removed pure"
+	ln -s $DOTFILES/_init/pure/pure.zsh $ohmycustomthemes/pure.zsh-theme && c_list "symlinked pure"
+}
+
+# Makes oh-my-zsh custom plugins folder and makes symlink to zsh-syntax-highlight
+installzshsyntax() {
+	mkdir $ohmycustomplugins
+	rm -rf $ohmycustomplugins/zsh-syntax-highlighting && c_list "removed zsh-syntax-highlighting"
+	ln -s $DOTFILES/_init/zsh-syntax-highlighting $ohmycustomplugins/zsh-syntax-highlighting && c_list "symlinked zsh-syntax-highlighting"
 }
 
 # Install powerline fonts
@@ -98,6 +106,7 @@ backup
 notice "Installing"
 install
 installpure
+installzshsyntax
 notice "Copying fonts to library"
 installfonts
 
