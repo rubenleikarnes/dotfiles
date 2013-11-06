@@ -10,6 +10,7 @@
 - Git
 - Git Extras
 - Tree
+- Tmux
 - Node.js
 - NPM
 - Homebrew Cask

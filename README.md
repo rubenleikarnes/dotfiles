@@ -3,14 +3,22 @@
 My start for getting some awesome dotfiles. My startingpoint ~~is~~ was mostly a fork of [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) bash files witch I've now stopped using since I've gone over to use Zsh. My Vim config ~~is~~ was a fork of [Harry Roberts'](https://github.com/csswizardry/dotfiles) vimrc for a startingpoint. Go check them out they're both awesome. My Sublime config have been evolving over the past few years and i tend to switch color scheme atleast once a month. Can't remember where I forked my tmux.conf, sorry.
 
 ## Install
+For this [Stow](www.gnu.org/s/stow/) is needed (brew install stow)
 
 ``` 
-mkdir -P ~/Projects
-git clone https://github.com/rub1/dotfiles.git ~/Projects/dotfiles
-cd ~/Projects/dotfiles
-sh bootstrap.sh
+git clone https://github.com/rub1/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+stow zsh
+stow vim
+stow git
+stow tmux
 ```
 Restart terminal session
+
+### Vim
+```
+:BundleInstall
+´´
 
 ## Terminal settings
 
@@ -19,7 +27,7 @@ Restart terminal session
 
 ## Application list
 
-- [New computer application list (osx)](_init/Applications.md)
+- [New computer application list (osx)](Applications.md)
 
 ## Sources
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) 
