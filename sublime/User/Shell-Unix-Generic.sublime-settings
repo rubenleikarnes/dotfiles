@@ -28,6 +28,7 @@
 		".zshrc",
 		".wgetrc",
 		"zsh-theme",
-		".zshalias"
+		".zshalias",
+		".vimrc"
 	]
 }

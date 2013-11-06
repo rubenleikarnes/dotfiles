@@ -3,14 +3,28 @@
 
 " No compatibility
 set nocompatible
+filetype off                  " required!
 set encoding=utf-8
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 
 
-" Plugins
-execute pathogen#infect()
+" Vundle 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
+" let Vundle manage Vundle --- required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'Raimondi/delimitMate'
+Bundle 'Shougo/neocomplcache.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'majutsushi/tagbar'
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-sensible'
+Bundle 'mhinz/vim-startify'
+
+filetype plugin indent on     " required!
 
 " NERDTree 
 " autocmd vimenter * NERDTree
