@@ -16,9 +16,9 @@ stow tmux
 Restart terminal session
 
 ### Vim
-```
+``` 
 :BundleInstall
-´´
+```
 
 ## Terminal settings
 
