@@ -11,8 +11,7 @@
 - Git Extras
 - Tree
 - Tmux
-- Node.js
-- NPM
+- Node.js (npm included)
 - Homebrew Cask
 - Upgrade Ruby
 - Upgrade Vim
@@ -21,6 +20,7 @@
 - Sass
 - Compass
 - Grunt
+- Bower
 - Yo
 
 ## Browsers
