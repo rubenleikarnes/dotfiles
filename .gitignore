@@ -37,3 +37,7 @@ Icon?
 ehthumbs.db
 Thumbs.db
 *.swp
+
+# Vim plugins from Vundle
+######################
+vim/.vim/bundle/*
