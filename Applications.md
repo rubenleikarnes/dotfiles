@@ -33,7 +33,7 @@
 - Forklift
 - Mysql Workbench
 - [ColorSnapper](http://colorsnapper.com/) (App Store)
-- Mamp
+- Mamp/xampp
 - Mou
 
 ## Media
