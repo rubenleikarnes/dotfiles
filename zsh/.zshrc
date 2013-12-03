@@ -23,6 +23,7 @@ antigen-bundles <<EOBUNDLES
 	git-extras
 	brew
 	command-not-found
+	sublime
 
 	tarrasch/zsh-bd
 	sindresorhus/pure
