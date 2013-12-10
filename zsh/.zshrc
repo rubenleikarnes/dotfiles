@@ -25,7 +25,7 @@ antigen-bundles <<EOBUNDLES
 	command-not-found
 	sublime
 
-	tarrasch/zsh-bd
+	Tarrasch/zsh-bd
 	sindresorhus/pure
 	zsh-users/zsh-syntax-highlighting
 	zsh-users/zsh-history-substring-search
