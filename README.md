@@ -8,6 +8,8 @@ For this [Stow](www.gnu.org/s/stow/) is needed (brew install stow)
 ``` 
 git clone https://github.com/rub1/dotfiles.git ~/dotfiles
 cd ~/dotfiles
+git submodule init
+git submodule update
 stow zsh
 stow vim
 stow git
