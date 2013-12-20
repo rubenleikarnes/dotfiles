@@ -2,6 +2,7 @@
 	"auto_complete": true,
 	"auto_indent": true,
 	"bold_folder_labels": true,
+	"caret_extra_width": 1,
 	"caret_style": "wide",
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
@@ -27,13 +28,12 @@
 		".swp"
 	],
 	"font_face": "Inconsolata",
-	"font_options":
-	[
-		"subpixel_antialias"
-	],
-	"font_size": 14,
+	"font_options": "subpixel_antialias",
+	"font_size": 17,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
+	"sidebar_folders": false,
+	"disable_colored_group_labels": true,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -52,10 +52,12 @@
 	],
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
+	"show_encoding": true,
+	"show_line_endings": true,
 	"smart_indent": true,
 	"tab_completion": true,
 	"tab_size": 4,
-	"theme": "Soda Dark.sublime-theme",
+	"theme": "Nil.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"trim_automatic_white_space": false,
 	"trim_trailing_white_space_on_save": false,
