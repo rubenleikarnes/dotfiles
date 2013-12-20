@@ -7,6 +7,7 @@
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
 	"detect_slow_plugins": true,
+	"disable_colored_group_labels": true,
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
 	"fallback_encoding": "UTF-8",
@@ -32,8 +33,6 @@
 	"font_size": 17,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"sidebar_folders": false,
-	"disable_colored_group_labels": true,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -54,6 +53,7 @@
 	"scroll_past_end": true,
 	"show_encoding": true,
 	"show_line_endings": true,
+	"sidebar_folders": false,
 	"smart_indent": true,
 	"tab_completion": true,
 	"tab_size": 4,
