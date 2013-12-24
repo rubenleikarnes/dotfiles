@@ -23,6 +23,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-sensible'
 Bundle 'mhinz/vim-startify'
+Bundle 'chriskempson/base16-vim'
 
 filetype plugin indent on     " required!
 
@@ -55,9 +56,11 @@ filetype plugin on
 syntax enable
 " 256 colours, please
 set t_Co=256
+"let base16colorspace=256
 " Scheme
 set background=dark
-colorscheme Tomorrow-Night
+"colorscheme Tomorrow-Night
+colorscheme base16-ocean
 set guifont=Inconsolata\ for\ Powerline
 
 
