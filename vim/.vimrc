@@ -8,6 +8,8 @@ set encoding=utf-8
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 
+" Change mapleader
+let mapleader=","
 
 " Vundle 
 set rtp+=~/.vim/bundle/vundle/
