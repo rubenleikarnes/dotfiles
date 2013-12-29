@@ -42,7 +42,16 @@ export UPDATE_ZSH_DAYS=3
 
 source $HOME/.zshalias
 
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Link Homebrew casks in `/Applications` rather than `~/Applications`
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # Base16 Shell
 BASE16_SCHEME="ocean"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
-[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
+#[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
