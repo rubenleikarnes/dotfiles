@@ -135,8 +135,8 @@ set smartcase
 set wildmenu
 " Change mapleader
 let mapleader=","
-
-
+" Enables mouse by default
+set mouse=a
 
 " Word wrap
 set wrap
