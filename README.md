@@ -24,7 +24,7 @@ Restart terminal session
 
 ## Terminal settings
 
-- Theme [Ocean](https://github.com/chriskempson/base16-iterm2)
+- Theme [Ocean Dark](https://github.com/chriskempson/base16-iterm2)
 - [Inconsolata (Powerline)](https://github.com/Lokaltog/powerline-fonts/tree/master/Inconsolata) (Size 14pt)
 
 ## Application list
