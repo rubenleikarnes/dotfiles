@@ -48,6 +48,9 @@ alias jks="jekyll serve --baseurl '' --watch"
 alias sassw="compass watch"
 alias sasswd="compass watch --debug-info"
 
+# oh-my-zsh warning for bower
+alias bower='noglob bower'
+
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
