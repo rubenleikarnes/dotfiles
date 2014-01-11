@@ -1,3 +1,5 @@
+# THIS IS NO LONGER USED! USE README FOR INSTALL (STOW)
+
 #!/bin/zsh
 # Lots of copy and paste from these:
 # https://github.com/gf3/dotfiles/blob/master/bootstrap.sh
