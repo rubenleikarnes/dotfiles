@@ -1,21 +1,25 @@
 " .vimrc
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Genral
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " No compatibility
 set nocompatible
-filetype off                  " required!
+filetype off
 set encoding=utf-8
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 
-" Change mapleader
-let mapleader=","
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Vundle 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle --- required! 
+" let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
 Bundle 'Raimondi/delimitMate'
@@ -27,33 +31,13 @@ Bundle 'tpope/vim-sensible'
 Bundle 'mhinz/vim-startify'
 Bundle 'chriskempson/base16-vim'
 
-filetype plugin indent on     " required!
 
-" NERDTree 
-" autocmd vimenter * NERDTree
-let NERDTreeMinimalUI = 1
-let NERDTreeShowHidden=1
-" Focus file on open
-autocmd VimEnter * wincmd l
-" Close vim if only NERDTree is open
-autocmd bufenter * if (winnr("$") == 1 &&exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-" Activates neocomplcache
-let g:neocomplcache_enable_at_startup = 1
-" automatically populate the g:airline_symbols dictionary with the powerline symbols.
-let g:airline_powerline_fonts = 1
-" Startify startscreen for vim
-let g:startify_list_order = ['dir', 'files', 'bookmarks', 'sessions']
-let g:startify_session_detection = 1
-let g:startify_skiplist = [
-           \ '.DS_Store',
-           \ '.git'
-           \ ]
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => User interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Syntax highlighting
 
-" Detect filetype
-filetype plugin on
 " Enable syntax highighting
 syntax enable
 " 256 colours, please
@@ -81,18 +65,16 @@ set tabstop=4
 set shiftwidth=4
 " Round indent to nearst multiple of 4
 set shiftround
-" No line-wrapping
-set nowrap
 
 
 
 " Interactions
 
 " Start scrolling slightly before the cursor reaches an edge
-set scrolloff=5
-set sidescrolloff=5
-" Scroll sideways a character at a time, rather than a screen at a time
-set sidescroll=1
+set scrolloff=7
+set sidescrolloff=7
+" Scroll sideways 7 characters at a time, rather than a screen at a time
+set sidescroll=7
 "Allow motions and back-spacing over line-endings etc
 set backspace=indent,eol,start
 set whichwrap=h,l,b,<,>,~,[,]
@@ -145,6 +127,9 @@ set nolist
 set textwidth=0
 set wrapmargin=0
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Custom keyboard shortcuts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Hotkeys 
 map <silent> <C-m> :NERDTreeToggle<CR>
@@ -158,3 +143,26 @@ map <C-k> <C-w><Up>
 map <C-j> <C-w><Down>
 map <C-l> <C-w><Right>
 map <C-h> <C-w><Left>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Custom plugin settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" NERDTree 
+let NERDTreeMinimalUI = 1
+let NERDTreeShowHidden=1
+" Focus file on open
+autocmd VimEnter * wincmd l
+" Close vim if only NERDTree is open
+autocmd bufenter * if (winnr("$") == 1 &&exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Activates neocomplcache
+let g:neocomplcache_enable_at_startup = 1
+
+" automatically populate the g:airline_symbols dictionary with the powerline symbols.
+let g:airline_powerline_fonts = 1
+
+" Startify startscreen for vim
+let g:startify_list_order = ['dir', 'files', 'bookmarks', 'sessions']
+let g:startify_session_detection = 1
+let g:startify_skiplist = ['.DS_Store', '.git']
