@@ -30,7 +30,7 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-sensible'
 Bundle 'mhinz/vim-startify'
 Bundle 'chriskempson/base16-vim'
-
+Bundle 'airblade/vim-gitgutter'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User interface
