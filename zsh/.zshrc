@@ -12,7 +12,7 @@ export PATH
 
 # Antigen
 ZSHA_BASE=$HOME/dotfiles/zsh
-source $ZSHA_BASE/antigen/antigen.zsh
+source $ZSHA_BASE/.antigen/antigen.zsh
 
 # Antigen bundles
 antigen-use oh-my-zsh
