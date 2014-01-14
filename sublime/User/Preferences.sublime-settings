@@ -51,11 +51,17 @@
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"margin": 0,
+	"new_window_settings":
+	{
+		"show_minimap": false
+	},
 	"open_files_in_new_window": false,
+	"overlay_scroll_bars": "enabled",
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
 	"show_encoding": true,
 	"show_line_endings": true,
+	"show_tab_close_buttons": false,
 	"sidebar_folders": false,
 	"smart_indent": true,
 	"tab_completion": true,

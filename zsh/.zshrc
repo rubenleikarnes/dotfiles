@@ -55,3 +55,9 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 BASE16_SCHEME="ocean"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
 #[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
+
+# Asks before rm foo/*
+unsetopt RM_STAR_SILENT
+
+# Waits 10s when rm foo/*
+setopt RM_STAR_WAIT
