@@ -47,7 +47,7 @@ set t_Co=256
 set background=dark
 "colorscheme Tomorrow-Night
 colorscheme base16-ocean
-set guifont=Inconsolata\ for\ Powerline
+set guifont=Inconsolata\ for\ Powerline:h14
 
 
 " Set relevant filetypes
