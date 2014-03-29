@@ -6,6 +6,7 @@ PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH # Updated coreutinls
 PATH=/usr/local/share/npm/bin:$PATH # NPM
 PATH=/usr/local/share:$PATH # Local share
 PATH=/usr/local/bin:$PATH # User binaries
+PATH=/usr/local/lib:$PATH # User library
 PATH=$HOME/.bin:$PATH # Personal binaries
  
 export PATH
@@ -65,3 +66,7 @@ unsetopt RM_STAR_SILENT
 
 # Waits 10s when rm foo/*
 setopt RM_STAR_WAIT
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export HOMEBREW_GITHUB_API_TOKEN=55f0f5be63f132e94e7d9c2e8cc8216d63d7cca6
