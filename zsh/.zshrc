@@ -68,5 +68,3 @@ unsetopt RM_STAR_SILENT
 setopt RM_STAR_WAIT
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-export HOMEBREW_GITHUB_API_TOKEN=55f0f5be63f132e94e7d9c2e8cc8216d63d7cca6
