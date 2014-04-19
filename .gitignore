@@ -38,7 +38,10 @@ ehthumbs.db
 Thumbs.db
 *.swp
 
-# Vim plugins from Vundle
-######################
+# Vim plugins from Vundle #
+###########################
 vim/.vim/bundle/*
+
+# ﬂocal files #
+###############
 zsh/.zlocal
