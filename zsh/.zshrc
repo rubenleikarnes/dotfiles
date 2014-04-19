@@ -42,6 +42,7 @@ antigen-apply
 export UPDATE_ZSH_DAYS=3
 
 source $HOME/.zshalias
+source $HOME/.zlocal
 
 # Sets default typeset to UTF-8
 export LC_ALL=en_US.UTF-8
