@@ -41,3 +41,4 @@ Thumbs.db
 # Vim plugins from Vundle
 ######################
 vim/.vim/bundle/*
+zsh/.zlocal
