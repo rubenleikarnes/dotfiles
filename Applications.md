@@ -4,25 +4,6 @@
 - [Homebrew](http://mxcl.github.io/homebrew/)
 - [Command Line Tools for Xcode](http://connect.apple.com) (Maybe Xcode)
 
-### Brew list
-
-- Zsh
-- Git
-- Git Extras
-- Tree
-- Tmux
-- Node.js (npm included)
-- Homebrew Cask
-- Upgrade Ruby
-- Upgrade Vim
-- Upgrade Python
-- Upgrade Php
-- Sass
-- Compass
-- Grunt
-- Bower
-- Yo
-
 ## Browsers
 - Google Chrome
 - Google Chrome Canary
@@ -34,7 +15,6 @@
 - Mysql Workbench
 - [ColorSnapper](http://colorsnapper.com/) (App Store)
 - Mamp/xampp
-- Mou
 
 ## Media
 - Airmail
@@ -44,7 +24,6 @@
 - Transmission
 - Tweetbot
 - VLC
-- Evernote 
 - Kuuva (App Store)
 
 ## Tools
@@ -52,15 +31,14 @@
 - Alfred
 - Dropbox
 - Google Drive
-- Mou
 - The Unarchiver
+- Unrarx
 
 ### Useful 
 - Bartender
 - BTSync
 - coconutBattery
 - Moom (App Store)
-- Pop
 - VmWare Fusion
 
 ### System
