@@ -44,3 +44,5 @@
 	# http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
 	[url "git@github.com:rub1/"]
 		insteadOf = "git://github.com/rub1/"
+[credential]
+	helper = osxkeychain
