@@ -54,6 +54,7 @@ python
 rbenv
 readline
 ruby
+rust
 sqlite
 stow
 tmux
@@ -107,6 +108,7 @@ openemu
 opera
 opera-developer
 opera-next
+ps3-media-server
 qlcolorcode
 qlmarkdown
 qlstephen
