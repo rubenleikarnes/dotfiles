@@ -22,38 +22,36 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-Bundle 'Raimondi/delimitMate'
-Bundle 'Shougo/neocomplcache.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-sensible'
-Bundle 'mhinz/vim-startify'
 Bundle 'chriskempson/base16-vim'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'editorconfig/editorconfig-vim'
+" lean & mean status/tabline for vim thats light as air
+Bundle 'bling/vim-airline'
+" provides insert mode auto-completion for quotes, parens, brackets, etc.
+Bundle 'Raimondi/delimitMate'
+Bundle 'scrooloose/nerdtree'
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Syntax highlighting
+set guifont=Inconsolata\ for\ Powerline:h14
 
+
+" Show line numbers
+set number
 " Enable syntax highighting
 syntax enable
-" 256 colours, please
-set t_Co=256
-"let base16colorspace=256
-" Scheme
-set background=dark
-"colorscheme Tomorrow-Night
 colorscheme base16-ocean
+set background=dark
 set guifont=Inconsolata\ for\ Powerline:h14
 
 
 " Set relevant filetypes
 au BufRead,BufNewFile *.scss set filetype=css
 au BufRead,BufNewFile *.md set filetype=markdown
-
 
 
 " Tabs, indentation and lines
@@ -66,6 +64,12 @@ set shiftwidth=4
 " Round indent to nearst multiple of 4
 set shiftround
 
+" Word wrap
+set wrap
+set linebreak
+set nolist 
+set textwidth=0
+set wrapmargin=0
 
 
 " Interactions
@@ -84,7 +88,6 @@ set iskeyword-=_
 set noerrorbells
 
 
-
 " Visual decorations
 
 " hide startup message
@@ -101,8 +104,6 @@ set modeline
 set ruler
 " Show file title in terminal tab
 set title
-" Show line numbers
-set number
 "Highlight current line
 set cursorline
 " Don’t keep results highlighted after searching...
@@ -115,17 +116,9 @@ set ignorecase
 set smartcase
 " Enhance command-line completion
 set wildmenu
-" Change mapleader
-let mapleader=","
 " Enables mouse by default
 set mouse=a
 
-" Word wrap
-set wrap
-set linebreak
-set nolist 
-set textwidth=0
-set wrapmargin=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Custom keyboard shortcuts
@@ -156,13 +149,5 @@ autocmd VimEnter * wincmd l
 " Close vim if only NERDTree is open
 autocmd bufenter * if (winnr("$") == 1 &&exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" Activates neocomplcache
-let g:neocomplcache_enable_at_startup = 1
-
 " automatically populate the g:airline_symbols dictionary with the powerline symbols.
 let g:airline_powerline_fonts = 1
-
-" Startify startscreen for vim
-let g:startify_list_order = ['dir', 'files', 'bookmarks', 'sessions']
-let g:startify_session_detection = 1
-let g:startify_skiplist = ['.DS_Store', '.git']
