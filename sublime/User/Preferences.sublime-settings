@@ -5,7 +5,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "wide",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+	"color_scheme": "Packages/Base16 Color Schemes/base16-tomorrow.dark.tmTheme",
 	"default_line_ending": "unix",
 	"detect_slow_plugins": true,
 	"disable_colored_group_labels": true,
@@ -41,6 +41,7 @@
 	"ignored_packages":
 	[
 		"Markdown",
+		"SideBarEnhancements",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -67,7 +68,7 @@
 	"smart_indent": true,
 	"tab_completion": true,
 	"tab_size": 4,
-	"theme": "Spacegray.sublime-theme",
+	"theme": "Nil.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": false,
