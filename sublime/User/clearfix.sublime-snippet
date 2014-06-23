@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+ 
+.clearfix:after {
+  clear: both;
+}
+ 
+.clearfix {
+  *zoom: 1;
+}]]></content>
+	<tabTrigger>clearfix1</tabTrigger>
+    <description>Clearfix css class</description>
+</snippet>
