@@ -6,6 +6,7 @@ My start for getting some awesome dotfiles. My startingpoint ~~is~~ was mostly a
 For this [Stow](www.gnu.org/s/stow/) is needed (brew install stow)
 
 ``` 
+chsh -s $(which zsh)
 git clone https://github.com/rub1/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 git submodule init
