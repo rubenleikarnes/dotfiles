@@ -1,9 +1,7 @@
-" .vimrc
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Genral
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" No compatibility
+" Use Vim settings, rather then Vi settings. This setting must be as early as possible, as it has side effects.
 set nocompatible
 filetype off
 set encoding=utf-8
@@ -31,6 +29,9 @@ Bundle 'bling/vim-airline'
 " provides insert mode auto-completion for quotes, parens, brackets, etc.
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/nerdtree'
+Bundle 'jby/tmux.vim'
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'valloric/MatchTagAlways'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -39,13 +40,16 @@ Bundle 'scrooloose/nerdtree'
 
 set guifont=Inconsolata\ for\ Powerline:h14
 
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  syntax on
+endif
 
 " Show line numbers
 set number
-" Enable syntax highighting
-syntax enable
-colorscheme base16-ocean
 set background=dark
+" colorscheme base16-solarized
+" colorscheme Tomorrow
+color Dracula
 set guifont=Inconsolata\ for\ Powerline:h14
 
 
@@ -86,6 +90,8 @@ set whichwrap=h,l,b,<,>,~,[,]
 set iskeyword-=_
 " Disable error bells
 set noerrorbells
+set noswapfile
+set autowrite 
 
 
 " Visual decorations
