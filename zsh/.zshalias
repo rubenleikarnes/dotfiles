@@ -1,7 +1,5 @@
 # Shortcuts
 alias g="git"
-alias h="history"
-alias j="jobs"
 alias v="vim"
 alias t="tmux"
 alias s="subl"
@@ -29,11 +27,13 @@ alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
 
+# Jump alias for z
+alias j='z'
+
 # List 10 last paths
 alias q='dirs -v | head -10'
 
 # Specific folder shortcuts
-alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Projects"
@@ -50,6 +50,9 @@ alias sasswd="compass watch --debug-info"
 
 # oh-my-zsh warning for bower
 alias bower='noglob bower'
+
+# htop needs to run as root, bug not showing cpu and mem usage
+alias htop='sudo htop'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
