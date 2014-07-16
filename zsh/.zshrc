@@ -25,6 +25,7 @@ antigen-bundles <<EOBUNDLES
 	brew
 	command-not-found
 	sublime
+	z
 
 	Tarrasch/zsh-bd
 	sindresorhus/pure
@@ -69,3 +70,5 @@ unsetopt RM_STAR_SILENT
 setopt RM_STAR_WAIT
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+sh '/usr/local/etc/profile.d/z.sh'
