@@ -47,9 +47,9 @@ endif
 " Show line numbers
 set number
 set background=dark
-" colorscheme base16-solarized
+colorscheme base16-solarized
 " colorscheme Tomorrow
-color Dracula
+" color base16-ocean
 set guifont=Inconsolata\ for\ Powerline:h14
 
 
