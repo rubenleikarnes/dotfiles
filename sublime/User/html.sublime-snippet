@@ -9,10 +9,6 @@
 	<title>${1:Title}</title>
 	
 	<link rel="stylesheet" href="${2:style.css}">
-	
-	<link rel="shortcut icon" href="favicon.png">
-	<link rel="apple-touch-icon-precomposed" href="icon.png">
-	<meta name="apple-mobile-web-app-title" content="${1:Title}">
 </head>
 <body>
 	
