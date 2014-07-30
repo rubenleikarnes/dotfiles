@@ -49,3 +49,7 @@ Restart terminal session
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) 
 - [Artem Sapegin](https://github.com/sapegin/dotfiles)
 - [Harry Roberts](https://github.com/csswizardry/dotfiles)
+
+## Screenshot
+
+![Screenshot of terminal](screenshot.png)
