@@ -1,8 +1,12 @@
 <snippet>
-  <content><![CDATA[*, *:before, *:after {
+  <content><![CDATA[html {
 	-webkit-box-sizing: border-box; 
 	-moz-box-sizing: border-box; 
 	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }]]></content>
 	<tabTrigger>borderbox1</tabTrigger>
     <description>Box-sizing: Border-box</description>
