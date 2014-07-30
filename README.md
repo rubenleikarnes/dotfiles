@@ -5,6 +5,7 @@ My start for getting some awesome dotfiles. My startingpoint ~~is~~ was mostly a
 # Requirements
 
 ```
+coreutils
 git
 stow
 tmux
