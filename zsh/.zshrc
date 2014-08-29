@@ -22,7 +22,6 @@ antigen-use oh-my-zsh
 antigen-bundles <<EOBUNDLES
 	git
 	git-extras
-	brew
 	command-not-found
 	sublime
 	z
@@ -34,6 +33,7 @@ antigen-bundles <<EOBUNDLES
 EOBUNDLES
 
 if [ "$OSTYPE"="darwin11.0" ]; then
+	antigen-bundle brew
 	antigen-bundle osx
 fi
 
@@ -61,7 +61,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Base16 Shell
 BASE16_SCHEME="ocean"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
-#[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
+[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
 
 # Asks before rm foo/*
 unsetopt RM_STAR_SILENT
