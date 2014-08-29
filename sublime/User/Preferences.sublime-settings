@@ -5,7 +5,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "wide",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
+	"color_scheme": "Packages/Dayle Rees Color Schemes/sublime/legacy.tmTheme",
 	"default_line_ending": "unix",
 	"detect_slow_plugins": true,
 	"disable_colored_group_labels": true,
@@ -40,8 +40,8 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Markdown"
+		"Markdown",
+		"Vintage"
 	],
 	"indent_guide_options":
 	[
@@ -74,7 +74,7 @@
 	"spacegray_sidebar_tree_large": true,
 	"tab_completion": true,
 	"tab_size": 4,
-	"theme": "Spacegray.sublime-theme",
+	"theme": "legacy.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": false,
