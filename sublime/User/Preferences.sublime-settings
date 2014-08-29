@@ -40,8 +40,8 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Markdown",
-		"Vintage"
+		"Vintage",
+		"Markdown"
 	],
 	"indent_guide_options":
 	[
@@ -52,10 +52,10 @@
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"margin": 0,
-	"match_brackets": true, 
+	"match_brackets": true,
 	"match_brackets_angle": true,
-	"match_brackets_braces": true, 
-	"match_brackets_content": true, 
+	"match_brackets_braces": true,
+	"match_brackets_content": true,
 	"match_brackets_square": true,
 	"new_window_settings":
 	{
