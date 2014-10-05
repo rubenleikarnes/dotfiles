@@ -42,12 +42,6 @@ alias temp="cd ~/Projects/_temp"
 alias mamp="cd ~/Projects/_htdocs/"
 alias wp="cd ~/Projects/_htdocs/wordpress/wp-content/themes/"
 
-# Jekyll shortcuts
-alias jk="jekyll"
-alias jks="jekyll serve --baseurl '' --watch"
-alias sassw="compass watch"
-alias sasswd="compass watch --debug-info"
-
 # oh-my-zsh warning for bower
 alias bower='noglob bower'
 
@@ -92,9 +86,6 @@ alias update1='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanu
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
-
-# Enhanced WHOIS lookups
-alias whois="whois -h whois-servers.net"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
