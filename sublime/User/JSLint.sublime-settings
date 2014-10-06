@@ -1,0 +1,6 @@
+{
+	"options" : [
+		// suggest an indent level of two spaces.
+		"--indent", "4"
+	]
+}
