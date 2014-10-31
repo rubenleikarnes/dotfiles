@@ -1,8 +1,10 @@
 ack
+android-sdk
 apple-gcc42
 archey
 autoconf
 automake
+bash
 brew-cask
 cmake
 coreutils
@@ -30,6 +32,7 @@ libtool
 libyaml
 mercurial
 moreutils
+mysql
 nettle
 node
 openssl
