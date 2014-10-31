@@ -1,16 +1,22 @@
+airfoil
 alfred
 android-file-transfer
 atom
 bartender
 betterzipql
+breach
 chromium
 coconutbattery
 dash
 disk-inventory-x
 dropbox
+evernote
 evom
+fantastical
 fileshuttle
 firefox
+font-droid-sans
+font-droid-sans-mono
 font-fira-mono (!)
 font-fira-sans
 font-inconsolata
@@ -18,11 +24,13 @@ font-inconsolata-dz
 font-inconsolata-dz-for-powerline
 font-m-plus
 font-noto-sans
+font-open-sans
 font-roboto
 font-source-code-pro
 font-source-sans-pro
 font-source-serif-pro
 forklift
+gimp
 github
 google-chrome
 google-chrome-canary
@@ -31,6 +39,7 @@ imageoptim
 instacast
 iterm2
 licecap
+monochrome (!)
 moom
 mysqlworkbench
 ngrok
@@ -43,7 +52,9 @@ qlstephen
 quicklook-csv
 quicklook-json
 silverlight
+sketch-beta
 skype
+spectacle
 spotify
 sublime-text3
 suspicious-package
