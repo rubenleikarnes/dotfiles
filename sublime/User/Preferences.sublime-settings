@@ -40,8 +40,9 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Markdown"
+		"Markdown",
+		"MarkdownEditing",
+		"Vintage"
 	],
 	"indent_guide_options":
 	[
