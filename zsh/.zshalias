@@ -2,7 +2,6 @@
 alias g="git"
 alias v="vim"
 alias t="tmux"
-alias s="subl"
 alias o="open"
 alias oo="open ."
 
@@ -77,6 +76,16 @@ alias week='date +%V'
 
 # A nicer tree
 alias tre='tree -C --charset utf-8'
+
+# `s` with no arguments opens the current directory in Sublime Text, otherwise
+# opens the given location
+function s() {
+	if [ $# -eq 0 ]; then
+		subl .;
+	else
+		subl "$@";
+	fi;
+}
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update --system; sudo gem update; antigen selfupdate; antigen update'
