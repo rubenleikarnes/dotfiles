@@ -2,6 +2,7 @@
 	"extensions":
 	[
 		"aspx",
-		"master"
+		"master",
+		"cshtml"
 	]
 }
