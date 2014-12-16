@@ -63,10 +63,12 @@
 		"show_minimap": false
 	},
 	"open_files_in_new_window": false,
+	"origami_auto_zoom_on_focus": false,
 	"overlay_scroll_bars": "enabled",
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
 	"show_encoding": true,
+	"show_full_path": true,
 	"show_line_endings": true,
 	"show_tab_close_buttons": false,
 	"sidebar_folders": false,
