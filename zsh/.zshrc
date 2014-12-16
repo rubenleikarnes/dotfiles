@@ -22,6 +22,7 @@ antigen-use oh-my-zsh
 antigen-bundles <<EOBUNDLES
 	git
 	git-extras
+	docker
 	command-not-found
 	sublime
 	z
@@ -72,3 +73,8 @@ setopt RM_STAR_WAIT
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 sh '/usr/local/etc/profile.d/z.sh'
+
+# Dcoker exports
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/ruben/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
