@@ -33,5 +33,9 @@
 	// Fix end of line + select
 	{ "keys": ["super+shift+right"], "command": "move_to", "args": {"to": "hardeol", "extend": true} },
 	// Fix beginning of line + select
-	{ "keys": ["super+shift+left"], "command": "move_to", "args": {"to": "hardbol", "extend": true} }
+	{ "keys": ["super+shift+left"], "command": "move_to", "args": {"to": "hardbol", "extend": true} },
+
+	// Tab switch in order insted os last used
+	{ "keys": ["ctrl+tab"], "command": "next_view" },
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" }
 ]
