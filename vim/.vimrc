@@ -44,12 +44,18 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
+" Enable 256 colors
+if &term == "screen"
+  set t_Co=256
+endif
+
+
 " Show line numbers
 set number
-set background=dark
-colorscheme base16-solarized
-" colorscheme Tomorrow
-" color base16-ocean
+"set background=dark
+colorscheme base16-default
+"colorscheme Tomorrow
+"color base16-ocaen
 set guifont=Inconsolata\ for\ Powerline:h14
 
 
