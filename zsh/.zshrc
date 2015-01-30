@@ -8,6 +8,7 @@ PATH=/usr/local/share:$PATH # Local share
 PATH=/usr/local/bin:$PATH # User binaries
 PATH=/usr/local/lib:$PATH # User library
 PATH=$HOME/.bin:$PATH # Personal binaries
+PATH=$HOME/.rvm/gems/ruby-2.0.0-p353/bin:$PATH # Personal binaries
  
 export PATH
 
