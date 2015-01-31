@@ -50,16 +50,16 @@ alias cls=clear
 alias sl=ls
 
 # List all files colorized in long format
-alias l="ls -l --human-readable"
+alias l="ls -l --human-readable --color"
 
 # List all files colorized in long format, including dot files
-alias la="ls -l --all --human-readable --group-directories-first"
+alias la="ls -l --all --human-readable --group-directories-first --color"
 
 # List only directories
-alias lsd='ls -l | grep "^d"'
+alias lsd='ls -l --color | grep "^d"'
 
 # List only files
-alias lsf='ls -l | grep -v "^d"'
+alias lsf='ls -l --color | grep -v "^d"'
 
 # Get week number
 alias week='date +%V'
