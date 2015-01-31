@@ -36,6 +36,7 @@
 		"zshenv",
 		".zlocal",
 		".zpreztorc",
-		".zalias"
+		".zalias",
+		"conf"
 	]
 }
