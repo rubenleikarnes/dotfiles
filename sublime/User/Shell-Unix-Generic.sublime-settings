@@ -29,6 +29,10 @@
 		".wgetrc",
 		"zsh-theme",
 		".zshalias",
-		".vimrc"
+		".vimrc",
+		"zpreztorc",
+		"zlogin",
+		"zprofile",
+		"zshenv"
 	]
 }
