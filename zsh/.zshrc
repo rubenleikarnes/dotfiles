@@ -12,6 +12,8 @@ PATH=$HOME/.rvm/gems/ruby-2.0.0-p353/bin:$PATH # Personal binaries
  
 export PATH
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 # Antigen
 ZSHA_BASE=$HOME/dotfiles/zsh
 source $ZSHA_BASE/.antigen/antigen.zsh
@@ -70,8 +72,6 @@ unsetopt RM_STAR_SILENT
 
 # Waits 10s when rm foo/*
 setopt RM_STAR_WAIT
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 sh '/usr/local/etc/profile.d/z.sh'
 
