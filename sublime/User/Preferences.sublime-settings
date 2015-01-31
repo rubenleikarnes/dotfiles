@@ -44,11 +44,8 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Markdown",
 		"Vintage",
-		"Oblivion Color Scheme",
-		"Liquid",
-		"MarkdownEditing"
+		"Markdown"
 	],
 	"indent_guide_options":
 	[
