@@ -21,7 +21,9 @@ git clone https://github.com/rub1/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 git submodule init
 git submodule update
-stow zsh
+cd ~/dotfiles/zsh/.zprezto
+git submodule init
+git submodule update
 stow vim
 stow git
 stow tmux
