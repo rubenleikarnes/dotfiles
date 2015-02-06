@@ -38,7 +38,7 @@ alias bower='noglob bower'
 alias htop='sudo htop'
 
 # Enable aliases to be sudo’ed
-alias sudo='sudo '
+# alias sudo='sudo '
 
 # show line numbers in cat
 alias cat="cat -n"
