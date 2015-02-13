@@ -33,6 +33,12 @@ stow vim
 stow zsh
 ```
 
+Stow symlinks to parent directory so you need to be in the dotfiles dir to symlink the folders. If you need to specify target other than parent use the following pattern:
+
+```
+stow -t target source
+```
+
 Restart terminal session
 
 ### Vim
