@@ -55,3 +55,12 @@ export DOCKER_TLS_VERIFY=1
 settitle() {
     printf "\033k$1\033\\"
 }
+
+# This will highlight any time you type rm -rf in red
+ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
+
+# Some options for our Zsh history. These will set our history to allow a ton more entires, ignore duplicate commands, and ignore some of the commands we don’t need a history of. This is useful because if you want to search for that command you ran a few weeks ago, you can do that a lot easier.
+export HISTSIZE=32768;
+export HISTFILESIZE=$HISTSIZE;
+export HISTCONTROL=ignoredups;
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
