@@ -148,4 +148,8 @@ function man() {
 		LESS_TERMCAP_us=$(printf "\e[1;32m") \
 			man "$@"
 }
- 
+
+# Find files in current dir and subdirs
+function ff() {
+	ack -f | ack "$1"
+}
