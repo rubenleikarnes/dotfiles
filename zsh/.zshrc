@@ -45,7 +45,7 @@ unsetopt RM_STAR_SILENT
 # Waits 10s when rm foo/*
 setopt RM_STAR_WAIT
 
-sh '/usr/local/etc/profile.d/z.sh'
+source '/usr/local/etc/profile.d/z.sh'
 
 # Dcoker exports
 export DOCKER_HOST=tcp://192.168.59.103:2376
