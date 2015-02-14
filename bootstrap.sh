@@ -1,13 +1,11 @@
-# THIS IS NO LONGER USED! USE README FOR INSTALL (STOW)
-
 #!/bin/zsh
 # Lots of copy and paste from these:
 # https://github.com/gf3/dotfiles/blob/master/bootstrap.sh
 # https://github.com/davidfischer/dotfiles/blob/master/install.sh
 
 dotfiles=~/dotfiles
-dependencies=(git stow tree vim)
-files=(zsh vim git tmux)
+dependencies=(git stow tmux zsh)
+files=(ack editorconfig git hushlogin nano tmux vim zsh)
 backupdir="$HOME/.dotfiles-backup/$(date "+%Y%m%d-%H%M%S")"
 
 # Notice title
@@ -26,6 +24,15 @@ c_list() { echo  "  \033[1;32m✔\033[0m $1"; }
 # Output: ✖ variabel
 e_list() { echo  "  \033[1;31m✖\033[0m $1"; }
 
+in_array() {
+  local hay needle=$1
+  shift
+  for hay; do
+    [[ $hay == $needle ]] && return 0
+  done
+  return 1
+}
+
 # Check for dependency
 dep() {
 	type -p $1 &> /dev/null
@@ -42,28 +49,41 @@ dep() {
 backup() {
 	mkdir -p $backupdir
 	for file in "${files[@]}"; do
-		cp -Rf $HOME/$file $backupdir/$file && c_list "$file"
+		cd $dotfiles
+
+		local myfiles=( $(ls -A ${file[@]}) )
+
+		for fil in "${myfiles[@]}"; do
+			in_array $fil || cp -Rf "$HOME/$fil" "$backupdir/$fil" && c_list "$fil"
+		done
 	done
 }
 
-# Removes old files and makes new symlinks
+# Removes old files
+remove() {
+	for file in "${files[@]}"; do
+		cd $dotfiles
+
+		local myfiles=( $(ls -A ${file[@]}) )
+
+		for fil in "${myfiles[@]}"; do
+			in_array $fil || rm -rf "$HOME/$fil" && c_list "$fil"
+		done
+	done
+}
+
+# makes new symlinks
 install() {
 	for file in "${files[@]}"; do
-		rm -rf $HOME/$file && c_list "removed $file"
 		cd $dotfiles
 		stow $file && c_list "symlinked $file"
 	done
 }
 
-# Install powerline fonts
-installfonts() {
-	cp -f $dotfiles/fonts/*/*.otf $HOME/Library/Fonts
-	cp -f $dotfiles/fonts/*/*.ttf $HOME/Library/Fonts
-}
-
 # Dependencies
-
 notice "Checking dependencies"
+
+cd $DOTFILES
 
 not_met=0
 for need in "${dependencies[@]}"; do
@@ -87,13 +107,24 @@ git submodule init
 notice "Updating submodules"
 git submodule update
 
+# Update subsubmodules
+cd $DOTFILES/zsh/.zprezto/
+notice "Updating subrepo"
+git pull origin master
+notice "Init subsubmodules"
+git submodule init
+notice "Updating subsubmodules"
+git submodule update
+
+cd $DOTFILES
+
 # Install
 notice "Backup to $backupdir"
 backup
+notice "Removing old files from home"
+remove
 notice "Installing"
 install
-notice "Copying fonts to library"
-installfonts
 
 # Finished
 notice "Finished"
