@@ -1,0 +1,13 @@
+include ~/.nano/syntax/ALL.nanorc
+#include ~/.nano/syntax/erb.nanorc
+#include ~/.nano/syntax/ruby.nanorc
+
+set morespace
+set tabsize 2
+set tabstospaces
+set autoindent
+set brackets ""')>]}""'
+set matchbrackets "(<[{)>]}""])"
+set mouse
+set smooth
+
