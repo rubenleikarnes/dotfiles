@@ -16,6 +16,9 @@ zsh
 ## Install
 
 ``` 
+
+$ bash < <( curl https://raw.githubusercontent.com/rub1/dotfiles/master/bootstrap.sh )
+
 chsh -s $(which zsh)
 git clone https://github.com/rub1/dotfiles.git ~/dotfiles
 cd ~/dotfiles
