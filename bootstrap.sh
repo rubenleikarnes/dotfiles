@@ -51,7 +51,7 @@ backup() {
 	for file in "${files[@]}"; do
 		cd $dotfiles
 
-		local myfiles=( $(ls -A ${file[@]}) )
+		local myfiles=$(ls -A ${file[@]})
 
 		for fil in "${myfiles[@]}"; do
 			in_array $fil || cp -Rf "$HOME/$fil" "$backupdir/$fil" && c_list "$fil"
@@ -64,7 +64,7 @@ remove() {
 	for file in "${files[@]}"; do
 		cd $dotfiles
 
-		local myfiles=( $(ls -A ${file[@]}) )
+		local myfiles=$(ls -A ${file[@]})
 
 		for fil in "${myfiles[@]}"; do
 			in_array $fil || rm -rf "$HOME/$fil" && c_list "$fil"
