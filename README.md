@@ -20,7 +20,7 @@ zsh
 $ bash < <( curl https://raw.githubusercontent.com/rub1/dotfiles/master/bootstrap.sh )
 
 chsh -s $(which zsh)
-git clone https://github.com/rub1/dotfiles.git ~/dotfiles
+git clone --recursive https://github.com/rub1/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 git submodule init
 git submodule update

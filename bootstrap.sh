@@ -100,21 +100,21 @@ fi
 cd $DOTFILES
 
 # Update Repo
-notice "Updating repo"
-git pull origin master
-notice "Init submodules"
-git submodule init
-notice "Updating submodules"
-git submodule update
+# notice "Updating repo"
+# git pull origin master
+# notice "Init submodules"
+# git submodule init
+# notice "Updating submodules"
+# git submodule update
 
 # Update subsubmodules
-cd $DOTFILES/zsh/.zprezto/
-notice "Updating subrepo"
-git pull origin master
-notice "Init subsubmodules"
-git submodule init
-notice "Updating subsubmodules"
-git submodule update
+# cd $DOTFILES/zsh/.zprezto/
+# notice "Updating subrepo"
+# git pull origin master
+# notice "Init subsubmodules"
+# git submodule init
+# notice "Updating subsubmodules"
+# git submodule update
 
 cd $DOTFILES
 
