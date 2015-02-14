@@ -8,6 +8,9 @@ bash
 brew-cask
 cmake
 coreutils
+docker
+erlang
+fig
 findutils
 freetype
 gdbm
@@ -28,6 +31,7 @@ libgpg-error
 libksba
 libpng
 libtasn1
+libtiff
 libtool
 libyaml
 mercurial
@@ -44,6 +48,8 @@ postgresql
 python
 rcm
 readline
+reattach-to-user-namespace
+rtmpdump
 ruby
 sqlite
 stow
@@ -53,6 +59,7 @@ tree
 unixodbc
 vim
 weechat
+wxmac
 xz
 z
 zlib

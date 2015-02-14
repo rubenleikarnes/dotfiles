@@ -4,9 +4,12 @@ android-file-transfer
 atom
 bartender
 betterzipql
+boot2docker
 breach
 chromium
+cocktail
 coconutbattery
+codekit
 dash
 disk-inventory-x
 dropbox
@@ -15,6 +18,7 @@ evom
 fantastical
 fileshuttle
 firefox
+font-anonymous-pro
 font-droid-sans
 font-droid-sans-mono
 font-fira-mono (!)
@@ -29,6 +33,7 @@ font-roboto
 font-source-code-pro
 font-source-sans-pro
 font-source-serif-pro
+font-ubuntu
 forklift
 gimp
 github
@@ -39,6 +44,8 @@ imageoptim
 instacast
 iterm2
 licecap
+liteicon
+little-snitch
 monochrome (!)
 moom
 mysqlworkbench
@@ -56,11 +63,14 @@ sketch-beta
 skype
 spectacle
 spotify
+steam
 sublime-text3
 suspicious-package
 teamviewer
 the-unarchiver
 transmission
 unrarx
+vagrant-manager
+virtualbox
 vlc
-webp-quicklook
+webp-quicklook (!)
