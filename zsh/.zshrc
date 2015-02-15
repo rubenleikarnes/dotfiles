@@ -25,7 +25,10 @@ PATH=$HOME/.rvm/gems/ruby-2.0.0-p353/bin:$PATH # Personal binaries
 export PATH
 
 source $HOME/.zalias
-source $HOME/.zlocal
+
+if [ -f $HOME/.zlocal ]; then
+	source $HOME/.zlocal
+fi
 
 
 # Highlight section titles in manual pages
@@ -45,7 +48,10 @@ unsetopt RM_STAR_SILENT
 # Waits 10s when rm foo/*
 setopt RM_STAR_WAIT
 
-source '/usr/local/etc/profile.d/z.sh'
+if [ -f '/usr/local/etc/profile.d/z.sh' ]; then
+	source '/usr/local/etc/profile.d/z.sh'
+fi
+
 
 # Dcoker exports
 export DOCKER_HOST=tcp://192.168.59.103:2376
