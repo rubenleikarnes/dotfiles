@@ -92,59 +92,43 @@ install() {
 	done
 }
 
-# Dependencies
-notice "Checking dependencies"
-
-not_met=0
-for need in "${dependencies[@]}"; do
-	dep $need
-	met=$?
-	not_met=$(echo "$not_met + $met" | bc)
-done
-
-if [ $not_met -gt 0 ]; then
-	error "$not_met dependencies not met!"
-	exit 1
-fi
-
 # Assumes $HOME/.dotfiles is *ours*
 if [ -d $HOME/dotfiles ]; then
-	cd $DOTFILES
 
-	# Update Repo
-	notice "Updating"
-	git pull origin master
-	git submodule init
-	git submodule update
+	# Dependencies
+	notice "Checking dependencies"
+
+	not_met=0
+	for need in "${dependencies[@]}"; do
+		dep $need
+		met=$?
+		not_met=$(echo "$not_met + $met" | bc)
+	done
+
+	if [ $not_met -gt 0 ]; then
+		error "$not_met dependencies not met!"
+		exit 1
+	fi
+
+	cd $DOTFILES
 
 	# Backup
 	notice "Backup to $backupdir"
 	backup
+	# Remove old files
 	notice "Removing old files from home"
 	remove
 
-	# Install
+	# Install new symlinks
 	notice "Installing"
 	install
+
+	# Finished
+	notice "Finished"
 else
-	cd $HOME
-	# Clone Repo
-	notice "Downloading"
-	git clone --recursive git://github.com/rub1/dotfiles.git $HOME/dotfiles
-
-	cd $DOTFILES
-
-	# Backup
-	notice "Backup to $backupdir"
-	backup
-	notice "Removing old files from home"
-	remove
-
-	# Install
-	notice "Installing"
-	install
+	# Couldn't find dotfiles
+	error "Couldn't find dotfiles in $HOME, please download using the following link:"
+	error "\"git clone --recursive git://github.com/rub1/dotfiles.git $HOME/dotfiles\""
 fi
 
-# Finished
-notice "Finished"
-exec $SHELL -l
+# exec $SHELL -l
