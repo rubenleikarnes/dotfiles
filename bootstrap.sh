@@ -4,7 +4,7 @@
 # https://github.com/davidfischer/dotfiles/blob/master/install.sh
 
 dotfiles=~/dotfiles
-dependencies=(git stow tmux zsh)
+dependencies=(git stow tmux)
 files=(ack editorconfig git hushlogin nano tmux vim zsh)
 backupdir="$HOME/.dotfiles-backup/$(date "+%Y%m%d-%H%M%S")"
 
@@ -48,26 +48,38 @@ dep() {
 # Creates a new backup direcotry and copys files that will be symlinked
 backup() {
 	mkdir -p $backupdir
-	for file in "${files[@]}"; do
+	for folder in "${files[@]}"; do
 		cd $dotfiles
 
-		local myfiles=$(ls -A ${file[@]})
+		local myfiles=()
+
+		for item in "$(ls -A1 ${folder[@]})"; do
+			myfiles=("${myfiles[@]}" $item)
+		done
 
 		for fil in "${myfiles[@]}"; do
-			in_array $fil || cp -Rf "$HOME/$fil" "$backupdir/$fil" && c_list "$fil"
+			if [ -e $HOME/${fil} ]; then
+				in_array $fil || cp -Rf "$HOME/$fil" "$backupdir/$fil" && c_list "$fil"
+			fi
 		done
 	done
 }
 
 # Removes old files
 remove() {
-	for file in "${files[@]}"; do
+	for folder in "${files[@]}"; do
 		cd $dotfiles
 
-		local myfiles=$(ls -A ${file[@]})
+		local myotherfiles=()
 
-		for fil in "${myfiles[@]}"; do
-			in_array $fil || rm -rf "$HOME/$fil" && c_list "$fil"
+		for item in "$(ls -A1 ${folder[@]})"; do
+			myotherfiles=("${myotherfiles[@]}" $item)
+		done
+
+		for fil in "${myotherfiles[@]}"; do
+			if [ -e $HOME/${fil} ]; then
+				in_array $fil || rm -rf "$HOME/$fil" && c_list "$fil"
+			fi
 		done
 	done
 }
@@ -97,8 +109,6 @@ if [ $not_met -gt 0 ]; then
 	exit 1
 fi
 
-cd $DOTFILES
-
 # Update Repo
 # notice "Updating repo"
 # git pull origin master
@@ -115,8 +125,6 @@ cd $DOTFILES
 # git submodule init
 # notice "Updating subsubmodules"
 # git submodule update
-
-cd $DOTFILES
 
 # Install
 notice "Backup to $backupdir"
