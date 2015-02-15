@@ -9,31 +9,15 @@ coreutils
 git
 stow
 tmux
-z
 zsh
 ```
 
 ## Install
 
 ``` 
-
-$ bash < <( curl https://raw.githubusercontent.com/rub1/dotfiles/master/bootstrap.sh )
-
-chsh -s $(which zsh)
-git clone --recursive https://github.com/rub1/dotfiles.git ~/dotfiles
+git clone --recursive git://github.com/rub1/dotfiles.git $HOME/dotfiles
 cd ~/dotfiles
-git submodule init
-git submodule update
-cd ~/dotfiles/zsh/.zprezto
-git submodule init
-git submodule update
-cd ~/dotfiles
-stow editorconfig
-stow git
-stow hushlogin
-stow tmux
-stow vim
-stow zsh
+sh bootstrap.sh
 ```
 
 Stow symlinks to parent directory so you need to be in the dotfiles dir to symlink the folders. If you need to specify target other than parent use the following pattern:
