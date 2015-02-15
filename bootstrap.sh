@@ -108,7 +108,7 @@ if [ $not_met -gt 0 ]; then
 fi
 
 # Assumes $HOME/.dotfiles is *ours*
-if [ -d $HOME/.dotfiles ]; then
+if [ -d $HOME/dotfiles ]; then
 	cd $DOTFILES
 
 	# Update Repo
@@ -130,9 +130,9 @@ else
 	cd $HOME
 	# Clone Repo
 	notice "Downloading"
-	git clone --recursive git://github.com/rub1/dotfiles.git $HOME/.dotfiles
+	git clone --recursive git://github.com/rub1/dotfiles.git $HOME/dotfiles
 
-	cd $DOTf
+	cd $DOTFILES
 
 	# Backup
 	notice "Backup to $backupdir"
