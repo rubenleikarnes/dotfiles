@@ -28,7 +28,7 @@ in_array() {
   local hay needle=$1
   shift
   for hay; do
-    [[ $hay == $needle ]] && return 0
+	[[ $hay == $needle ]] && return 0
   done
   return 1
 }
@@ -45,7 +45,7 @@ dep() {
 	return $installed
 }
 
-# Creates a new backup direcotry and copys files that will be symlinked
+# Creates a new backup directory and copys old files
 backup() {
 	mkdir -p $backupdir
 	for folder in "${files[@]}"; do
@@ -95,8 +95,6 @@ install() {
 # Dependencies
 notice "Checking dependencies"
 
-cd $DOTFILES
-
 not_met=0
 for need in "${dependencies[@]}"; do
 	dep $need
@@ -109,30 +107,43 @@ if [ $not_met -gt 0 ]; then
 	exit 1
 fi
 
-# Update Repo
-# notice "Updating repo"
-# git pull origin master
-# notice "Init submodules"
-# git submodule init
-# notice "Updating submodules"
-# git submodule update
+# Assumes $HOME/.dotfiles is *ours*
+if [ -d $HOME/.dotfiles ]; then
+	cd $DOTFILES
 
-# Update subsubmodules
-# cd $DOTFILES/zsh/.zprezto/
-# notice "Updating subrepo"
-# git pull origin master
-# notice "Init subsubmodules"
-# git submodule init
-# notice "Updating subsubmodules"
-# git submodule update
+	# Update Repo
+	notice "Updating"
+	git pull origin master
+	git submodule init
+	git submodule update
 
-# Install
-notice "Backup to $backupdir"
-backup
-notice "Removing old files from home"
-remove
-notice "Installing"
-install
+	# Backup
+	notice "Backup to $backupdir"
+	backup
+	notice "Removing old files from home"
+	remove
+
+	# Install
+	notice "Installing"
+	install
+else
+	cd $HOME
+	# Clone Repo
+	notice "Downloading"
+	git clone --recursive git://github.com/rub1/dotfiles.git $HOME/.dotfiles
+
+	cd $DOTf
+
+	# Backup
+	notice "Backup to $backupdir"
+	backup
+	notice "Removing old files from home"
+	remove
+
+	# Install
+	notice "Installing"
+	install
+fi
 
 # Finished
 notice "Finished"
