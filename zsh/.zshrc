@@ -24,10 +24,16 @@ PATH=$HOME/.rvm/gems/ruby-2.0.0-p353/bin:$PATH # Personal binaries
  
 export PATH
 
-source $HOME/.zalias
+if [ -f $HOME/.termsupport.zsh ]; then
+	source $HOME/.termsupport.zsh
+fi
 
 if [ -f $HOME/.zlocal ]; then
 	source $HOME/.zlocal
+fi
+
+if [ -f $HOME/.zalias ]; then
+	source $HOME/.zalias
 fi
 
 
