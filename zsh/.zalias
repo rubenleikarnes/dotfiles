@@ -4,7 +4,6 @@ alias v="vim"
 alias t="tmux"
 
 # Folders and path
-alias .="pwd"
 alias cd..='cd ..'
 alias cd/='cd /'
 
