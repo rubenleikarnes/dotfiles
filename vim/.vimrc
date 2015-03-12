@@ -53,7 +53,8 @@ endif
 " Show line numbers
 set number
 "set background=dark
-colorscheme base16-default
+"colorscheme base16-default
+colorscheme euphrasia
 "colorscheme Tomorrow
 "color base16-ocaen
 set guifont=Inconsolata\ for\ Powerline:h14
