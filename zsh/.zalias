@@ -182,9 +182,11 @@ function ff() {
 	ack -f | ack "$1"
 }
 
-# Open twitch stream in VLC with best quality
+# Open twitch stream in VLC
 function twitch() {
-	if [[ -n $1 ]]; then
+	if [[ -n $2 ]]; then
+		livestreamer twitch.tv/$1 $2
+	elif [[ -n $1 ]]; then
 		livestreamer twitch.tv/$1 best
 	else
 		echo "You need to specify what strema to watch"
