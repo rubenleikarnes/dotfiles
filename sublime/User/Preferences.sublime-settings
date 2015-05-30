@@ -9,7 +9,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "wide",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/SublimeLinter/Seti (SL).tmTheme",
+	"color_scheme": "Packages/Base16 Color Schemes/base16-ocean.dark.tmTheme",
 	"default_line_ending": "unix",
 	"detect_slow_plugins": true,
 	"disable_colored_group_labels": true,
@@ -29,23 +29,23 @@
 	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
-		".git",
 		".bundle",
 		"*cache*",
-		".svn",
-		".hg",
 		".cache",
+		".git",
+		".hg",
+		".svn",
 		".swp"
 	],
 	"font_face": "Ubuntu Mono",
 	"font_options": "subpixel_antialias",
-	"font_size": 15,
+	"font_size": 16,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Markdown"
+		"Markdown",
+		"Vintage"
 	],
 	"indent_guide_options":
 	[
