@@ -23,15 +23,15 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-sensible'
 Bundle 'chriskempson/base16-vim'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'editorconfig/editorconfig-vim'
+" Bundle 'editorconfig/editorconfig-vim'
 " lean & mean status/tabline for vim thats light as air
 Bundle 'bling/vim-airline'
 " provides insert mode auto-completion for quotes, parens, brackets, etc.
-Bundle 'Raimondi/delimitMate'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jby/tmux.vim'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'valloric/MatchTagAlways'
+" Bundle 'Raimondi/delimitMate'
+" Bundle 'scrooloose/nerdtree'
+" Bundle 'jby/tmux.vim'
+" Bundle 'cakebaker/scss-syntax.vim'
+" Bundle 'valloric/MatchTagAlways'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
