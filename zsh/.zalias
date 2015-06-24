@@ -92,7 +92,7 @@ function o() {
 }
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; echo " "; echo  "  \033[1;30m✔\033[0m  Everything is up to date"'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade -all; brew cleanup; echo " "; echo  "  \033[1;30m✔\033[0m  Everything is up to date"'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -189,6 +189,15 @@ function twitch() {
 	elif [[ -n $1 ]]; then
 		livestreamer twitch.tv/$1 best
 	else
-		echo "You need to specify what strema to watch"
+		echo "You need to specify what stream to watch"
+	fi
+}
+
+# Open twitch stream chat in default browser
+function twchat() {
+	if [[ -n $1 ]]; then
+		open http://www.twitch.tv/$1/chat
+	else
+		echo "You need to specify what stream chat to open"
 	fi
 }
