@@ -1,66 +1,170 @@
-ack
-android-sdk
-apple-gcc42
-archey
-autoconf
-automake
-bash
-brew-cask
-cmake
-coreutils
-docker
-erlang
-fig
-findutils
-freetype
-gdbm
-gettext
-git
-gmp
-gnu-sed
-gnupg
-gnutls
-graphicsmagick
-grep
-htop-osx
-imagemagick
-jpeg
-libevent
-libgcrypt
-libgpg-error
-libksba
-libpng
-libtasn1
-libtiff
-libtool
-libyaml
-mercurial
-moreutils
-mysql
-nettle
-node
-openssl
-ossp-uuid
-pcre
-php55
-pkg-config
-postgresql
-python
-rcm
-readline
-reattach-to-user-namespace
-rtmpdump
-ruby
-sqlite
-stow
-tarsnap
-tmux
-tree
-unixodbc
-vim
-weechat
-wxmac
-xz
-z
-zlib
-zsh
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
+tap 'caskroom/versions'
+tap 'homebrew/bundle'
+tap 'homebrew/dupes'
+tap 'homebrew/php'
+tap 'homebrew/versions'
+tap 'telemachus/desc'
+tap 'thoughtbot/formulae'
+brew 'ack'
+brew 'android-sdk'
+brew 'archey'
+brew 'autoconf'
+brew 'xz'
+brew 'automake'
+brew 'readline'
+brew 'bash'
+brew 'pcre'
+brew 'gettext'
+brew 'git'
+brew 'docker'
+brew 'boot2docker'
+brew 'cmake'
+brew 'coreutils'
+brew 'libtool'
+brew 'openssl'
+brew 'unixodbc'
+brew 'jpeg'
+brew 'libpng'
+brew 'libtiff'
+brew 'wxmac'
+brew 'erlang'
+brew 'libyaml'
+brew 'fig'
+brew 'findutils'
+brew 'freetype'
+brew 'gdbm'
+brew 'pkg-config'
+brew 'jbig2dec'
+brew 'little-cms2'
+brew 'ghostscript'
+brew 'libffi'
+brew 'glib'
+brew 'gmp'
+brew 'gnu-sed', args: ['default-names']
+brew 'gnupg'
+brew 'libtasn1'
+brew 'nettle'
+brew 'gnutls'
+brew 'graphicsmagick'
+brew 'htop-osx'
+brew 'icu4c'
+brew 'imagemagick'
+brew 'irssi'
+brew 'libevent'
+brew 'libgpg-error'
+brew 'libgcrypt'
+brew 'libksba'
+brew 'mercurial'
+brew 'moreutils'
+brew 'mysql'
+brew 'sqlite'
+brew 'python'
+brew 'node'
+brew 'ossp-uuid'
+brew 'postgresql'
+brew 'reattach-to-user-namespace'
+brew 'rtmpdump'
+brew 'ruby'
+brew 'stow'
+brew 'tarsnap'
+brew 'tmux'
+brew 'tree'
+brew 'vim'
+brew 'weechat'
+brew 'z'
+brew 'zsh'
+brew 'caskroom/cask/brew-cask'
+brew 'homebrew/dupes/apple-gcc42'
+brew 'homebrew/dupes/grep'
+brew 'homebrew/dupes/zlib'
+brew 'homebrew/php/php55', args: ['with-gmp']
+brew 'thoughtbot/formulae/rcm'
+cask 'airfoil'
+cask 'alfred'
+cask 'android-file-transfer'
+cask 'bartender'
+cask 'betterzipql'
+cask 'beyond-compare'
+cask 'boot2docker'
+cask 'breach'
+cask 'chromium'
+cask 'cocktail'
+cask 'coconutbattery'
+cask 'codekit'
+cask 'dash'
+cask 'disk-inventory-x'
+cask 'dropbox'
+cask 'easysimbl'
+cask 'evernote'
+cask 'evom'
+cask 'fantastical'
+cask 'fileshuttle'
+cask 'firefox'
+cask 'firefox-beta'
+cask 'font-anonymous-pro'
+cask 'font-comfortaa'
+cask 'font-droid-sans'
+cask 'font-droid-sans-mono'
+cask 'font-fantasque-sans-mono'
+cask 'font-fira-mono'
+cask 'font-fira-sans'
+cask 'font-inconsolata'
+cask 'font-inconsolata-dz'
+cask 'font-inconsolata-dz-for-powerline'
+cask 'font-josefin-sans'
+cask 'font-lato'
+cask 'font-m-plus'
+cask 'font-noto-sans'
+cask 'font-open-sans'
+cask 'font-roboto'
+cask 'font-source-code-pro'
+cask 'font-source-sans-pro'
+cask 'font-source-serif-pro'
+cask 'font-ubuntu'
+cask 'forklift'
+cask 'gimp'
+cask 'github'
+cask 'google-chrome'
+cask 'google-chrome-canary'
+cask 'hocus-focus'
+cask 'imagealpha'
+cask 'imageoptim'
+cask 'inssider'
+cask 'instacast'
+cask 'istat-menus'
+cask 'iterm2'
+cask 'licecap'
+cask 'liteicon'
+cask 'little-snitch'
+cask 'monochrome'
+cask 'moom'
+cask 'mysqlworkbench'
+cask 'ngrok'
+cask 'omnifocus'
+cask 'opera'
+cask 'plex-home-theater'
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'qlprettypatch'
+cask 'qlstephen'
+cask 'quicklook-csv'
+cask 'quicklook-json'
+cask 'silverlight'
+cask 'sketch-beta'
+cask 'sketchup'
+cask 'skype'
+cask 'spectacle'
+cask 'spotify'
+cask 'steam'
+cask 'sublime-text3'
+cask 'suspicious-package'
+cask 'teamviewer'
+cask 'the-unarchiver'
+cask 'transmission'
+cask 'unrarx'
+cask 'vagrant'
+cask 'vagrant-manager'
+cask 'virtualbox'
+cask 'webp-quicklook'
