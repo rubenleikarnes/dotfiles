@@ -1,0 +1,14 @@
+"*":
+  "exception-reporting":
+    userId: "cf5f2894-20a5-3010-0fdb-bf53ec064336"
+  welcome:
+    showOnStartup: false
+  core: {}
+  editor:
+    invisibles: {}
+    tabLength: 4
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+  "autocomplete-plus": {}
