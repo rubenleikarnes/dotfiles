@@ -1,5 +1,21 @@
 ## Changelog
 
+### 5.4.7
+- #269
+
+### 5.4.6
+ - Refactor to fix #266
+
+### 5.4.5
+- #265
+
+### 5.4.4
+- #263
+
+### 5.4.3
+- Add deactivate method to package
+- Refactoring
+
 ### 5.4.2
 - #261
 
