@@ -201,3 +201,12 @@ function twchat() {
 		echo "You need to specify what stream chat to open"
 	fi
 }
+
+# Open new note file in sublime or open notes folder in sublime
+function notes() {
+	if [[ -n $1 ]]; then
+		subl ~/Dropbox/Notes/$1.md && subl ~/Dropbox/Notes -na
+	else
+		subl ~/Dropbox/Notes/
+	fi
+}
