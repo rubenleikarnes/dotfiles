@@ -37,5 +37,8 @@
 
 	// Tab switch in order insted os last used
 	{ "keys": ["ctrl+tab"], "command": "next_view" },
-	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" }
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+
+	// New file super+t
+	{ "keys": ["super+t"], "command": "new_file" }
 ]

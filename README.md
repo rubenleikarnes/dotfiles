@@ -10,14 +10,15 @@ git
 stow
 tmux
 zsh
+reattach-to-user-namespace
 ```
 
 ## Install
 
 ``` 
+Set default shell in System Preferences  \'/usr/local/bin/zsh\'
 git clone --recursive git://github.com/rub1/dotfiles.git $HOME/dotfiles
-cd ~/dotfiles
-sh bootstrap.sh
+git submodule update --init --recursive
 ```
 
 Stow symlinks to parent directory so you need to be in the dotfiles dir to symlink the folders. If you need to specify target other than parent use the following pattern:
@@ -36,12 +37,8 @@ Restart terminal session
 
 ## Terminal settings
 
-- Theme [Ocean Dark](https://github.com/chriskempson/base16-iterm2)
+- Theme [Ocean Dark](iterm2/euphrasia.itermcolors) by [jathu](https://github.com/jathu/)
 - [Inconsolata (Powerline)](https://github.com/Lokaltog/powerline-fonts/tree/master/Inconsolata) (Size 14pt)
-
-## Application list
-
-- [New computer application list (osx)](Applications.md)
 
 ## Sources
 
@@ -51,4 +48,5 @@ Restart terminal session
 
 ## Screenshot
 
-![Screenshot of terminal](screenshot.png)
+![Screenshot of iterm2](iterm.png)
+![Screenshot of sublime text](sublime.png)
