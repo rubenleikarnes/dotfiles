@@ -37,7 +37,7 @@ Restart terminal session
 
 ## Terminal settings
 
-- Theme [Ocean Dark](iterm2/euphrasia.itermcolors) by [jathu](https://github.com/jathu/)
+- Theme [Euphrasia](iterm2/euphrasia.itermcolors) by [jathu](https://github.com/jathu/)
 - [Inconsolata (Powerline)](https://github.com/Lokaltog/powerline-fonts/tree/master/Inconsolata) (Size 14pt)
 
 ## Sources
