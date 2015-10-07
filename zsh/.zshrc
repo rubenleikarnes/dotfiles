@@ -12,8 +12,6 @@ fi
 
 # Path additions
 # List items in the reverse order you want them to appear in $PATH (i.e. last items appear first ).
-PATH=$HOME/.rvm/gems/ruby-2.0.0-p353/bin:$PATH # Personal binaries
-PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 PATH=/usr/local/opt/ruby/bin:$PATH # Newer Ruby version
 PATH=/usr/local/opt/php54:$PATH # Newer PHP version
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH # Updated coreutinls
@@ -79,4 +77,5 @@ export HISTFILESIZE=$HISTSIZE;
 export HISTCONTROL=ignoredups;
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 
-source '/Users/ruben/.rvm/scripts/rvm'
+# Rbenv stuff
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

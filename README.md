@@ -39,6 +39,7 @@ Restart terminal session
 
 - Theme [Euphrasia](iterm2/euphrasia.itermcolors) by [jathu](https://github.com/jathu/)
 - [Inconsolata (Powerline)](https://github.com/Lokaltog/powerline-fonts/tree/master/Inconsolata) (Size 14pt)
+- [Use ⌥ ← and ⌥→ to jump forwards/backwards words in iTerm](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x)
 
 ## Sources
 
