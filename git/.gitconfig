@@ -1,55 +1,111 @@
 [user]
 	name = rub1
 	email = ruben.leikarnes@gmail.com
+
 [core]
 	editor = vim
+
+	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
+
+	# Make `git rebase` safer on OS X
+	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+	trustctime = false
+
+	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
+	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+	precomposeunicode = false
+
 [color]
-	# Use colors in Git commands that are capable of colored output when outputting to the terminal
+	# Use colors in Git commands that are capable of colored output when
+	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
 	ui = auto
+
 [color "branch"]
 	current = yellow reverse
 	local = yellow
 	remote = green
+
 [color "diff"]
 	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+
 [color "status"]
 	added = yellow
 	changed = green
 	untracked = cyan
+
+
+[diff]
+	# Detect copies as well as renames
+	renames = copies
+
+[diff "bin"]
+	# Use `hexdump` to diff binary files
+	textconv = hexdump -v -C
+
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+
+[help]
+	# Automatically correct and execute mistyped commands
+	autocorrect = 1
+
 [alias]
 	up = push
 	down = pull
+
 	# View the SHA, description, and history graph of the latest 20 commits
-	l = log --pretty=oneline -n 20 --graph
-	lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	lg = "log --color -n 20 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
 	# View the current working tree status using the short format
 	s = status -s
+
 	# Show the diff between the latest commit and the current state
-	d = !"git diff-index --quiet HEAD; git diff --patch-with-stat"
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+	# Pull in remote changes for the current repository and all its submodules
+	p = !"git pull; git submodule foreach git pull origin master"
+
 	# Commit all changes
-	ca = !git commit -av	
+	ca = !git add -A && git commit -av
+
+	# Show verbose output about tags, branches or remotes
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+
 	# Undo
 	undo = "reset --hard HEAD~1"
+
 	# Shows unpushed files / commited files that havent been pushed
 	unpushed = "log --branches --not --remotes --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
 	# Shorten Commit
 	c = commit -v
+
+	# List contributors with number of commits
+	contributors = shortlog --summary --numbered
+
 [push]
 	default = simple
+	
+	# Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
+
 	# Any GitHub repo with my username should be checked out r/w by default
 	# http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
 	[url "git@github.com:rub1/"]
 		insteadOf = "git://github.com/rub1/"
+
 [credential]
 	helper = osxkeychain
+
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
