@@ -15,7 +15,6 @@ fi
 PATH=/usr/local/opt/ruby/bin:$PATH # Newer Ruby version
 PATH=/usr/local/opt/php54:$PATH # Newer PHP version
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH # Updated coreutinls
-PATH=/usr/local/share/npm/bin:$PATH # NPM
 PATH=/usr/local/share:$PATH # Local share
 PATH=/usr/local/bin:$PATH # User binaries
 PATH=/usr/local/lib:$PATH # User library
