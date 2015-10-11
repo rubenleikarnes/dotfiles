@@ -41,7 +41,7 @@
 	# Shows unpushed files / commited files that havent been pushed
 	unpushed = "log --branches --not --remotes --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 	# Shorten Commit
-	c = commit
+	c = commit -v
 [push]
 	default = simple
 	# Any GitHub repo with my username should be checked out r/w by default
