@@ -18,4 +18,3 @@ indent_size = 2
 [{package.json,*.yml,*.rb,Gemfile,*.erb}]
 indent_style = space
 indent_size = 2
-
