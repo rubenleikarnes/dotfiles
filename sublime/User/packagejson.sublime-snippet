@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[{
+	"name": "Project",
+	"version": "1.0.0",
+	"description": "Lorem ipsum dolor sit amet",
+	"license": "MIT",
+	"repository": "rub1/project",
+	"author": {
+	"name": "Ruben Leikarnes",
+	"email": "ruben.leikarnes@gmail.com",
+	"url": "rub1.org"
+	},
+    "devDependencies": {
+		"gulp": "~3.9.0",
+		"gulp-ruby-sass": "~2.0.4",
+		"browser-sync": "~2.9.11"
+    },
+    "dependencies": {
+        "normalize.css": "~3.0.3"
+    }
+}]]></content>
+	<tabTrigger>package1</tabTrigger>
+    <description>Package.json defaults</description>
+</snippet>

@@ -34,6 +34,7 @@
 		".cache",
 		".git",
 		".hg",
+		"node_modules",
 		".svn",
 		".swp"
 	],
