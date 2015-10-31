@@ -81,6 +81,9 @@ function s() {
 	fi;
 }
 
+# prezto stole my function
+unalias o
+
 # `o` with no arguments opens the current directory, otherwise opens the given
 # location
 function o() {
@@ -204,9 +207,16 @@ function twchat() {
 
 # Open new note file in sublime or open notes folder in sublime
 function notes() {
+	NOTES=~/Dropbox/Notes
+
 	if [[ -n $1 ]]; then
-		subl ~/Dropbox/Notes/$1.md && subl ~/Dropbox/Notes -na
+		# If sublime is editor, open new window and add notes folder to tree
+		if [[ $EDITOR == "subl" ]]; then 
+			$EDITOR $NOTES -na
+		fi
+
+		$EDITOR $NOTES/$1.md
 	else
-		subl ~/Dropbox/Notes/
+		$EDITOR $NOTES
 	fi
 }
