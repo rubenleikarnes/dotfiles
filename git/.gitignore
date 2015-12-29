@@ -16,3 +16,6 @@ Thumbs.db
 # Cache files
 *.swp
 .sass-cache
+
+# Node packages
+node_modules
