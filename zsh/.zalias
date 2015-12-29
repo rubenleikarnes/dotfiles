@@ -30,6 +30,9 @@ alias p="cd ~/Projects"
 alias dot="cd ~/dotfiles"
 alias temp="cd ~/Projects/_temp"
 
+# Github stars to pinboard
+alias pinstars="python ~/Repos/pin-stars/pin-github-stars.py -u rub1"
+
 # oh-my-zsh warning for bower
 alias bower='noglob bower'
 
@@ -62,6 +65,9 @@ alias lsf='ls -l --color | grep -v "^d"'
 
 # Get week number
 alias week='date +%V'
+
+# Rake db:migrate 
+alias rdbm='rake db:migrate'
 
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
 # the `.git` directory, listing directories first. The output gets piped into
