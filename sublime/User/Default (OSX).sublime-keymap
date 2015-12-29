@@ -40,5 +40,8 @@
 	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
 
 	// New file super+t
-	{ "keys": ["super+t"], "command": "new_file" }
+	{ "keys": ["super+t"], "command": "new_file" },
+
+	// Hotkey pref stopped working
+	{ "keys": ["super+,"], "command": "open_file", "args": {"file": "${packages}/User/Preferences.sublime-settings"} },
 ]
