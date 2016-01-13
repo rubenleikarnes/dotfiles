@@ -2,6 +2,8 @@
 	"Seti_SB_bright": true,
 	"Seti_no_bar_undertabs": true,
 	"Seti_sb_tree_tiny": true,
+	"Seti_show_group_arrows": true,
+	"Seti_sidebar_font_Hack": true,
 	"Seti_tabs_med": true,
 	"auto_complete": true,
 	"auto_indent": true,
