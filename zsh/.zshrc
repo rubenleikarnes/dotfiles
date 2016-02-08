@@ -78,3 +78,6 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 
 # Rbenv stuff
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# global node modules
+export NODE_PATH=/usr/local/lib/node_modules
