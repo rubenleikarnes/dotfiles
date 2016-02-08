@@ -66,7 +66,7 @@ alias lsf='ls -l --color | grep -v "^d"'
 # Get week number
 alias week='date +%V'
 
-# Rake db:migrate 
+# Rake db:migrate
 alias rdbm='rake db:migrate'
 
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
@@ -85,6 +85,11 @@ function s() {
 	else
 		subl "$@";
 	fi;
+}
+
+# 'code' opens files/folders in Visual Studios Code
+function code() {
+	VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*;
 }
 
 # prezto stole my function
@@ -217,7 +222,7 @@ function notes() {
 
 	if [[ -n $1 ]]; then
 		# If sublime is editor, open new window and add notes folder to tree
-		if [[ $EDITOR == "subl" ]]; then 
+		if [[ $EDITOR == "subl" ]]; then
 			$EDITOR $NOTES -na
 		fi
 
