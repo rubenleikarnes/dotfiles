@@ -6,6 +6,12 @@
 # Use smart-case by default
 --smart-case
 
+# follow symlinks
+--follow
+
+# ignore directories
+--ignore-dir=node_modules
+
 # Extended File Types
 --type-add=css=.less,.scss,.sass
 --type-add=ruby=.haml
