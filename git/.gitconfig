@@ -3,7 +3,7 @@
 	email = ruben.leikarnes@gmail.com
 
 [core]
-	editor = vim
+	editor = nvim 
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
