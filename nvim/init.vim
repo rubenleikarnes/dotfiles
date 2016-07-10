@@ -23,6 +23,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'editorconfig/editorconfig-vim' " Autoload .editorconfig "
 	Plug 'airblade/vim-gitgutter' " Git status in the gutter"
 
+	Plug 'ryanoasis/vim-devicons' " Devicons in font "
+
 call plug#end()
 
 
@@ -42,6 +44,7 @@ set diffopt+=vertical
 syntax on " switch syntax highlighting on "
 set guifont=Hack:h15
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
+highlight Comment cterm=italic
 set number " Show line numbers "
 set relativenumber " show relative line numbers "
 set background=dark " Dark theme "
