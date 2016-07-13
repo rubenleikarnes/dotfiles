@@ -94,7 +94,7 @@ setw -g mode-bg blue
 setw -g mode-fg black
 
 # window status
-setw -g window-status-format "#[bg=colour236]#[fg=colour7] #I #[fg=color14]#[bg=colour0] #W "
+setw -g window-status-format "#[bg=colour238]#[fg=colour7] #I #[fg=color14]#[bg=colour236] #W "
 setw -g window-status-current-format "#[bg=colour6]#[fg=colour7] #I #[fg=colour7]#[bg=colour236] #W "
 setw -g window-status-current-bg colour0
 setw -g window-status-current-fg colour11
