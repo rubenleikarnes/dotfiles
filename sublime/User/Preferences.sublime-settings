@@ -51,8 +51,23 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"AutoFileName",
+		"Boron Color Scheme",
+		"Bower",
+		"DashDoc",
+		"Dayle Rees Color Schemes",
+		"Dracula Color Scheme",
+		"Emmet",
+		"ERB Autocomplete",
+		"Gist",
 		"Git",
-		"Vintage"
+		"GitGutter",
+		"Monokai Extended",
+		"Theme - Flatgrammer",
+		"Theme - Flatland",
+		"Theme - Glacier",
+		"Vintage",
+		"WordCount"
 	],
 	"indent_guide_options":
 	[
