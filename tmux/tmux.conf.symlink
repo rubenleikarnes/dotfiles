@@ -118,17 +118,6 @@ set -g clock-mode-colour blue
 # Copy & paste
 #
 
-# Clunkily connect tmux buffers with the pasteboard.
-#bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
-
-# http://superuser.com/a/838233
-# Is needed to open non terminal apps with options 
-# etc: open sublime with current dir
-#set-option -g default-command "reattach-to-user-namespace -l /usr/local/bin/zsh"
-
-# Bind escape to copy-mode
-#bind Escape copy-mode
-
 # https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
 # Use vim keybindings in copy mode
 setw -g mode-keys vi
