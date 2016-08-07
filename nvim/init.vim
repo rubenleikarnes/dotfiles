@@ -25,6 +25,7 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'ryanoasis/vim-devicons' " Devicons in font "
 
+	Plug 'nacitar/terminalkeys.vim' " Som things to improve key support in rxvt "
 call plug#end()
 
 
@@ -56,6 +57,10 @@ let g:airline_theme='oceanicnext'
 set backspace=indent,eol,start " make backspace behave in a sane manner "
 set history=1000 " change history to 1000 "
 
+
+if &term =~ '256color'
+	set t_ut=
+endif
 
 " Abbreviations "
 abbr funciton function
