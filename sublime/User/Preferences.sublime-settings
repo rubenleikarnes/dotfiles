@@ -1,5 +1,4 @@
 {
-	"Seti_SB_bright": true,
 	"Seti_no_bar_undertabs": true,
 	"Seti_sb_tree_tiny": true,
 	"Seti_show_group_arrows": true,
@@ -51,6 +50,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"GitGutter",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -67,6 +67,7 @@
 	"match_brackets_braces": true,
 	"match_brackets_content": true,
 	"match_brackets_square": true,
+	"mouse_wheel_tabswitch": false,
 	"new_window_settings":
 	{
 		"show_minimap": false
