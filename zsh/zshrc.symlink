@@ -21,15 +21,18 @@ fi
 # Path additions
 # List items in the reverse order you want them to appear in $PATH (i.e. last items appear first ).
 PATH=/usr/local/opt/ruby/bin:$PATH # Newer Ruby version
-PATH=/usr/local/opt/php54:$PATH # Newer PHP version
+# PATH=/usr/local/opt/php71/bin:$PATH # Use brew php instead os macOS php
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH # Updated coreutinls
 PATH=/usr/local/share:$PATH # Local share
+PATH=/usr/local/sbin:$PATH # User binaries
 PATH=/usr/local/bin:$PATH # User binaries
 PATH=/usr/local/lib:$PATH # User library
 PATH=$HOME/.bin:$PATH # Personal binaries
 
- 
+
 export PATH
+
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 if [ -f $ZHOME/termsupport.zsh ]; then
 	source $ZHOME/termsupport.zsh
@@ -91,3 +94,4 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # global node modules
 export NODE_PATH=/usr/local/lib/node_modules
+

@@ -46,3 +46,7 @@ vim/.vim/bundle/*
 ###############
 zsh/.zlocal
 Archive
+
+# Sublime Package Control Cert Copy #
+####################################
+*.crt
