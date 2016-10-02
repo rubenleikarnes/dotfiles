@@ -64,6 +64,9 @@ alias lsd='ls -l --color | grep "^d"'
 # List only files
 alias lsf='ls -l --color | grep -v "^d"'
 
+# Prezto stole localtunnel alias
+unalias lt
+
 # Get week number
 alias week='date +%V'
 
@@ -92,9 +95,6 @@ function s() {
 function code() {
 	VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*;
 }
-
-# prezto stole my function
-#unalias o
 
 # `o` with no arguments opens the current directory, otherwise opens the given
 # location
