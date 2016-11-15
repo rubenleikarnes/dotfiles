@@ -3,6 +3,14 @@ alias g="git"
 alias v="nvim"
 alias t="tmux"
 alias vim="nvim"
+alias rvim="/usr/bin/vim"
+
+# reload zsh config
+alias reload!='source ~/.zshrc'
+
+# Helpers
+alias df='df -h' # disk free, in Gigabytes, not bytes
+alias du='du -h -c' # calculate disk usage for a folder
 
 # Folders and path
 alias cd..='cd ..'
@@ -270,3 +278,4 @@ function extract() {
         echo "'$1' is not a valid file"
     fi
 }
+

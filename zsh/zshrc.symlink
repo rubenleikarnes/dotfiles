@@ -35,17 +35,9 @@ export PATH
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-if [ -f $ZHOME/termsupport.zsh ]; then
-	source $ZHOME/termsupport.zsh
-fi
 
-if [ -f $ZHOME/zlocal ]; then
-	source $ZHOME/zlocal.zsh
-fi
-
-if [ -f $ZHOME/zalias.zsh ]; then
-	source $ZHOME/zalias.zsh
-fi
+# load all zsh config files in dotfiles/zsh
+for config ($ZHOME/*.zsh) source $config
 
 
 # Highlight section titles in manual pages

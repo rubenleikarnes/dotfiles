@@ -37,6 +37,7 @@
 		".zlocal",
 		".zpreztorc",
 		".zalias",
-		"conf"
+		"conf",
+		"symlink"
 	]
 }
