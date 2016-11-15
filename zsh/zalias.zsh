@@ -202,7 +202,7 @@ function twitch() {
 	if [[ -n $2 ]]; then
 		livestreamer twitch.tv/$1 $2
 	elif [[ -n $1 ]]; then
-		livestreamer twitch.tv/$1 best
+		livestreamer twitch.tv/$1 720p30 
 	else
 		echo "You need to specify what stream to watch"
 	fi
