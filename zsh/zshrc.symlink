@@ -20,6 +20,7 @@ fi
 
 # Path additions
 # List items in the reverse order you want them to appear in $PATH (i.e. last items appear first ).
+PATH=$PATH:$HOME/.yarn/bin # Yarn
 PATH=/usr/local/opt/ruby/bin:$PATH # Newer Ruby version
 # PATH=/usr/local/opt/php71/bin:$PATH # Use brew php instead os macOS php
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH # Updated coreutinls
@@ -95,3 +96,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # global node modules
 export NODE_PATH=/usr/local/lib/node_modules
 
+
+alias craftman="/Users/ruben/.craftman/bin/craftman"
