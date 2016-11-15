@@ -11,10 +11,14 @@
 
 # ignore directories
 --ignore-dir=node_modules
+--ignore-dir=bower_components
 
 # Extended File Types
---type-add=css=.less,.scss,.sass
+--type-add=css=.less,.scss,.sass,.styl
 --type-add=ruby=.haml
 --type-set=coffee=.coffee
 --type-set=markdown=.md,.markdown
 --type-set=json=.json
+--type-set=html=.html,.mustache,.handlebars,.tmpl
+--type-set=svg=.svg
+--type-set=ts=.ts
