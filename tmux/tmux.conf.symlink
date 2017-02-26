@@ -100,9 +100,9 @@ setw -g window-status-current-format "#[bg=colour6]#[fg=colour7] #I #[fg=colour7
 setw -g window-status-current-bg colour0
 setw -g window-status-current-fg colour11
 setw -g window-status-current-attr dim
+setw -g window-status-attr dim
 setw -g window-status-bg green
 setw -g window-status-fg black
-setw -g window-status-attr dim
 #setw -g window-status-content-bg colour0
 #setw -g window-status-content-fg colour11
 #setw -g window-status-content-attr blink
