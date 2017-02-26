@@ -10,7 +10,7 @@ zsh
 git
 tmux
 reattach-to-user-namespace
-[zplug](https://github.com/zplug/zplug/)
+zplug
 ```
 
 ## Install
