@@ -1,59 +1,78 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
-DOTFILES=$HOME/dotfiles
-ZHOME=$DOTFILES/zsh
-
-# Source Prezto.
-#if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-#  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-#fi
-
-
-if [[ -s "$ZHOME/.zprezto/init.zsh" ]]; then
-  source "$ZHOME/.zprezto/init.zsh"
-fi
-
 # Path additions
 # List items in the reverse order you want them to appear in $PATH (i.e. last items appear first ).
-PATH=$PATH:$HOME/.yarn/bin # Yarn
 PATH=/usr/local/opt/ruby/bin:$PATH # Newer Ruby version
-# PATH=/usr/local/opt/php71/bin:$PATH # Use brew php instead os macOS php
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH # Updated coreutinls
 PATH=/usr/local/share:$PATH # Local share
 PATH=/usr/local/sbin:$PATH # User binaries
 PATH=/usr/local/bin:$PATH # User binaries
 PATH=/usr/local/lib:$PATH # User library
-PATH=$HOME/.bin:$PATH # Personal binaries
-
 
 export PATH
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+DOTFILES=$HOME/dotfiles
+ZHOME=$DOTFILES/zsh
+
+
+# zPlug.
+
+source $HOME/.zplug/init.zsh
+
+zplug "zimframework/zim", depth:1, use:"init.zsh", hook-build:"ln -sf $ZPLUG_ROOT/repos/zimframework/zim ~/.zim"
+zplug "modules/editor", depth:1, from:prezto
+zplug "lib/termsupport", depth:1, from:oh-my-zsh
+zplug "mafredri/zsh-async", depth:1, from:github
+zplug "sindresorhus/pure", depth:1, use:pure.zsh, from:github, as:theme
+
+
+# Zim settings
+zmodules=(
+  completion
+  directory
+  environment
+  git
+  history
+  history-substring-search
+  input
+  meta
+  prompt
+  spectrum
+  syntax-highlighting
+  utility
+)
+
+zprompt_theme="pure"
+ztermtitle="%n@%m:%~"
+zdouble_dot_expand="true"
+zhighlighters=(main brackets pattern cursor root)
+
+
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+
+# zplug load --verbose
+zplug load
+
+# Config
 
 # load all zsh config files in dotfiles/zsh
-for config ($ZHOME/*.zsh) source $config
-
+for config ($ZHOME/config/*.zsh) source $config
 
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-# Base16 Shell
-# BASE16_SCHEME="ocean"
-# BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
-# [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
+# Disable Homebrew analytics
+export HOMEBREW_NO_ANALYTICS=1
 
 # Asks before rm foo/*
 unsetopt RM_STAR_SILENT
-
 # Waits 10s when rm foo/*
 setopt RM_STAR_WAIT
 
@@ -61,17 +80,9 @@ if [ -f '/usr/local/etc/profile.d/z.sh' ]; then
 	source '/usr/local/etc/profile.d/z.sh'
 fi
 
-
-# Dcoker exports
-#export DOCKER_HOST=tcp://192.168.59.103:2376
-#export DOCKER_CERT_PATH=/Users/ruben/.boot2docker/certs/boot2docker-vm
-#export DOCKER_CERT_PATH=/Users/ruben/.docker/machine/machines/default/
-#export DOCKER_TLS_VERIFY=1
-
-
-settitle() {
-    printf "\033k$1\033\\"
-}
+# settitle() {
+#     printf "\033k$1\033\\"
+# }
 
 # This will highlight any time you type rm -rf in red
 ZSH_HIGHLIGHT_PATTERNS=('rm -rf*' 'fg=white,bold,bg=red')
@@ -81,12 +92,10 @@ export HISTSIZE=32768;
 export HISTFILESIZE=$HISTSIZE;
 export HISTCONTROL=ignoredups;
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+SAVEHIST=$HISTSIZE
 
 # Rbenv stuff
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # global node modules
 export NODE_PATH=/usr/local/lib/node_modules
-
-
-alias craftman="/Users/ruben/.craftman/bin/craftman"
