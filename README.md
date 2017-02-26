@@ -6,10 +6,11 @@ My startingpoint ~~is~~ was mostly a fork of [Mathias Bynens'](https://github.co
 
 ```
 coreutils
+zsh
 git
 tmux
-zsh
 reattach-to-user-namespace
+[zplug](https://github.com/zplug/zplug/)
 ```
 
 ## Install
@@ -36,8 +37,8 @@ Restart terminal session
 
 ## Terminal settings
 
-- Theme [Euphrasia](iterm2/euphrasia.itermcolors) by [jathu](https://github.com/jathu/)
-- Font Hack
+- Theme: [Oceanic Next](https://github.com/voronianski/oceanic-next-color-scheme)
+- Font: [Hack](https://github.com/chrissimpkins/hack)
 - [Use ⌥ ← and ⌥→ to jump forwards/backwards words in iTerm](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x)
 
 ## Sources
@@ -45,9 +46,5 @@ Restart terminal session
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) 
 - [Artem Sapegin](https://github.com/sapegin/dotfiles)
 - [Harry Roberts](https://github.com/csswizardry/dotfiles)
-- [Nick Nisi](https://github.com/nicknisi)
-
-## Screenshot
-
-![Screenshot of iterm2](iterm.png)
-![Screenshot of sublime text](sublime.png)
+- [Nick Nisi](https://github.com/nicknisi/dotfiles)
+- [Ahmed El Gabri](https://github.com/ahmedelgabri/dotfiles)
