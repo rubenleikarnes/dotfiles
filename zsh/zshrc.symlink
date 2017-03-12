@@ -47,7 +47,7 @@ ztermtitle="%n@%m:%~"
 zdouble_dot_expand="true"
 zhighlighters=(main brackets pattern cursor root)
 
-
+# Checks for new plugins on startup
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
   if read -q; then
@@ -79,10 +79,6 @@ setopt RM_STAR_WAIT
 if [ -f '/usr/local/etc/profile.d/z.sh' ]; then
 	source '/usr/local/etc/profile.d/z.sh'
 fi
-
-# settitle() {
-#     printf "\033k$1\033\\"
-# }
 
 # This will highlight any time you type rm -rf in red
 ZSH_HIGHLIGHT_PATTERNS=('rm -rf*' 'fg=white,bold,bg=red')
