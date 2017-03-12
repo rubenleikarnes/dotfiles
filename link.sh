@@ -87,6 +87,5 @@ echo "=============================="
 if [ ! -d $HOME/.zplug ]; then
     e_list "ZPlug not found please install"
 else
-    e_list "ZPlug not found please install"
     y_list "ZPlug is installed"
 fi
