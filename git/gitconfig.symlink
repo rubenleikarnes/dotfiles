@@ -116,3 +116,5 @@
 	required = true
 [gui]
 	recentrepo = /Users/ruben/Sites/neplog
+[http]
+	sslVerify = true
