@@ -4,6 +4,7 @@
 	"Seti_show_group_arrows": true,
 	"Seti_sidebar_font_Hack": true,
 	"Seti_tabs_med": true,
+	"Seti_yellow_scrollbar": true,
 	"auto_complete": true,
 	"auto_indent": true,
 	"bold_folder_labels": true,
@@ -45,7 +46,7 @@
 		"subpixel_antialias",
 		"gray_antialias"
 	],
-	"font_size": 15,
+	"font_size": 16,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
