@@ -1,12 +1,20 @@
 <snippet>
-  <content><![CDATA[<!DOCTYPE html>
+  <content><![CDATA[<!doctype html>
 <html lang="en">
 <head>
+
 	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="Ruben Leikarnes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ruben Leikarnes">
+
+	<!-- Disable tap highlight on IE -->
+	<meta name="msapplication-tap-highlight" content="no">
+
+	<!-- Color the status bar on mobile devices -->
+	<meta name="theme-color" content="#222">
+
 
 	<title>${1:Title}</title>
 	
