@@ -3,6 +3,7 @@
 PATH=/usr/local/lib/node_modules:$PATH # Newer Ruby version
 PATH=/usr/local/opt/ruby/bin:$PATH # Newer Ruby version
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH # Updated coreutinls
+PATH=/usr/local/Cellar:$PATH # Brew
 PATH=/usr/local/share:$PATH # Local share
 PATH=/usr/local/sbin:$PATH # User binaries
 PATH=/usr/local/bin:$PATH # User binaries
