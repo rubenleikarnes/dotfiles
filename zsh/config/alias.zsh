@@ -14,6 +14,8 @@ alias du='du -h -c' # calculate disk usage for a folder
 
 # Folders and path
 alias cd..='cd ..'
+alias cd...='cd ../..'
+alias cd....='cd ../../..'
 alias cd/='cd /'
 
 alias 1='cd -'
@@ -106,4 +108,5 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+# New on High Sierra, it needs recreate ~/.Trash after deleting it
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; mkdir ~/.Trash"

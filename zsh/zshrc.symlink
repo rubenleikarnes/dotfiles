@@ -19,10 +19,12 @@ ZHOME=$DOTFILES/zsh
 
 # zPlug.
 
-source $HOME/.zplug/init.zsh
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
 zplug "zimframework/zim", depth:1, use:"init.zsh", hook-build:"ln -sf $ZPLUG_ROOT/repos/zimframework/zim ~/.zim"
 zplug "modules/editor", depth:1, from:prezto
+zplug "modules/osx", depth:1, from:prezto
 zplug "lib/termsupport", depth:1, from:oh-my-zsh
 zplug "mafredri/zsh-async", depth:1, from:github
 zplug "sindresorhus/pure", depth:1, use:pure.zsh, from:github, as:theme
