@@ -1,0 +1,26 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"AutoFileName",
+		"Autoprefixer",
+		"Babel",
+		"BracketHighlighter",
+		"Emmet",
+		"GitGutter",
+		"GitStatus",
+		"Markdown Preview",
+		"Oceanic Color Scheme",
+		"Origami",
+		"Package Control",
+		"Pretty JSON",
+		"Sass",
+		"SCSS",
+		"Seti_UI",
+		"Theme - Spacegray"
+	]
+}

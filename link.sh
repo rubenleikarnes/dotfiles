@@ -84,7 +84,7 @@ fi
 
 echo "\nChecking if ZPlug is installed" 
 echo "=============================="
-if [ ! -d $HOME/.zplug ]; then
+if [ ! -d $ZPLUG_HOME/init.zsh ]; then
     e_list "ZPlug not found please install"
 else
     y_list "ZPlug is installed"

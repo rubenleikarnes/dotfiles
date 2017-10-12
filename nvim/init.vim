@@ -18,14 +18,13 @@ call plug#begin('~/.vim/plugged')
 
 	" Utilities "
 	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " Filedraw, but only load on opening the draw "
-		Plug 'bling/vim-airline' " Status line with often used info (line number, git status etc) "
+	Plug 'bling/vim-airline' " Status line with often used info (line number, git status etc) "
 	Plug 'vim-airline/vim-airline-themes' " themes for vim-airline "
 	Plug 'editorconfig/editorconfig-vim' " Autoload .editorconfig "
 	Plug 'airblade/vim-gitgutter' " Git status in the gutter"
-
 	Plug 'ryanoasis/vim-devicons' " Devicons in font "
-
 	Plug 'nacitar/terminalkeys.vim' " Som things to improve key support in rxvt "
+	Plug 'wincent/terminus' " Terminus enhances Vim's and Neovim's integration with the terminal when using tmux "
 call plug#end()
 
 
