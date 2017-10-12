@@ -27,6 +27,10 @@ zplug "modules/editor", depth:1, from:prezto
 zplug "modules/osx", depth:1, from:prezto
 zplug "lib/termsupport", depth:1, from:oh-my-zsh
 zplug "mafredri/zsh-async", depth:1, from:github
+zplug "chrissicool/zsh-256color", from:github
+zplug "djui/alias-tips", from:github
+zplug "supercrabtree/k", from:github
+zplug "zsh-users/zsh-autosuggestions", from:github
 zplug "sindresorhus/pure", depth:1, use:pure.zsh, from:github, as:theme
 
 
@@ -99,3 +103,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # global node modules
 export NODE_PATH=/usr/local/lib/node_modules
+
+# zsh-users/zsh-autosuggestions
+# Bind ctrl + space to accept the current suggestion.
+bindkey '^ ' autosuggest-accept
