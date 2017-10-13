@@ -43,18 +43,21 @@ set diffopt+=vertical
 " Visuals "
 syntax on " switch syntax highlighting on "
 set guifont=Hack:h15
-set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
 highlight Comment cterm=italic
 set number " Show line numbers "
 set relativenumber " show relative line numbers "
-set background=dark " Dark theme "
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme OceanicNext
-let g:airline_theme='oceanicnext'
-"let base16colorspace=256"  " Access colors present in 256 colorspace"
 
 set backspace=indent,eol,start " make backspace behave in a sane manner "
 set history=1000 " change history to 1000 "
+
+
+set background=dark " Dark theme "
+
+set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
+colorscheme OceanicNext
+let g:airline_theme='oceanicnext'
+"let base16colorspace=256"  " Access colors present in 256 colorspace"
 
 
 if &term =~ '256color'
