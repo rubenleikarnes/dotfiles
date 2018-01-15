@@ -10,8 +10,10 @@
 		"Autoprefixer",
 		"Babel",
 		"BracketHighlighter",
+		"EditorConfig",
 		"Emmet",
 		"GitGutter",
+		"Gitignored File Excluder",
 		"GitStatus",
 		"Markdown Preview",
 		"Oceanic Color Scheme",
@@ -21,6 +23,6 @@
 		"Sass",
 		"SCSS",
 		"Seti_UI",
-		"Theme - Spacegray"
+		"Seti_UX"
 	]
 }

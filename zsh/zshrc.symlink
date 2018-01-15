@@ -1,6 +1,7 @@
 # Path additions
 # List items in the reverse order you want them to appear in $PATH (i.e. last items appear first ).
-PATH=/usr/local/lib/node_modules:$PATH # Newer Ruby version
+PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH" # Older php version
+PATH=/usr/local/lib/node_modules:$PATH # Newer node modules
 PATH=/usr/local/opt/ruby/bin:$PATH # Newer Ruby version
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH # Updated coreutinls
 PATH=/usr/local/Cellar:$PATH # Brew
@@ -18,11 +19,13 @@ ZHOME=$DOTFILES/zsh
 
 
 # zPlug.
-
+# In order to use zplug, please add the following to your .zshrc:
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "zimframework/zim", depth:1, use:"init.zsh", hook-build:"ln -sf $ZPLUG_ROOT/repos/zimframework/zim ~/.zim"
+
+zplug "zplug/zplug"
+zplug "zimfw/zimfw", depth:1, use:"init.zsh", hook-build:"ln -sf $ZPLUG_ROOT/repos/zimfw/zimfw ~/.zimftw"
 zplug "modules/editor", depth:1, from:prezto
 zplug "modules/osx", depth:1, from:prezto
 zplug "lib/termsupport", depth:1, from:oh-my-zsh
@@ -71,6 +74,7 @@ zplug load
 # load all zsh config files in dotfiles/zsh
 for config ($ZHOME/config/*.zsh) source $config
 
+
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
 
@@ -81,12 +85,9 @@ export HOMEBREW_NO_ANALYTICS=1
 
 # Asks before rm foo/*
 unsetopt RM_STAR_SILENT
+
 # Waits 10s when rm foo/*
 setopt RM_STAR_WAIT
-
-if [ -f '/usr/local/etc/profile.d/z.sh' ]; then
-	source '/usr/local/etc/profile.d/z.sh'
-fi
 
 # This will highlight any time you type rm -rf in red
 ZSH_HIGHLIGHT_PATTERNS=('rm -rf*' 'fg=white,bold,bg=red')
