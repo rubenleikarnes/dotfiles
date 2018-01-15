@@ -25,20 +25,9 @@
   for file in ${ZIM_HOME}/modules/${^zmodules}/init.zsh(-.N); do
     zrecompile -pq ${file}
   done
-
-  # zcompile all prompt setup scripts
-  # commented out since i use pure theme instead of the zim provided ones
-  # for file in ${ZIM_HOME}/modules/prompt/functions/prompt_*_setup; do
-  #   zrecompile -pq ${file}
-  # done
-
-  # syntax-highlighting
-  for file in ${ZIM_HOME}/modules/syntax-highlighting/external/highlighters/**^test-data/*.zsh; do
+ 
+  # zcompile all zplug plugins
+  for file in /usr/local/opt/zplug/repos/*/*/*.zsh(-.N); do
     zrecompile -pq ${file}
   done
-  zrecompile -pq ${ZIM_HOME}/modules/syntax-highlighting/external/zsh-syntax-highlighting.zsh
-
-  # zsh-histery-substring-search
-  zrecompile -pq ${ZIM_HOME}/modules/history-substring-search/external/zsh-history-substring-search.zsh
-
 ) &!
