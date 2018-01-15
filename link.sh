@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Credits to https://github.com/nicknisi/dotfiles/blob/master/install/link.sh
+# Credits to https://   .com/nicknisi/dotfiles/blob/master/install/link.sh
 
 DOTFILES=$HOME/dotfiles
 
@@ -22,13 +22,13 @@ echo "\nCreating symlinks"
 echo "=============================="
 linkables=$( find -H "$DOTFILES" -maxdepth 3 -name '*.symlink' )
 for file in $linkables ; do
-    target="$HOME/.$( basename $file '.symlink' )"
-    if [ -e $target ]; then
-        y_list "~${target#$HOME} already exists... Skipping."
-    else
-        g_list "Creating symlink for $file"
-        ln -s $file $target
-    fi
+	target="$HOME/.$( basename $file '.symlink' )"
+	if [ -e $target ]; then
+		y_list "~${target#$HOME} already exists... Skipping."
+	else
+		g_list "Creating symlink for $file"
+		ln -s $file $target
+	fi
 done
 
 
@@ -36,15 +36,15 @@ done
 echo "\nInstalling nvim" 
 echo "=============================="
 if [ ! -d $HOME/.config ]; then
-    g_list "Creating ~/.config"
-    mkdir -p $HOME/.config
+	g_list "Creating ~/.config"
+	mkdir -p $HOME/.config
 fi
 
 if [ ! -d $HOME/.config/nvim ]; then
-    g_list "Creating symlink for nvim"
-    ln -s $DOTFILES/nvim $HOME/.config/nvim 
+	g_list "Creating symlink for nvim"
+	ln -s $DOTFILES/nvim $HOME/.config/nvim 
 else
-    y_list "~/.config/nvim already exists... Skipping."
+	y_list "~/.config/nvim already exists... Skipping."
 fi
 
 
@@ -52,15 +52,15 @@ fi
 echo "\nInstalling Sublime Text" 
 echo "=============================="
 if [ ! -d  $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages ]; then
-    g_list "Creating Sublimee Packages folder"
-    mkdir -p $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages
+	g_list "Creating Sublimee Packages folder"
+	mkdir -p $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages
 fi
 
 if [ ! -d $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]; then
-    g_list "Creating symlink for Sublime Text"
-    ln -s $DOTFILES/sublime/User $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User  
+	g_list "Creating symlink for Sublime Text"
+	ln -s $DOTFILES/sublime/User $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User  
 else
-    y_list "Sublime Text User folder already exists... Skipping."
+	y_list "Sublime Text User folder already exists... Skipping."
 fi
 
 
@@ -85,7 +85,7 @@ fi
 echo "\nChecking if ZPlug is installed" 
 echo "=============================="
 if [ ! -d $ZPLUG_HOME/init.zsh ]; then
-    e_list "ZPlug not found please install"
+	y_list "ZPlug is installed"
 else
-    y_list "ZPlug is installed"
+	e_list "ZPlug not found please install"
 fi

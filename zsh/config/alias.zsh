@@ -59,7 +59,7 @@ alias lsd='ls -l --color | grep "^d"'
 alias lsf='ls -l --color | grep -v "^d"'
 
 # Stolen localtunnel alias
-unalias lt
+#unalias lt
 
 # Get week number
 alias week='date +%V'
@@ -97,6 +97,9 @@ function o() {
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade -all; brew cleanup; npm update -g; gem update --system; gem update;echo " "; mas outdated; mas upgrade; echo  "  \033[1;30m✔\033[0m  Everything is up to date"'
+
+# Force update macos
+alias forcesystemupdate="sudo softwareupdate -i --all --verbose"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
