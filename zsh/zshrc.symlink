@@ -23,34 +23,32 @@ ZHOME=$DOTFILES/zsh
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-
-zplug "zplug/zplug"
+zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:2
+zplug "zsh-users/zsh-completions", from:github, defer:2
+zplug "zsh-users/zsh-history-substring-search", from:github, defer:2
+zplug "zsh-users/zsh-autosuggestions", from:github, defer:2
 zplug "zimfw/zimfw", depth:1, use:"init.zsh", hook-build:"ln -sf $ZPLUG_ROOT/repos/zimfw/zimfw ~/.zimftw"
 zplug "modules/editor", depth:1, from:prezto
-zplug "modules/osx", depth:1, from:prezto
-zplug "lib/termsupport", depth:1, from:oh-my-zsh
+zplug "modules/osx", depth:1, from:prezto, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "mafredri/zsh-async", depth:1, from:github
 zplug "chrissicool/zsh-256color", from:github
 zplug "djui/alias-tips", from:github
 zplug "supercrabtree/k", from:github
-zplug "zsh-users/zsh-autosuggestions", from:github
 zplug "sindresorhus/pure", depth:1, use:pure.zsh, from:github, as:theme
+zplug "lib/termsupport", depth:1, from:oh-my-zsh
 
 
 # Zim settings
 zmodules=(
-  completion
-  directory
-  environment
-  git
-  history
-  history-substring-search
-  input
-  meta
-  prompt
-  spectrum
-  syntax-highlighting
-  utility
+	directory
+	environment
+	git
+	history
+	input
+	meta
+	prompt
+	spectrum
+	utility
 )
 
 zprompt_theme="pure"
@@ -60,10 +58,10 @@ zhighlighters=(main brackets pattern cursor root)
 
 # Checks for new plugins on startup
 if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
+	printf "Install? [y/N]: "
+	if read -q; then
+		echo; zplug install
+	fi
 fi
 
 # zplug load --verbose
@@ -74,6 +72,12 @@ zplug load
 # load all zsh config files in dotfiles/zsh
 for config ($ZHOME/config/*.zsh) source $config
 
+# Completion Matching Control
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# Not allowed to have in a separete file?
+# Need to research more about this
+export HOMEBREW_GITHUB_API_TOKEN=***
 
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
