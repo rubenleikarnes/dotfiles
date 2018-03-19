@@ -10,11 +10,13 @@
 		"Autoprefixer",
 		"Babel",
 		"BracketHighlighter",
+		"Clickable URLs",
 		"EditorConfig",
 		"Emmet",
 		"GitGutter",
 		"Gitignored File Excluder",
 		"GitStatus",
+		"Handlebars",
 		"Markdown Preview",
 		"Oceanic Color Scheme",
 		"Origami",
@@ -23,6 +25,7 @@
 		"Sass",
 		"SCSS",
 		"Seti_UI",
-		"Seti_UX"
+		"Seti_UX",
+		"TOML"
 	]
 }

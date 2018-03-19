@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Credits to https://   .com/nicknisi/dotfiles/blob/master/install/link.sh
+# Credits to https://github.com/nicknisi/dotfiles/blob/master/install/link.sh
 
 DOTFILES=$HOME/dotfiles
 

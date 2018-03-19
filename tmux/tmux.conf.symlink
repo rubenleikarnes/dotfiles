@@ -136,3 +136,4 @@ bind -n WheelDownPane select-pane -t= \; send-keys -M
 # digs into some of Apple’s inner-workings to enable pbcopy and pbpaste support.
 set-option -g default-command "reattach-to-user-namespace -l zsh"
 
+

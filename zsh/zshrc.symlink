@@ -28,6 +28,7 @@ zplug "zsh-users/zsh-completions", from:github, defer:2
 zplug "zsh-users/zsh-history-substring-search", from:github, defer:2
 zplug "zsh-users/zsh-autosuggestions", from:github, defer:2
 zplug "zimfw/zimfw", depth:1, use:"init.zsh", hook-build:"ln -sf $ZPLUG_ROOT/repos/zimfw/zimfw ~/.zimftw"
+zplug "lib/termsupport", depth:1, from:oh-my-zsh
 zplug "modules/editor", depth:1, from:prezto
 zplug "modules/osx", depth:1, from:prezto, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "mafredri/zsh-async", depth:1, from:github
@@ -35,7 +36,6 @@ zplug "chrissicool/zsh-256color", from:github
 zplug "djui/alias-tips", from:github
 zplug "supercrabtree/k", from:github
 zplug "sindresorhus/pure", depth:1, use:pure.zsh, from:github, as:theme
-zplug "lib/termsupport", depth:1, from:oh-my-zsh
 
 
 # Zim settings
@@ -72,12 +72,14 @@ zplug load
 # load all zsh config files in dotfiles/zsh
 for config ($ZHOME/config/*.zsh) source $config
 
+# local exports or aliases not intended for github
+if [ -r ~/.zshlocal ]
+then
+    source ~/.zshlocal
+fi
+
 # Completion Matching Control
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-
-# Not allowed to have in a separete file?
-# Need to research more about this
-export HOMEBREW_GITHUB_API_TOKEN=***
 
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
