@@ -97,9 +97,8 @@
 
 	# Any GitHub repo with my username should be checked out r/w by default
 	# http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
-	# [url "git@github.com:rub1/"]
-	# 	insteadOf = "git://github.com/rub1/"
-	# Need to find out more about this
+	[url "git@github.com:rub1/"]
+		insteadOf = "git://github.com/rub1/"
 
 [credential]
 	helper = osxkeychain
@@ -112,7 +111,5 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
-[gui]
-	recentrepo = /Users/ruben/Sites/neplog
 [http]
 	sslVerify = true
