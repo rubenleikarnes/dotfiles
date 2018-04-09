@@ -1,6 +1,6 @@
 # Path additions
 # List items in the reverse order you want them to appear in $PATH (i.e. last items appear first ).
-PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH" # Older php version
+PATH=/usr/local/opt/php@5.6/bin:$PATH # Older php version
 PATH=/usr/local/lib/node_modules:$PATH # Newer node modules
 PATH=/usr/local/opt/ruby/bin:$PATH # Newer Ruby version
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH # Updated coreutinls
