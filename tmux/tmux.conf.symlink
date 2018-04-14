@@ -5,28 +5,37 @@ bind-key C-a send-prefix
 
 # start with window 1 (instead of 0)
 set -g base-index 1
-
-# start with pane 1
 set -g pane-base-index 1
 
 # colors
 set -g default-terminal "screen-256color"
-set -g terminal-overrides ',xterm-256color:Tc'
-set -as terminal-overrides ',xterm*:sitm=\E[3m'
-
-# force a reload of the config file
-unbind r
-bind r source-file ~/.tmux.conf
+set -ga terminal-overrides ",xterm-256color:Tc"
 
 # history
-set -g history-limit 16384
+set -g history-limit 100000
 
 # allow terminal scrolling
 set-option -g terminal-overrides 'xterm*:smcup@:rmcup@'
 
 # unicode
-#set -g utf8 on
-#set -g status-utf8 on
+set -q -g status-utf8 on                  # expect UTF-8 (tmux < 2.2)
+setw -q -g utf8 on
+
+# Neovim https://github.com/neovim/neovim/wiki/FAQ#esc-in-tmux-or-gnu-screen-is-delayed
+set -sg escape-time 0
+set -g focus-events on
+
+# auto window rename
+set-window-option -g automatic-rename on
+
+# automatically renumber tmux windows
+set -g renumber-windows on
+
+# set terminal title
+set -g set-titles on
+set -g set-titles-string '#h ❐ #S ● #I #W'
+set -g display-time 3000 # tmux messages are displayed for 1.5 seconds
+set -g display-panes-time 1000 # slightly longer pane indicators display time
 
 # listen to alerts from all windows
 set -g bell-action any
@@ -35,9 +44,6 @@ set -g bell-action any
 set -g monitor-activity on
 set -g visual-activity on
 
-# automatically renumber tmux windows
-set -g renumber-windows on
-
 # Rather than constraining window size to the maximum size of any client
 # connected to the *session*, constrain window size to the maximum size of any
 # client connected to *that window*. Much more reasonable.
@@ -45,6 +51,23 @@ setw -g aggressive-resize on
 
 # make delay shorter
 set -sg escape-time 0
+
+
+# direnv setup
+# https://github.com/direnv/direnv/wiki/Tmux#alternatively
+set-option -g update-environment "DIRENV_DIFF DIRENV_DIR DIRENV_WATCHES"
+set-environment -gu DIRENV_DIFF
+set-environment -gu DIRENV_DIR
+set-environment -gu DIRENV_WATCHES
+set-environment -gu DIRENV_LAYOUT
+
+#
+# Keybinds
+#
+
+# reload ~/.tmux.conf using PREFIX r
+bind-key r source-file ~/.tmux.conf \; display "Reloaded!"
+
 
 # New window with default path set to last path
 bind g split-window -h -c "#{pane_current_path}"
@@ -66,56 +89,66 @@ bind l select-pane -R
 # mouse behavior
 set -g mouse on
 
-# auto window rename
-set-window-option -g automatic-rename on
-
 #
 # Visuals
 #
 
+setw -g other-pane-height 25
+setw -g other-pane-width 80
+
 # panes
-set-option -g status-position bottom
-set -g pane-border-fg blue
-set -g pane-active-border-fg brightblue
-#set -g pane-active-border-attr blink
+set -g pane-border-style bg=default,fg=colour238
+set -g pane-active-border-style bg=default,fg=white
+# setw -g pane-border-status bottom
+setw -g pane-border-format '─'
 
 
-# status line
-set -g status-justify left
-set -g status-bg default
-set -g status-fg blue
-set -g status-interval 2
 
-# messaging
+# colorize messages in the command line
 set -g message-fg black
 set -g message-bg blue
-set -g message-command-fg blue
-set -g message-command-bg black
+set -g message-style bg=default,fg=brightred #base02
+set -g message-command-style bg=black,fg=blue
+
 
 #window mode
-setw -g mode-bg blue
+setw -g mode-bg white
 setw -g mode-fg black
 
-# window status
-setw -g window-status-format "#[bg=colour238]#[fg=colour7] #I #[fg=color14]#[bg=colour236] #W "
-setw -g window-status-current-format "#[bg=colour6]#[fg=colour7] #I #[fg=colour7]#[bg=colour236] #W "
-setw -g window-status-current-bg colour0
-setw -g window-status-current-fg colour11
-setw -g window-status-current-attr dim
-setw -g window-status-attr dim
-setw -g window-status-bg green
-setw -g window-status-fg black
-#setw -g window-status-content-bg colour0
-#setw -g window-status-content-fg colour11
-#setw -g window-status-content-attr blink
+#
+# Status bar
+#
+set -g status on
 
-# Info on right
-set -g status-right-length 30
-set -g status-right "#[bg=colour8]#[fg=colour7] %H:%M "
-set -g status-left ''
+set -g status-position bottom
+set -g status-interval 5
+set -g status-justify left
 
-# tmux clock
-set -g clock-mode-colour blue
+set -g status-bg default
+set -g status-fg blue
+
+# set color for status bar
+set -g status-style bg=default,fg=default
+
+# Status window
+setw -g window-status-format "#[bg=default]#{?window_activity_flag,#{?window_bell_flag,#[fg=brightred]#I #W,#[fg=colour231]#W},#[fg=colour243]#W}#[bg=default]"
+setw -g window-status-current-format "#{?window_zoomed_flag,#[fg=magenta][#W],#W}#[bg=default]"
+# setw -g window-status-style bg=default,fg=colour237
+setw -g window-status-activity-style bg=default,fg=colour243
+setw -g window-status-bell-style bg=default,fg=brightred
+setw -g window-status-current-style bg=default,fg=colour004
+
+# Left status 
+set -g status-left-length 70
+set -g status-left "#[fg=colour237]#{?client_prefix,#[fg=colour202],#[fg=colour245]}#I #[fg=colour237] "
+
+# Right status 
+status_prefix="#{?client_prefix,#[fg=colour202]#(echo $(tmux show-option -gqv prefix | tr \"[:lower:]\" \"[:upper:]\" | sed 's/C-/\^/'))#[fg=colour237] • ,}"
+zoomed="#{?window_zoomed_flag,#[fg=magenta][zoomed] #[fg=colour237]• ,}"
+battery="#{battery_status_fg}#{battery_percentage}#[fg=colour237] • "
+status_date_time="#[fg=colour237]#[fg=colour243]%d %b, %H:%M#[fg=colour237]"
+
+set -g status-right "${status_prefix}${zoomed}${battery}${status_date_time}"
 
 #
 # Copy & paste
@@ -137,3 +170,9 @@ bind -n WheelDownPane select-pane -t= \; send-keys -M
 set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-battery'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
