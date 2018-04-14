@@ -18,15 +18,14 @@ call plug#begin('~/.vim/plugged')
 
 	" Utilities "
 	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " Filedraw, but only load on opening the draw "
-	Plug 'bling/vim-airline' " Status line with often used info (line number, git status etc) "
+	Plug 'vim-airline/vim-airline' " Status line with often used info (line number, git status etc) "
 	Plug 'vim-airline/vim-airline-themes' " themes for vim-airline "
 	Plug 'editorconfig/editorconfig-vim' " Autoload .editorconfig "
 	Plug 'airblade/vim-gitgutter' " Git status in the gutter"
-	Plug 'ryanoasis/vim-devicons' " Devicons in font "
 	Plug 'nacitar/terminalkeys.vim' " Som things to improve key support in rxvt "
 	Plug 'wincent/terminus' " Terminus enhances Vim's and Neovim's integration with the terminal when using tmux "
+	Plug 'ryanoasis/vim-devicons' " Devicons in font "
 call plug#end()
-
 
 
 set nocompatible " not compatible with vi "
@@ -39,10 +38,9 @@ set laststatus=2 " Show status line "
 set ttyfast " faster redrawing "
 set diffopt+=vertical
 
-
 " Visuals "
 syntax on " switch syntax highlighting on "
-set guifont=Hack:h15
+set guifont=Hack\ Nerd\ Font:h15
 highlight Comment cterm=italic
 set number " Show line numbers "
 set relativenumber " show relative line numbers "
@@ -107,8 +105,6 @@ set t_vb=
 set tm=500
 
 
-
-
 " Tab control "
 set noexpandtab " insert tabs rather than spaces for <Tab> "
 set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop' "
@@ -130,13 +126,11 @@ set wrapmargin=0
 " highlight conflicts "
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
-
 " Enables mouse "
 if has('mouse')
-    set mouse=a
-    " set ttymouse=xterm2 "
+	set mouse=a
+	" set ttymouse=xterm2 "
 endif
-
 
 " Use hjkl to change foucs to other buffers "
 map <C-k> <C-w><Up>
@@ -146,7 +140,6 @@ map <C-h> <C-w><Left>
 
 nmap <leader>, :w<cr> " shortcut to save "
 noremap Q <NOP> " disable Ex mode "
-
 
 nmap <leader>. <c-^> " switch between current and last buffer "
 vnoremap . :normal .<cr> " enable . command in visual mode "
@@ -163,17 +156,13 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-
-
 " Set relevant filetypes "
 au BufRead,BufNewFile *.scss set filetype=css
 au BufRead,BufNewFile *.md set filetype=markdown
 
-
-
-
+" . "
 " Section Plugins "
-
+" . "
 
 " close NERDTree after a file is opened "
 let g:NERDTreeQuitOnOpen=1
@@ -189,10 +178,6 @@ nmap <silent> <leader>k :NERDTreeToggle<cr>
 let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden=1
 
-
-
+let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-
-
+let g:airline#extensions#tabline#formatter = 'unique_tail'
