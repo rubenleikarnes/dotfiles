@@ -93,3 +93,9 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
+
+#
+# How to match case insensitive patterns with ls?
+# https://unix.stackexchange.com/questions/48770/how-to-match-case-insensitive-patterns-with-ls
+
+unsetopt CASE_GLOB
