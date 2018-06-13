@@ -41,6 +41,13 @@ Restart terminal session
 - Font: [Hack](https://github.com/chrissimpkins/hack)
 - [Use ⌥ ← and ⌥→ to jump forwards/backwards words in iTerm](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x)
 
+``` 
+FOR  ACTION         SEND
+⌘←  "SEND HEX CODE"      0x01 
+⌘→  "SEND HEX CODE"      0x05
+⌥←  "SEND ESC SEQ"  b
+⌥→  "SEND ESC SEQ"  f
+```
 ## Sources
 
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) 
