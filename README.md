@@ -9,7 +9,6 @@ coreutils
 zsh
 git
 tmux
-reattach-to-user-namespace
 zplug
 ```
 
