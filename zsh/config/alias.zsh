@@ -13,10 +13,10 @@ alias df='df -h' # disk free, in Gigabytes, not bytes
 alias du='du -h -c' # calculate disk usage for a folder
 
 # Folders and path
-alias cd..='cd ..'
-alias cd...='cd ../..'
-alias cd....='cd ../../..'
-alias cd/='cd /'
+# alias cd..='cd ..'
+# alias cd...='cd ../..'
+# alias cd....='cd ../../..'
+# alias cd/='cd /'
 
 alias 1='cd -'
 alias 2='cd -2'
@@ -43,9 +43,6 @@ alias pinstars="python ~/Repos/pin-stars/pin-github-stars.py -u rub1"
 # htop needs to run as root, bug not showing cpu and mem usage
 alias htop='sudo htop'
 
-# show line numbers in cat
-alias cat="cat -n"
-
 # List all files colorized in long format
 alias l="ls -l --human-readable --color"
 
@@ -58,8 +55,6 @@ alias lsd='ls -l --color | grep "^d"'
 # List only files
 alias lsf='ls -l --color | grep -v "^d"'
 
-# Stolen localtunnel alias
-#unalias lt
 
 # Get week number
 alias week='date +%V'
