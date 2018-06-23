@@ -1,24 +1,13 @@
-# Path additions
-# List items in the reverse order you want them to appear in $PATH (i.e. last items appear first ).
-PATH=/usr/local/opt/php@5.6/bin:$PATH # Older php version
-PATH=/usr/local/lib/node_modules:$PATH # Newer node modules
-PATH=/usr/local/opt/ruby/bin:$PATH # Newer Ruby version
-PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH # Updated coreutinls
-PATH=/usr/local/Cellar:$PATH # Brew
-PATH=/usr/local/share:$PATH # Local share
-PATH=/usr/local/sbin:$PATH # User binaries
-PATH=/usr/local/bin:$PATH # User binaries
-PATH=/usr/local/lib:$PATH # User library
+# Path
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 export PATH
-
-fpath=(/usr/local/share/zsh-completions $fpath)
 
 DOTFILES=$HOME/dotfiles
 ZHOME=$DOTFILES/zsh
 
 
-# zPlug.
+# ZPlug
 # In order to use zplug, please add the following to your .zshrc:
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
@@ -27,19 +16,16 @@ zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:2
 zplug "zsh-users/zsh-completions", from:github, defer:2
 zplug "zsh-users/zsh-history-substring-search", from:github, defer:2
 zplug "zsh-users/zsh-autosuggestions", from:github, defer:2
-zplug "zimfw/zimfw", depth:1, use:"init.zsh", hook-build:"ln -sf $ZPLUG_ROOT/repos/zimfw/zimfw ~/.zimftw"
+zplug "zimfw/zimfw", depth:1, use:"init.zsh", hook-build:"ln -sf $ZPLUG_ROOT/repos/zimfw/zimfw ~/.zim"
 zplug "lib/termsupport", depth:1, from:oh-my-zsh
-zplug "modules/editor", depth:1, from:prezto
-zplug "modules/osx", depth:1, from:prezto, if:"[[ $OSTYPE == *darwin* ]]"
-zplug "mafredri/zsh-async", depth:1, from:github
-zplug "chrissicool/zsh-256color", from:github
 zplug "djui/alias-tips", from:github
-zplug "supercrabtree/k", from:github
-zplug "sindresorhus/pure", depth:1, use:pure.zsh, from:github, as:theme
+zplug "chrissicool/zsh-256color", from:github
+zplug "b4b4r07/enhancd", use:init.sh
 
 
 # Zim settings
 zmodules=(
+	completion
 	directory
 	environment
 	git
@@ -47,13 +33,12 @@ zmodules=(
 	input
 	meta
 	prompt
-	spectrum
 	utility
 )
 
 zprompt_theme="pure"
 ztermtitle="%n@%m:%~"
-zdouble_dot_expand="true"
+# zdouble_dot_expand="true"
 zhighlighters=(main brackets pattern cursor root)
 
 # Checks for new plugins on startup
@@ -67,7 +52,6 @@ fi
 # zplug load --verbose
 zplug load
 
-# Config
 
 # load all zsh config files in dotfiles/zsh
 for config ($ZHOME/config/*.zsh) source $config
@@ -78,14 +62,12 @@ then
     source ~/.zshlocal
 fi
 
-# Completion Matching Control
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+# Change default zim location
+export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
 
-# Link Homebrew casks in `/Applications` rather than `~/Applications`
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Disable Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -98,15 +80,9 @@ setopt RM_STAR_WAIT
 # This will highlight any time you type rm -rf in red
 ZSH_HIGHLIGHT_PATTERNS=('rm -rf*' 'fg=white,bold,bg=red')
 
-# Some options for our Zsh history. These will set our history to allow a ton more entires, ignore duplicate commands, and ignore some of the commands we don’t need a history of. This is useful because if you want to search for that command you ran a few weeks ago, you can do that a lot easier.
-export HISTSIZE=32768;
-export HISTFILESIZE=$HISTSIZE;
-export HISTCONTROL=ignoredups;
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
-SAVEHIST=$HISTSIZE
-
 # Rbenv stuff
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # global node modules
 export NODE_PATH=/usr/local/lib/node_modules
+
