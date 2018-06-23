@@ -14,12 +14,12 @@
 	"caret_extra_width": 1,
 	"caret_style": "wide",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/Oceanic Color Scheme/Themes/Oceanic - Eighties.tmTheme",
+	"color_scheme": "Packages/Oceanic Next Color Scheme/Oceanic Next.tmTheme",
 	"default_line_ending": "unix",
 	"detect_slow_plugins": true,
 	"disable_colored_group_labels": true,
 	"draw_white_space": "selection",
-	"enable_tab_scrolling": false,
+	"enable_tab_scrolling": true,
 	"ensure_newline_at_eof_on_save": false,
 	"extra_file_exclude_patterns":
 	[
@@ -49,11 +49,17 @@
 		"*.lib",
 		"*.log",
 		"Desktop.ini",
-		"Thumbs.db"
+		"Thumbs.db",
+		"/Users/ruben/Projects/rails-faktura/faktura/tmp/restart.txt",
+		"/Users/ruben/Projects/rails-faktura/faktura/storage/.keep",
+		"/Users/ruben/Projects/rails-faktura/faktura/config/master.key",
+		"/Users/ruben/Projects/rails-faktura/faktura/log/development.log",
+		"/Users/ruben/Projects/rails-faktura/faktura/db/development.sqlite3"
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
+		".sass-cache",
 		".bundle",
 		"*cache* ",
 		".cache",
@@ -61,7 +67,11 @@
 		".hg",
 		"node_modules",
 		".svn",
-		".swp"
+		".swp",
+		"/Users/ruben/Projects/rails-faktura/faktura/tmp/cache",
+		"/Users/ruben/Projects/rails-faktura/faktura/tmp/sockets",
+		"/Users/ruben/Projects/rails-faktura/faktura/tmp/pids",
+		"/Users/ruben/Projects/rails-faktura/faktura/tmp/storage"
 	],
 	"font_face": "Hack",
 	"font_options":
@@ -74,6 +84,13 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"AutoFileName",
+		"Autoprefixer",
+		"Clickable URLs",
+		"EditorConfig",
+		"GitGutter",
+		"Oceanic Color Scheme",
+		"Sass",
 		"Vintage"
 	],
 	"indent_guide_options":
