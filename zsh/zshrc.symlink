@@ -86,3 +86,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # global node modules
 export NODE_PATH=/usr/local/lib/node_modules
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
