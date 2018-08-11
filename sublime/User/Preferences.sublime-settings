@@ -49,12 +49,7 @@
 		"*.lib",
 		"*.log",
 		"Desktop.ini",
-		"Thumbs.db",
-		"/Users/ruben/Projects/rails-faktura/faktura/tmp/restart.txt",
-		"/Users/ruben/Projects/rails-faktura/faktura/storage/.keep",
-		"/Users/ruben/Projects/rails-faktura/faktura/config/master.key",
-		"/Users/ruben/Projects/rails-faktura/faktura/log/development.log",
-		"/Users/ruben/Projects/rails-faktura/faktura/db/development.sqlite3"
+		"Thumbs.db"
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
@@ -67,11 +62,7 @@
 		".hg",
 		"node_modules",
 		".svn",
-		".swp",
-		"/Users/ruben/Projects/rails-faktura/faktura/tmp/cache",
-		"/Users/ruben/Projects/rails-faktura/faktura/tmp/sockets",
-		"/Users/ruben/Projects/rails-faktura/faktura/tmp/pids",
-		"/Users/ruben/Projects/rails-faktura/faktura/tmp/storage"
+		".swp"
 	],
 	"font_face": "Hack",
 	"font_options":
