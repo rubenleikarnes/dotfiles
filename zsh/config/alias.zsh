@@ -108,3 +108,7 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 # Also, clear Apple’s System Logs to improve shell startup speed
 # New on High Sierra, it needs recreate ~/.Trash after deleting it
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; mkdir ~/.Trash"
+
+# Use bat instad of cat
+alias cat="bat"
+alias ccat="\cat"
