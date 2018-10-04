@@ -1,0 +1,10 @@
+[applications_to_ignore]
+ack
+bash
+editorconfig
+git
+mackup
+nano
+nvim
+tmux
+zsh
