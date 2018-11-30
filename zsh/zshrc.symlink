@@ -3,6 +3,7 @@ PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 export PATH
 
+
 DOTFILES=$HOME/dotfiles
 ZHOME=$DOTFILES/zsh
 
@@ -21,6 +22,9 @@ zplug "lib/termsupport", depth:1, from:oh-my-zsh
 zplug "djui/alias-tips", from:github
 zplug "chrissicool/zsh-256color", from:github
 zplug "b4b4r07/enhancd", use:init.sh
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+
 
 
 # Zim settings
@@ -38,7 +42,7 @@ zmodules=(
 
 zprompt_theme="pure"
 ztermtitle="%n@%m:%~"
-# zdouble_dot_expand="true"
+zdouble_dot_expand="true"
 zhighlighters=(main brackets pattern cursor root)
 
 # Checks for new plugins on startup
@@ -88,3 +92,6 @@ export NODE_PATH=/usr/local/lib/node_modules
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+export PATH=$PATH:~/.composer/vendor/bin
