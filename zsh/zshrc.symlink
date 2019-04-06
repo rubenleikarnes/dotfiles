@@ -1,6 +1,6 @@
 # Path
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-
+PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH
 
 

@@ -12,6 +12,6 @@ function server() {
 function phpserver() {
 	local port="${1:-4000}"
 	local ip=127.0.0.1
-	sleep 1 && open "http://${ip}:${port}/" &
+	sleep 1 && 
 	php -S "${ip}:${port}"
 }
