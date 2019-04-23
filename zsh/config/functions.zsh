@@ -29,22 +29,3 @@ function colors() {
         fi
     done
 }
-
-
-# Open new note file in sublime or open notes folder in sublime
-function notes() {
-	NOTES=~/Dropbox/Notes
-
-	if [[ $1 == s ]]; then
-		subl $NOTES -na
-	elif [[ -n $1 ]]; then
-		# If sublime is editor, open new window and add notes folder to tree
-		if [[ $EDITOR == "subl" ]]; then
-			$EDITOR $NOTES -na
-		fi
-
-		$EDITOR $NOTES/$1.md
-	else
-		$EDITOR $NOTES
-	fi
-}
