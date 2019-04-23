@@ -8,6 +8,6 @@
 *, *:before, *:after {
 	box-sizing: inherit;
 }]]></content>
-	<tabTrigger>borderbox1</tabTrigger>
+	<tabTrigger>borderbox</tabTrigger>
     <description>Box-sizing: Border-box</description>
 </snippet>

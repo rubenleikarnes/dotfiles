@@ -7,6 +7,6 @@
         clear: both;
     }
 }]]></content>
-	<tabTrigger>clearfix1</tabTrigger>
+	<tabTrigger>clearfix</tabTrigger>
     <description>Clearfix css class</description>
 </snippet>
