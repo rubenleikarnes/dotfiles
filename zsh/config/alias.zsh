@@ -45,6 +45,7 @@ alias lsf='ls -l --color | grep -v "^d"'
 alias week='date +%V'
 
 # developing shortcuts
+alias gp='git push'
 alias rrs='rails server'
 alias rdbm='rails db:migrate'
 
