@@ -24,7 +24,7 @@ alias p="cd ~/Projects"
 alias dot="cd ~/dotfiles"
 
 # Github stars to pinboard
-alias pinstars="python ~/Repos/pin-stars/pin-github-stars.py -u rub1"
+alias pinstars="python ~/Repos//github-starred-to-pinboard/exporter.py"
 
 # htop needs to run as root, bug not showing cpu and mem usage
 alias htop='sudo htop'

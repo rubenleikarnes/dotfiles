@@ -109,15 +109,15 @@ setw -g pane-border-format '─'
 
 
 # colorize messages in the command line
-set -g message-fg black
-set -g message-bg blue
+# set -g message-fg black
+# set -g message-bg blue
 set -g message-style bg=default,fg=brightred #base02
 set -g message-command-style bg=black,fg=blue
 
 
 #window mode
-setw -g mode-bg white
-setw -g mode-fg black
+# setw -g mode-bg white
+# setw -g mode-fg black
 
 #
 # Status bar
