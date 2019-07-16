@@ -1,6 +1,6 @@
 [user]
 	name = ruben
-	email = rub1@users.noreply.github.com
+	email = rubenleikarnes@users.noreply.github.com
 
 [core]
 	editor = nvim 
@@ -16,11 +16,14 @@
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
+	whitespace = trailing-space,space-before-tab
+	
 [color]
 	# Use colors in Git commands that are capable of colored output when
 	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-	ui = auto
+	ui = true
 
 [color "branch"]
 	current = yellow reverse
@@ -28,10 +31,12 @@
 	remote = green
 
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold # line info
-	old = red # deletions
-	new = green # additions
+	meta = 11
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	commit = yellow bold
+	whitespace = red reverse
 
 [color "status"]
 	added = yellow
@@ -69,8 +74,11 @@
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule foreach git pull origin master"
 
-	# Commit all changes
+	# Commit all changes with $editor
 	ca = !git add -A && git commit -av
+
+	# Commit all changes with inline message
+	cm = !git add -A && git commit -am
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
@@ -97,8 +105,8 @@
 
 	# Any GitHub repo with my username should be checked out r/w by default
 	# http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
-	[url "git@github.com:rub1/"]
-		insteadOf = "git://github.com/rub1/"
+	[url "git@github.com:rubenleikarnes/"]
+		insteadOf = "git://github.com/rubenleikarnes/"
 
 [credential]
 	helper = osxkeychain
@@ -114,3 +122,8 @@
 	process = git-lfs filter-process
 [http]
 	sslVerify = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
