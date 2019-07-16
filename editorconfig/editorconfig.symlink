@@ -10,11 +10,8 @@ insert_final_newline = true
 indent_style = tab
 indent_size = 4
 charset = utf-8
+trim_trailing_whitespace = true
 
-[*.py]
-indent_style = space
-indent_size = 2
-
-[{package.json,*.yml,*.rb,Gemfile,*.erb}]
+[*.{json,yml,rb,py},Gemfile]
 indent_style = space
 indent_size = 2
