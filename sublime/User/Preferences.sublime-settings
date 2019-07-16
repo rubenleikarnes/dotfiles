@@ -64,7 +64,7 @@
 		".svn",
 		".swp"
 	],
-	"font_face": "Hack",
+	"font_face": "Hack Nerd Font",
 	"font_options":
 	[
 		"subpixel_antialias",
@@ -75,13 +75,6 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"AutoFileName",
-		"Autoprefixer",
-		"Clickable URLs",
-		"EditorConfig",
-		"GitGutter",
-		"Oceanic Color Scheme",
-		"Sass",
 		"Vintage"
 	],
 	"indent_guide_options":
