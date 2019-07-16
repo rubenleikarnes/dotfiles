@@ -1,7 +1,8 @@
 # Path
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+PATH="/Users/ruben/.composer/vendor/bin:$PATH"
 PATH="/Users/ruben/Library/Python/2.7/bin:$PATH"
+PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH
 
 
@@ -10,22 +11,22 @@ ZHOME=$DOTFILES/zsh
 
 
 # ZPlug
-# In order to use zplug, please add the following to your .zshrc:
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:2
-zplug "zsh-users/zsh-completions", from:github, defer:2
+# zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:2
+zplug "zdharma/fast-syntax-highlighting", from:github
+# zplug "zsh-users/zsh-completions", from:github, defer:2
 zplug "zsh-users/zsh-history-substring-search", from:github, defer:2
 zplug "zsh-users/zsh-autosuggestions", from:github, defer:2
 zplug "zimfw/zimfw", depth:1, use:"init.zsh", hook-build:"ln -sf $ZPLUG_ROOT/repos/zimfw/zimfw ~/.zim"
 zplug "lib/termsupport", depth:1, from:oh-my-zsh
 zplug "djui/alias-tips", from:github
 zplug "chrissicool/zsh-256color", from:github
-zplug "b4b4r07/enhancd", use:init.sh
+#zplug "b4b4r07/enhancd", use:init.sh
 zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
-
+#zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 
 
 # Zim settings
@@ -35,12 +36,10 @@ zmodules=(
 	environment
 	history
 	input
-	meta
-	prompt
 	utility
 )
 
-zprompt_theme="pure"
+
 ztermtitle="%n@%m:%~"
 zdouble_dot_expand="true"
 zhighlighters=(main brackets pattern cursor root)
@@ -84,12 +83,54 @@ setopt RM_STAR_WAIT
 # This will highlight any time you type rm -rf in red
 ZSH_HIGHLIGHT_PATTERNS=('rm -rf*' 'fg=white,bold,bg=red')
 
-# Rbenv stuff
+# Load Rbenv if it exists
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # global node modules
 export NODE_PATH=/usr/local/lib/node_modules
 
+# Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH=$PATH:~/.composer/vendor/bin
+# Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Pure theme settings
+zstyle :prompt:pure:path color 039
+zstyle :prompt:pure:prompt:error color 160
+zstyle :prompt:pure:prompt:success color 046
+
+[[ $TERM == xterm* ]] || : ${PURE_POWER_MODE:=portable}
+# source ~/.pure10k.zsh
+source ~/.purepower
+
+# Configuration: https://github.com/bhilburn/powerlevel9k
+# `$(_pp_c x y`) evaluates to `y` if the terminal supports >= 256 colors and to `x` otherwise.
+zmodload zsh/terminfo
+if (( terminfo[colors] >= 256 )); then
+  function _pp_c() { print -nr -- $2 }
+else
+  function _pp_c() { print -nr -- $1 }
+  typeset -g POWERLEVEL9K_IGNORE_TERM_COLORS=true
+fi
+
+typeset -ga POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    dir
+    vcs
+    command_execution_time
+)
+
+typeset -ga POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+    status
+    background_jobs
+)
+
+typeset -g PURE_POWER_MODE=fancy
+typeset -g POWERLEVEL9K_SHOW_RULER=false
+typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+typeset -g POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=false
+typeset -g POWERLEVEL9K_ALWAYS_SHOW_USER=false
+typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
+typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$(_pp_c 5 008)
