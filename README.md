@@ -14,7 +14,7 @@ zplug
 
 ## Install
 
-``` 
+```
 Set default shell in System Preferences  \'/usr/local/bin/zsh\'
 git clone --recursive git://github.com/rub1/dotfiles.git $HOME/dotfiles
 git submodule update --init --recursive
@@ -30,9 +30,17 @@ Restart terminal session
 
 ### NVim
 
-``` 
+```
 :PlugInstall
 ```
+
+### Tmux
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+Press ```prefix + I``` (capital i, as in Install) to fetch the plugin.
 
 ## Terminal settings
 
@@ -40,16 +48,16 @@ Restart terminal session
 - Font: [Hack](https://github.com/chrissimpkins/hack)
 - [Use ⌥ ← and ⌥→ to jump forwards/backwards words in iTerm](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x)
 
-``` 
+```
 FOR  ACTION         SEND
-⌘←  "SEND HEX CODE"      0x01 
+⌘←  "SEND HEX CODE"      0x01
 ⌘→  "SEND HEX CODE"      0x05
 ⌥←  "SEND ESC SEQ"  b
 ⌥→  "SEND ESC SEQ"  f
 ```
 ## Sources
 
-- [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) 
+- [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
 - [Artem Sapegin](https://github.com/sapegin/dotfiles)
 - [Harry Roberts](https://github.com/csswizardry/dotfiles)
 - [Xero Harrison](https://github.com/xero/dotfiles)
