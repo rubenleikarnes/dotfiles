@@ -18,8 +18,8 @@ set -g history-limit 100000
 set-option -g terminal-overrides 'xterm*:smcup@:rmcup@'
 
 # unicode
-set -q -g status-utf8 on                  # expect UTF-8 (tmux < 2.2)
 setw -q -g utf8 on
+set -q -g status-utf8 on                  # expect UTF-8 (tmux < 2.2)
 
 # Neovim https://github.com/neovim/neovim/wiki/FAQ#esc-in-tmux-or-gnu-screen-is-delayed
 set -sg escape-time 0
@@ -139,15 +139,15 @@ set -g status-style bg=default,fg=default
 setw -g window-status-format "#[bg=default]#{?window_activity_flag,#{?window_bell_flag,#[fg=brightred]#I #W,#[fg=colour231]#W},#[fg=colour243]#W}#[bg=default]"
 setw -g window-status-current-format "#{?window_zoomed_flag,#[fg=magenta][#W],#W}#[bg=default]"
 # setw -g window-status-style bg=default,fg=colour237
-setw -g window-status-activity-style bg=default,fg=colour243
+setw -g window-status-activity-style bg=default,fg=colour250
 setw -g window-status-bell-style bg=default,fg=brightred
-setw -g window-status-current-style bg=default,fg=colour004
+setw -g window-status-current-style bg=default,fg=colour039
 
-# Left status 
+# Left status
 set -g status-left-length 70
 set -g status-left "#[fg=colour237]#{?client_prefix,#[fg=colour202],#[fg=colour245]}#I #[fg=colour237] "
 
-# Right status 
+# Right status
 status_prefix="#{?client_prefix,#[fg=colour202]#(echo $(tmux show-option -gqv prefix | tr \"[:lower:]\" \"[:upper:]\" | sed 's/C-/\^/'))#[fg=colour237] • ,}"
 zoomed="#{?window_zoomed_flag,#[fg=magenta][zoomed] #[fg=colour237]• ,}"
 battery="#{battery_status_fg}#{battery_percentage}#[fg=colour237] • "
