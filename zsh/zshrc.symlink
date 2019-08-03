@@ -134,3 +134,6 @@ typeset -g POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=false
 typeset -g POWERLEVEL9K_ALWAYS_SHOW_USER=false
 typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
 typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$(_pp_c 5 008)
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
