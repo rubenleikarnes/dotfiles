@@ -7,7 +7,8 @@ export EDITOR='nano';
 export MANPAGER='less -X';
 
 # Custom theme from http://bashrcgenerator.com/
-export PS1="\n\[$(tput sgr0)\]\[\033[38;5;45m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;10m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \w\n\\$ \[$(tput sgr0)\]"
+export PS1="\n\[\e[1;32m\]\u\[\e[0;39m\]@\[\e[1;36m\]\h\[\e[0;39m\]:\[\e[1;33m\]\w\[\e[0;39m\]\[\e[1;35m\]$(__git_ps1 " (%s)")\[\e[0;39m\] \[\e[0;39m\]\n$ "
+#export PS1="\n\[$(tput sgr0)\]\[\033[38;5;45m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;10m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \w\n\\$ \[$(tput sgr0)\]"
 
 
 # Turn on recursive globbing (enables ** to recurse all directories)
