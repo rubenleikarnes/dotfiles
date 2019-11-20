@@ -21,7 +21,7 @@
 	// Line swapping
 	{ "keys": ["alt+up"], "command": "swap_line_up" },
 	{ "keys": ["alt+down"], "command": "swap_line_down" },
-	
+
 	{ "keys": ["super+v"], "command": "paste_and_indent" },
 	{ "keys": ["super+shift+v"], "command": "paste" },
 	{ "keys": ["ctrl+r"],  "command": "reindent" },
@@ -41,6 +41,7 @@
 
 	// New file super+t
 	{ "keys": ["super+t"], "command": "new_file" },
+	{ "keys": ["super+n"], "command": "new_file" },
 
 	// Hotkey pref stopped working
 	{ "keys": ["super+,"], "command": "open_file", "args": {"file": "${packages}/User/Preferences.sublime-settings"} },
