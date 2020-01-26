@@ -75,6 +75,12 @@ export LESS_TERMCAP_md="$ORANGE"
 # Disable Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
 
+# Homebrew Shell Completion
+# https://docs.brew.sh/Shell-Completion
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 # Asks before rm foo/*
 unsetopt RM_STAR_SILENT
 
