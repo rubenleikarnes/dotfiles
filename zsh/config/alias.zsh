@@ -12,6 +12,8 @@ alias df='df -h' # disk free, in Gigabytes, not bytes
 alias du='du -h -c' # calculate disk usage for a folder
 
 # Folders and path
+alias ..='cd ..'
+alias ...='cd ../..'
 alias cd..='cd ..'
 alias cd/='cd /'
 
@@ -31,6 +33,8 @@ alias htop='sudo htop'
 
 # List all files colorized in long format
 alias l="ls -l --human-readable --color"
+
+alias ls="ls --human-readable --color"
 
 # List all files colorized in long format, including dot files
 alias la="ls -l --all --human-readable --group-directories-first --color"
