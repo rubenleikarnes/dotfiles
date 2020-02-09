@@ -64,7 +64,7 @@
 		".svn",
 		".swp"
 	],
-	"font_face": "Hack Nerd Font",
+	"font_face": "Jetbrains Mono",
 	"font_options":
 	[
 		"subpixel_antialias",

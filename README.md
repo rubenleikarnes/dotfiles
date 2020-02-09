@@ -44,8 +44,8 @@ Press ```prefix + I``` (capital i, as in Install) to fetch the plugin.
 
 ## Terminal settings
 
-- Theme: [Oceanic Next](https://github.com/voronianski/oceanic-next-color-scheme)
-- Font: [Hack](https://github.com/chrissimpkins/hack)
+- Theme: [Snazzy](https://github.com/sindresorhus/iterm2-snazzy) ~~[Oceanic Next](https://github.com/voronianski/oceanic-next-color-scheme)~~
+- Font: [JetBrains Mono](https://www.jetbrains.com/lp/mono/) ~~[Hack](https://github.com/chrissimpkins/hack)~~
 - [Use ⌥ ← and ⌥→ to jump forwards/backwards words in iTerm](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x)
 
 ```

@@ -25,6 +25,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'nacitar/terminalkeys.vim' " Som things to improve key support in rxvt "
 	Plug 'wincent/terminus' " Terminus enhances Vim's and Neovim's integration with the terminal when using tmux "
 	Plug 'ryanoasis/vim-devicons' " Devicons in font "
+	Plug 'connorholyday/vim-snazzy' " Snazzy theme
 call plug#end()
 
 
@@ -40,7 +41,7 @@ set diffopt+=vertical
 
 " Visuals "
 syntax on " switch syntax highlighting on "
-set guifont=Hack\ Nerd\ Font:h15
+set guifont=JetBrains\ Mono:h15
 highlight Comment cterm=italic
 set number " Show line numbers "
 set relativenumber " show relative line numbers "
@@ -53,8 +54,8 @@ set history=1000 " change history to 1000 "
 set background=dark " Dark theme "
 
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
-colorscheme OceanicNext
-let g:airline_theme='oceanicnext'
+colorscheme snazzy
+let g:airline_theme='simple'
 "let base16colorspace=256"  " Access colors present in 256 colorspace"
 
 
