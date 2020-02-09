@@ -14,7 +14,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "wide",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/Oceanic Next Color Scheme/Oceanic Next.tmTheme",
+	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
 	"default_line_ending": "unix",
 	"detect_slow_plugins": true,
 	"disable_colored_group_labels": true,
