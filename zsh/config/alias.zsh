@@ -12,10 +12,10 @@ alias df='df -h' # disk free, in Gigabytes, not bytes
 alias du='du -h -c' # calculate disk usage for a folder
 
 # Folders and path
-alias ..='cd ..'
-alias ...='cd ../..'
-alias cd..='cd ..'
-alias cd/='cd /'
+# alias ..='cd ..'
+# alias ...='cd ../..'
+# alias cd..='cd ..'
+# alias cd/='cd /'
 
 # List 10 last paths
 alias q='dirs -v | head -10'
@@ -58,7 +58,7 @@ alias rdbm='rails db:migrate'
 # `less` with options to preserve color and line numbers, unless the output is
 # small enough for one screen.
 function tre() {
-	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" -L 3 | less -FRNX;
+	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
@@ -92,7 +92,7 @@ function g() {
 }
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update -g; gem update --system; gem update;echo " "; mas outdated; mas upgrade; echo  "  \033[1;30m✔\033[0m  Everything is up to date"'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; echo  "  \033[1;30m✔\033[0m  Everything is up to date"'
 
 # Force update macos
 alias forcesystemupdate="sudo softwareupdate -i --all --verbose"

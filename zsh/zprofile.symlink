@@ -5,6 +5,8 @@ setopt noflowcontrol   # disable start (C-s) and stop (C-q) characters
 setopt interactivecomments  # allow comments, even in interactive shells
 setopt printexitvalue       # for non-zero exit status
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
+setopt HIST_IGNORE_ALL_DUPS # Remove older command from the history if a duplicate is to be added.
+setopt EXTENDED_HISTORY
 setopt CORRECT
 
 # Better spell checking & auto correction prompt
