@@ -1,0 +1,14 @@
+# Zim settings
+zmodule completion
+zmodule directory
+zmodule environment
+zmodule history
+zmodule input
+zmodule utility
+
+ztermtitle="%n@%m:%~"
+zdouble_dot_expand="true"
+zhighlighters=(main brackets pattern cursor root)
+
+# Append `../` to your input for each `.` you type after an initial `..`
+zstyle ':zim:input' double-dot-expand yes

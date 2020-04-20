@@ -25,9 +25,12 @@
   for file in ${ZIM_HOME}/modules/${^zmodules}/init.zsh(-.N); do
     zrecompile -pq ${file}
   done
- 
+
   # zcompile all zplug plugins
   for file in /usr/local/opt/zplug/repos/*/*/*.zsh(-.N); do
     zrecompile -pq ${file}
   done
 ) &!
+
+# Initialize Zim
+source ${ZIM_HOME}/login_init.zsh -q &!

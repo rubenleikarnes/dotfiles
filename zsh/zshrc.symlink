@@ -37,20 +37,6 @@ zplug "chrissicool/zsh-256color", from:github
 zplug "mafredri/zsh-async", from:github
 #zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
-# Zim settings
-zmodules=(
-	completion
-	directory
-	environment
-	history
-	input
-	utility
-)
-
-
-ztermtitle="%n@%m:%~"
-zdouble_dot_expand="true"
-zhighlighters=(main brackets pattern cursor root)
 
 # Checks for new plugins on startup
 if ! zplug check --verbose; then
@@ -63,6 +49,15 @@ fi
 # zplug load --verbose
 zplug load
 
+# Change default zim location
+export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+
+if [[ ${ZIM_HOME}/init.zsh -ot ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  # Update static initialization script if it's outdated, before sourcing it
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
+source ${ZIM_HOME}/init.zsh
+
 # load all zsh config files in dotfiles/zsh
 for config ($ZHOME/config/*.zsh) source $config
 
@@ -71,9 +66,6 @@ if [ -r ~/.zshlocal ]
 then
     source ~/.zshlocal
 fi
-
-# Change default zim location
-export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
@@ -122,8 +114,6 @@ zstyle :prompt:pure:prompt:error color 160
 zstyle :prompt:pure:prompt:success color 046
 
 [[ $TERM == xterm* ]] || : ${PURE_POWER_MODE:=portable}
-# source ~/.pure10k.zsh
-source ~/.purepower
 
 # Configuration: https://github.com/bhilburn/powerlevel9k
 # `$(_pp_c x y`) evaluates to `y` if the terminal supports >= 256 colors and to `x` otherwise.
@@ -145,7 +135,7 @@ typeset -ga POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     status
     background_jobs
 )
-
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 typeset -g PURE_POWER_MODE=fancy
 typeset -g POWERLEVEL9K_SHOW_RULER=false
 typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
