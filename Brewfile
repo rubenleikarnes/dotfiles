@@ -69,6 +69,7 @@ cask "firefox-developer-edition"
 cask "font-hack"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono"
+cask "forklift"
 cask "google-chrome"
 cask "google-chrome-canary"
 cask "iina"
@@ -85,6 +86,7 @@ cask "mysqlworkbench"
 cask "oversight"
 cask "pennywise"
 cask "pocket-casts"
+cask "radio-silence"
 cask "rectangle"
 cask "slack"
 cask "spotify"
@@ -106,6 +108,8 @@ cask "xnconvert"
 mas "Airmail", id: 918858936
 mas "Dato", id: 1470584107
 mas "Microsoft To Do", id: 1274495053
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Tweetbot", id: 1384080005
 mas "Up Next", id: 1355117041
 mas "Xcode", id: 497799835
