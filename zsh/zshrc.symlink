@@ -1,16 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-
 # Path
-PATH="/Users/ruben/.crenv/bin:$PATH"
-PATH="/Users/ruben/.composer/vendor/bin:$PATH"
-PATH="/Users/ruben/Library/Python/2.7/bin:$PATH"
-PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH
 
@@ -23,7 +11,6 @@ ZHOME=$DOTFILES/zsh
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 # zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:2
 zplug "zdharma/fast-syntax-highlighting", from:github
 # zplug "zsh-users/zsh-completions", from:github, defer:2
@@ -35,7 +22,7 @@ zplug "djui/alias-tips", from:github
 zplug "chrissicool/zsh-256color", from:github
 #zplug "b4b4r07/enhancd", use:init.sh
 zplug "mafredri/zsh-async", from:github
-#zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
 
 # Checks for new plugins on startup
@@ -93,10 +80,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 # Load Rbenv if it exists
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# Load crenv
-if which crenv > /dev/null; then eval "$(crenv init -)"; fi
-
-
 # global node modules
 export NODE_PATH=/usr/local/lib/node_modules
 
@@ -113,39 +96,5 @@ zstyle :prompt:pure:path color 039
 zstyle :prompt:pure:prompt:error color 160
 zstyle :prompt:pure:prompt:success color 046
 
-[[ $TERM == xterm* ]] || : ${PURE_POWER_MODE:=portable}
-
-# Configuration: https://github.com/bhilburn/powerlevel9k
-# `$(_pp_c x y`) evaluates to `y` if the terminal supports >= 256 colors and to `x` otherwise.
-zmodload zsh/terminfo
-if (( terminfo[colors] >= 256 )); then
-  function _pp_c() { print -nr -- $2 }
-else
-  function _pp_c() { print -nr -- $1 }
-  typeset -g POWERLEVEL9K_IGNORE_TERM_COLORS=true
-fi
-
-typeset -ga POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-    dir
-    vcs
-    command_execution_time
-)
-
-typeset -ga POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-    status
-    background_jobs
-)
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-typeset -g PURE_POWER_MODE=fancy
-typeset -g POWERLEVEL9K_SHOW_RULER=false
-typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-typeset -g POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=false
-typeset -g POWERLEVEL9K_ALWAYS_SHOW_USER=false
-typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
-typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$(_pp_c 5 008)
-
 # iterm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

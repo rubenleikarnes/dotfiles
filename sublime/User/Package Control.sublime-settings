@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Alignment",
 		"AutoFileName",
 		"Autoprefixer",
@@ -18,17 +19,18 @@
 		"Gitignored File Excluder",
 		"GitStatus",
 		"Handlebars",
+		"HighlightWords",
 		"MarkdownPreview",
 		"Nunjucks Syntax",
 		"Oceanic Color Scheme",
 		"Oceanic Next Color Scheme",
 		"Origami",
 		"Package Control",
-		"Pretty JSON",
 		"Sass",
 		"SCSS",
 		"Seti_UI",
 		"Seti_UX",
-		"TOML"
+		"TOML",
+		"WordHighlight"
 	]
 }
