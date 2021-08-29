@@ -31,6 +31,3 @@
     zrecompile -pq ${file}
   done
 ) &!
-
-# Initialize Zim
-source ${ZIM_HOME}/login_init.zsh -q &!

@@ -20,6 +20,12 @@ shopt -s nocaseglob;
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
+#  There is a new shell option: `dirspell'. When enabled, the filename completion code performs spelling correction on directory names during completion.
+shopt -s dirspell
+
+# Autocomplete only suggest folders
+complete -d cd
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -92,6 +98,7 @@ bind "set completion-ignore-case on"
 
 # Treat hyphens and underscores as equivalent
 bind "set completion-map-case on"
+
 
 # Display matches for ambiguous patterns at first tab press
 bind "set show-all-if-ambiguous on"

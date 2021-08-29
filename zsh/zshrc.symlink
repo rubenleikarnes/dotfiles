@@ -1,5 +1,8 @@
 # Path
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+PATH="/opt/homebrew/bin:$PATH"
+PATH="/opt/homebrew/sbin:$PATH"
+PATH="/opt/homebrew/opt/dart/libexec:$PATH"
+PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH
 
 
@@ -8,21 +11,18 @@ ZHOME=$DOTFILES/zsh
 
 
 # ZPlug
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-# zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:2
 zplug "zdharma/fast-syntax-highlighting", from:github
-# zplug "zsh-users/zsh-completions", from:github, defer:2
+zplug "zsh-users/zsh-completions", from:github, defer:2
 zplug "zsh-users/zsh-history-substring-search", from:github, defer:2
 zplug "zsh-users/zsh-autosuggestions", from:github, defer:2
-zplug "zimfw/zimfw", depth:1, use:"init.zsh", hook-build:"ln -sf $ZPLUG_ROOT/repos/zimfw/zimfw ~/.zim"
 zplug "lib/termsupport", depth:1, from:oh-my-zsh
-zplug "djui/alias-tips", from:github
 zplug "chrissicool/zsh-256color", from:github
-#zplug "b4b4r07/enhancd", use:init.sh
 zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+zplug "MichaelAquilina/zsh-you-should-use"
 
 
 # Checks for new plugins on startup
@@ -36,16 +36,8 @@ fi
 # zplug load --verbose
 zplug load
 
-# Change default zim location
-export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
-
-if [[ ${ZIM_HOME}/init.zsh -ot ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
-  # Update static initialization script if it's outdated, before sourcing it
-  source ${ZIM_HOME}/zimfw.zsh init -q
-fi
-source ${ZIM_HOME}/init.zsh
-
 # load all zsh config files in dotfiles/zsh
+for module ($ZHOME/module/*.zsh) source $module
 for config ($ZHOME/config/*.zsh) source $config
 
 # local exports or aliases not intended for github
@@ -66,6 +58,8 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
 
+fpath=($ZPLUG_HOME/repos/zsh-users/zsh-completions/src $fpath)
+
 # Asks before rm foo/*
 unsetopt RM_STAR_SILENT
 
@@ -77,24 +71,29 @@ ZSH_HIGHLIGHT_PATTERNS=('rm -rf*' 'fg=white,bold,bg=red')
 
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-# Load Rbenv if it exists
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 # global node modules
 export NODE_PATH=/usr/local/lib/node_modules
 
 # Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Node Version Manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Pure theme settings
 zstyle :prompt:pure:path color 039
 zstyle :prompt:pure:prompt:error color 160
 zstyle :prompt:pure:prompt:success color 046
 
-# iterm2
+# iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# asdf version control
+ASDFINSTALL="$(brew --prefix)/Cellar/asdf/0.8.1_1/"
+
+if [ -f "$ASDFINSTALL"/asdf.sh ]; then
+	source "$ASDFINSTALL"/asdf.sh
+else
+	echo "$ASDFINSTALL is missing"
+fi
+
+
+# https://github.com/MichaelAquilina/zsh-you-should-use#customising-messages
+export YSU_MESSAGE_FORMAT="Found existing %alias_type for '$(tput setaf 2)%command$(tput sgr0)'. You should use: '$(tput setaf 2)%alias$(tput sgr0)'"

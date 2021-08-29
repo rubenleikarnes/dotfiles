@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 
 # Required for $langinfo
 zmodload zsh/langinfo
