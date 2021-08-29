@@ -3,7 +3,7 @@
 	email = rubenleikarnes@users.noreply.github.com
 
 [core]
-	editor = nvim 
+	editor = nano
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
@@ -19,7 +19,7 @@
 	pager = diff-so-fancy | less --tabs=4 -RFX
 
 	whitespace = trailing-space,space-before-tab
-	
+
 [color]
 	# Use colors in Git commands that are capable of colored output when
 	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
@@ -99,7 +99,7 @@
 
 [push]
 	default = simple
-	
+
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
@@ -127,3 +127,7 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[init]
+	defaultBranch = master
+[pull]
+	rebase = true

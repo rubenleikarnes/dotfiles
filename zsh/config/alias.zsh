@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Shortcuts
 alias v="nvim"
 alias t="tmux"
@@ -12,10 +14,11 @@ alias df='df -h' # disk free, in Gigabytes, not bytes
 alias du='du -h -c' # calculate disk usage for a folder
 
 # Folders and path
-# alias ..='cd ..'
-# alias ...='cd ../..'
-# alias cd..='cd ..'
-# alias cd/='cd /'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias cd..='cd ..'
+alias cd/='cd /'
 
 # List 10 last paths
 alias q='dirs -v | head -10'
@@ -50,8 +53,8 @@ alias week='date +%V'
 
 # developing shortcuts
 alias gp='git push'
-alias rrs='rails server'
-alias rdbm='rails db:migrate'
+alias rrs='bundle exec rails server'
+alias rdbm='bundle exec rails db:migrate'
 
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
 # the `.git` directory, listing directories first. The output gets piped into
@@ -60,6 +63,7 @@ alias rdbm='rails db:migrate'
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+compdef tre=tree
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
 # opens the given location
@@ -80,6 +84,7 @@ function o() {
 		open "$@";
 	fi;
 }
+compdef o=open
 
 # No arguments: `git status`
 # With arguments: acts like `git`
@@ -90,6 +95,7 @@ function g() {
     git status -s
   fi
 }
+compdef g=git
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; echo  "  \033[1;30m✔\033[0m  Everything is up to date"'
@@ -108,5 +114,14 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; mkdir ~/.Trash"
 
 # Use bat instad of cat
-alias cat="bat"
-alias ccat="\cat"
+if type bat &> /dev/null; then
+	alias cat="bat"
+	alias ccat="\cat"
+fi
+
+# Use fd instad of find
+if type fd &> /dev/null; then
+	alias find="fd"
+	alias ffind="\find"
+fi
+

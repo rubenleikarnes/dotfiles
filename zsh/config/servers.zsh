@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
 	local port="${1:-8000}";
@@ -11,7 +13,7 @@ function server() {
 # (Requires PHP 5.4.0+.)
 function phpserver() {
 	local port="${1:-4000}";
-	local ip=$(ipconfig getifaddr en1);
+	local ip=$(ipconfig getifaddr en0);
 	sleep 1 && open "http://${ip}:${port}/" &
 	php -S "${ip}:${port}";
 }
