@@ -11,7 +11,11 @@ ZHOME=$DOTFILES/zsh
 
 
 # ZPlug
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
+if uname -r |grep -q 'Darwin' ; then
+  export ZPLUG_HOME=/opt/homebrew/opt/zplug
+else
+  export ZPLUG_HOME=~/.zplug
+fi
 source $ZPLUG_HOME/init.zsh
 
 zplug "zdharma/fast-syntax-highlighting", from:github
@@ -82,11 +86,19 @@ zstyle :prompt:pure:path color 039
 zstyle :prompt:pure:prompt:error color 160
 zstyle :prompt:pure:prompt:success color 046
 
+# Force ctrl+e and ctrl+a
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # asdf version control
-ASDFINSTALL="$(brew --prefix)/Cellar/asdf/0.8.1_1/"
+if uname -r |grep -q 'Darwin' ; then
+	ASDFINSTALL="$(brew --prefix)/Cellar/asdf/0.8.1_1/"
+else
+	ASDFINSTALL="$HOME/.asdf/"
+fi
 
 if [ -f "$ASDFINSTALL"/asdf.sh ]; then
 	source "$ASDFINSTALL"/asdf.sh
