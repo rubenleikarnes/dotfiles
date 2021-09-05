@@ -159,6 +159,25 @@ vnoremap . :normal .<cr> " enable . command in visual mode "
 "imap <left> <nop>
 "imap <right> <nop>
 
+" https://sidneyliebrand.io/blog/a-collection-of-vim-key-binds "
+" moving up or down a paragraph "
+noremap K     {
+noremap J     }
+" Likewise H maps to ^ which takes you to the first non-whitespace character
+" of the current line and L maps to $ which takes you to the end of the
+" current line "
+noremap H     ^
+noremap L     $
+
+" Autoclose, disabled with set paste / cmd+v
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 " Set relevant filetypes "
 au BufRead,BufNewFile *.scss set filetype=css
 au BufRead,BufNewFile *.md set filetype=markdown
