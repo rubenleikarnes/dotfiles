@@ -97,3 +97,11 @@ fi
 
 # https://github.com/MichaelAquilina/zsh-you-should-use#customising-messages
 export YSU_MESSAGE_FORMAT="Found existing %alias_type for '$(tput setaf 2)%command$(tput sgr0)'. You should use: '$(tput setaf 2)%alias$(tput sgr0)'"
+
+# ripgrep
+# https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
+if type rg &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='rg --files'
+  export FZF_DEFAULT_OPTS='-m --height 50% --border'
+fi
+
