@@ -10,6 +10,7 @@ zsh
 git
 tmux
 zplug
+nvim
 ```
 
 ## Install
