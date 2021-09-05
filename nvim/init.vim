@@ -26,6 +26,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'wincent/terminus' " Terminus enhances Vim's and Neovim's integration with the terminal when using tmux "
 	Plug 'ryanoasis/vim-devicons' " Devicons in font "
 	Plug 'connorholyday/vim-snazzy' " Snazzy theme
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
 call plug#end()
 
 
@@ -146,16 +148,16 @@ nmap <leader>. <c-^> " switch between current and last buffer "
 vnoremap . :normal .<cr> " enable . command in visual mode "
 
 " Disable Arrow keys in Escape mode "
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+"map <up> <nop>
+"map <down> <nop>
+"map <left> <nop>
+"map <right> <nop>
 
 " Disable Arrow keys in Insert mode "
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+"imap <up> <nop>
+"imap <down> <nop>
+"imap <left> <nop>
+"imap <right> <nop>
 
 " Set relevant filetypes "
 au BufRead,BufNewFile *.scss set filetype=css
@@ -185,3 +187,15 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " To use fzf in Vim, add the following line to your .vimrc: "
 set rtp+=/opt/homebrew/opt/fzf
+
+" ctrl+f to open :Files command "
+nnoremap <silent> <C-f> :Files<CR>
+
+" ,+b to open current buffers "
+nnoremap <silent> <Leader>b :Buffers<CR>
+
+" ,+f to search current buffer "
+nnoremap <silent> <Leader>f :BLines<CR>
+
+" disable recording keybind "
+map q <Nop>
