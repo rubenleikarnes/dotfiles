@@ -114,13 +114,13 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; mkdir ~/.Trash"
 
 # Use bat instad of cat
-if type bat &> /dev/null; then
+if command bat &> /dev/null; then
 	alias cat="bat"
 	alias ccat="\cat"
 fi
 
 # Use fd instad of find
-if type fd &> /dev/null; then
+if command fd &> /dev/null; then
 	alias find="fd"
 	alias ffind="\find"
 fi
