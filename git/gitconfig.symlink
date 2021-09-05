@@ -3,7 +3,7 @@
 	email = rubenleikarnes@users.noreply.github.com
 
 [core]
-	editor = nano
+	editor = nvim
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
