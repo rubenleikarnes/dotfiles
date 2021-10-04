@@ -93,17 +93,19 @@ bindkey "^[[1;5D" backward-word
 # iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# asdf version control
-if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
-	ASDFINSTALL="$(brew --prefix)/Cellar/asdf/0.8.1_1/"
-else
-	ASDFINSTALL="$HOME/.asdf/"
+
+# asdf plugin from oh-my-zsh https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/asdf/asdf.plugin.zsh
+# Find where asdf should be installed
+ASDF_DIR="${ASDF_DIR:-$HOME/.asdf}"
+
+# If not found, check for Homebrew package
+if [[ ! -f "$ASDF_DIR/asdf.sh" ]] && (( $+commands[brew] )); then
+   ASDF_DIR="$(brew --prefix asdf)"
 fi
 
-if [ -f "$ASDFINSTALL"/asdf.sh ]; then
-	source "$ASDFINSTALL"/asdf.sh
-else
-	echo "$ASDFINSTALL is missing"
+# Load command
+if [[ -f "$ASDF_DIR/asdf.sh" ]]; then
+    . "$ASDF_DIR/asdf.sh"
 fi
 
 
@@ -116,4 +118,6 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files'
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
+
+
 
