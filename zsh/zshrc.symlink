@@ -93,21 +93,8 @@ bindkey "^[[1;5D" backward-word
 # iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-
-# asdf plugin from oh-my-zsh https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/asdf/asdf.plugin.zsh
-# Find where asdf should be installed
-ASDF_DIR="${ASDF_DIR:-$HOME/.asdf}"
-
-# If not found, check for Homebrew package
-if [[ ! -f "$ASDF_DIR/asdf.sh" ]] && (( $+commands[brew] )); then
-   ASDF_DIR="$(brew --prefix asdf)"
-fi
-
-# Load command
-if [[ -f "$ASDF_DIR/asdf.sh" ]]; then
-    . "$ASDF_DIR/asdf.sh"
-fi
-
+# official asdf-vm.com zsh+brew instructions
+echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 
 # https://github.com/MichaelAquilina/zsh-you-should-use#customising-messages
 export YSU_MESSAGE_FORMAT="Found existing %alias_type for '$(tput setaf 2)%command$(tput sgr0)'. You should use: '$(tput setaf 2)%alias$(tput sgr0)'"
@@ -121,3 +108,11 @@ fi
 
 
 
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
