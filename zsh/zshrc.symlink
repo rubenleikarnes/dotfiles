@@ -93,9 +93,6 @@ bindkey "^[[1;5D" backward-word
 # iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# official asdf-vm.com zsh+brew instructions
-echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
-
 # https://github.com/MichaelAquilina/zsh-you-should-use#customising-messages
 export YSU_MESSAGE_FORMAT="Found existing %alias_type for '$(tput setaf 2)%command$(tput sgr0)'. You should use: '$(tput setaf 2)%alias$(tput sgr0)'"
 
@@ -106,13 +103,5 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 
-
-
-
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
+# Launch asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
