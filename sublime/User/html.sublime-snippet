@@ -9,19 +9,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Ruben Leikarnes">
 
-	<!-- Disable tap highlight on IE -->
-	<meta name="msapplication-tap-highlight" content="no">
-
-	<!-- Color the status bar on mobile devices -->
-	<meta name="theme-color" content="#222">
-
-
 	<title>${1:Title}</title>
 	
 	<link rel="stylesheet" href="${2:style.css}">
 </head>
 <body>
-	
+	${3:}
 </body>
 </html>]]></content>
 	<tabTrigger>html5</tabTrigger>
