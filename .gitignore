@@ -50,3 +50,7 @@ Archive
 # Sublime Package Control Cert Copy #
 ####################################
 *.crt
+
+# Sublime Sync Settings #
+#########################
+sublime/User/SyncSettings.sublime-settings
