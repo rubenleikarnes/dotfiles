@@ -35,7 +35,7 @@
 	// Fix beginning of line + select
 	{ "keys": ["super+shift+left"], "command": "move_to", "args": {"to": "hardbol", "extend": true} },
 
-	// Tab switch in order insted os last used
+	// Tab switch in order insted of last used
 	{ "keys": ["ctrl+tab"], "command": "next_view" },
 	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
 
@@ -44,5 +44,5 @@
 	{ "keys": ["super+n"], "command": "new_file" },
 
 	// Hotkey pref stopped working
-	{ "keys": ["super+,"], "command": "open_file", "args": {"file": "${packages}/User/Preferences.sublime-settings"} },
+	{ "keys": ["super+,"], "command": "open_file", "args": {"file": "${packages}/User/Preferences.sublime-settings"} }
 ]
