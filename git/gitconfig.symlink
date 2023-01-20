@@ -73,9 +73,6 @@
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD; git --no-pager diff --patch-with-stat"
 
-	# Pull in remote changes for the current repository and all its submodules
-	p = !"git pull; git submodule foreach git pull origin master"
-
 	# Commit all changes with $editor
 	ca = !git add -A && git commit -av
 
@@ -130,6 +127,6 @@
 	newNormal = green bold
 	newHighlight = green bold 22
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [pull]
 	rebase = true
