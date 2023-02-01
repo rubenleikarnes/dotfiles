@@ -26,7 +26,13 @@ alias q='dirs -v | head -10'
 # Specific folder shortcuts
 alias dt="cd ~/Desktop"
 alias p="cd ~/Projects"
+alias c="cd ~/code"
+# alias cn="cd ~/code/nep-no"
+alias ct="cd ~/code/temp"
 alias dot="cd ~/dotfiles"
+
+# K8s
+alias k="kubectl"
 
 # Github stars to pinboard
 alias pinstars="python ~/Repos//github-starred-to-pinboard/exporter.py"
@@ -119,3 +125,11 @@ if type fd &>/dev/null; then
 	alias ffind="\find"
 fi
 
+# Cd to folder, or subfolder with args
+function cn() {
+  if [ $# -eq 0 ]; then
+    cd ~/code/nep-no;
+  else
+    cd ~/code/nep-no/$@;
+  fi;
+}
