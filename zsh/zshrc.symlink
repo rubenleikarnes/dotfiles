@@ -22,7 +22,7 @@ zplug "zdharma/fast-syntax-highlighting", from:github
 zplug "zsh-users/zsh-completions", from:github, defer:2
 zplug "zsh-users/zsh-history-substring-search", from:github, defer:2
 zplug "zsh-users/zsh-autosuggestions", from:github, defer:2
-zplug "lib/termsupport", depth:1, from:oh-my-zsh
+zplug "config/termsupport", depth:1, from:oh-my-zsh
 zplug "chrissicool/zsh-256color", from:github
 zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
