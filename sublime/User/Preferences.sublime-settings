@@ -56,11 +56,8 @@
     "*.log",
     "Desktop.ini",
     "Thumbs.db",
-    "/Users/ruben/Projects/nep-no-rikstoto-gfx/js/.DS_Store",
-    "/Users/ruben/Projects/nep-no-rikstoto-gfx/css/fonts/.DS_Store",
-    "/Users/ruben/Projects/nep-no-rikstoto-gfx/.DS_Store",
-    "/Users/ruben/Projects/nep-no-rikstoto-gfx/css/.DS_Store",
-    "/Users/ruben/Projects/nep-no-rikstoto-gfx/elements/.DS_Store"
+    "/Users/ruben/dotfiles/sublime/User/Package Control.user-ca-bundle",
+    "/Users/ruben/dotfiles/sublime/User/SyncSettings.sublime-settings",
   ],
   "find_selected_text": true,
   "folder_exclude_patterns":
@@ -81,7 +78,7 @@
     "subpixel_antialias",
     "gray_antialias"
   ],
-  "font_size": 16,
+  "font_size": 14,
   "highlight_line": true,
   "highlight_modified_tabs": true,
   "ignored_packages":
