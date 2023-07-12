@@ -19,3 +19,6 @@ Thumbs.db
 
 # Node packages
 node_modules
+
+# gh hosts
+config.symlink/gh/hosts.yml
