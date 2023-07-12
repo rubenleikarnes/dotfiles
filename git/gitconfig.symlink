@@ -1,6 +1,6 @@
 [user]
-	name = ruben
-	email = rubenleikarnes@users.noreply.github.com
+	name = Ruben
+	email = ruben.leikarnes@gmail.com
 
 [core]
 	editor = nvim
@@ -17,10 +17,13 @@
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
 
-	# https://github.com/so-fancy/diff-so-fancy
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  # https://github.com/dandavison/delta
+  pager = delta
 
 	whitespace = trailing-space,space-before-tab
+
+[interactive]
+  diffFilter = delta --color-only
 
 [color]
 	# Use colors in Git commands that are capable of colored output when
@@ -45,6 +48,10 @@
 	changed = green
 	untracked = cyan
 
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  line-numbers = true
 
 [diff]
 	# Detect copies as well as renames
@@ -53,10 +60,12 @@
 [diff "bin"]
 	# Use `hexdump` to diff binary files
 	textconv = hexdump -v -C
+  colorMoved = default
 
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+  conflictstyle = diff3
 
 [help]
 	# Automatically correct and execute mistyped commands
@@ -71,7 +80,7 @@
 	s = status -s
 
 	# Show the diff between the latest commit and the current state
-	d = !"git diff-index --quiet HEAD; git --no-pager diff --patch-with-stat"
+	d = !"git diff-index --quiet HEAD; git diff --patch-with-stat"
 
 	# Commit all changes with $editor
 	ca = !git add -A && git commit -av

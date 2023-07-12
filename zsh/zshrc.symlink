@@ -1,8 +1,8 @@
 # Path
-PATH="/opt/homebrew/bin:$PATH"
-PATH="/opt/homebrew/sbin:$PATH"
-PATH="/opt/homebrew/opt/dart/libexec:$PATH"
-PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+PATH="/usr/local/bin:$PATH"
+PATH="/usr/local/sbin:$PATH"
+PATH="/usr/local/opt/dart/libexec:$PATH"
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH
 
 
@@ -12,9 +12,10 @@ ZHOME=$DOTFILES/zsh
 
 # ZPlug
 if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
-	export ZPLUG_HOME=/opt/homebrew/opt/zplug
+	export ZPLUG_HOME=/usr/local/opt/zplug
 else
-	export ZPLUG_HOME=~/.zplug
+  export ZPLUG_HOME=/usr/local/opt/zplug
+	# export ZPLUG_HOME=~/.zplug
 fi
 source $ZPLUG_HOME/init.zsh
 
@@ -104,4 +105,4 @@ if type rg &> /dev/null; then
 fi
 
 # Launch asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+source /usr/local/opt/asdf/libexec/asdf.sh
