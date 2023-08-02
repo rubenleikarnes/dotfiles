@@ -6,17 +6,15 @@ My startingpoint ~~is~~ was mostly a fork of [Mathias Bynens'](https://github.co
 
 ```
 coreutils
-zsh
+fish
 git
-tmux
-zplug
 nvim
 ```
 
 ## Install
 
 ```
-Set default shell in System Preferences  \'/usr/local/bin/zsh\'
+Set default shell in System Preferences  \'/usr/local/bin/fish\'
 git clone --recursive git://github.com/rub1/dotfiles.git $HOME/dotfiles
 git submodule update --init --recursive
 ```
@@ -29,11 +27,16 @@ sh ./link.sh
 
 Restart terminal session
 
-### NVim
+### Brew
 
 ```
-:PlugInstall
+cd ~/dotfiles
+brew bundle
 ```
+
+### nvim
+
+Uses [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) with smaller changes and a few plugins
 
 ### Tmux
 
