@@ -54,3 +54,8 @@ Archive
 # Sublime Sync Settings #
 #########################
 sublime/User/SyncSettings.sublime-settings
+
+# nvim #
+########
+config.symlink/nvim/lazy-lock.json
+config.symlink/nvim/.netrwhist
