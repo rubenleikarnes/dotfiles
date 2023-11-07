@@ -17,7 +17,7 @@ recent.capture_file: /Users/ruben/Downloads/1.pcap
 # Main window geometry.
 # Decimal numbers.
 gui.geometry_main_x: 50
-gui.geometry_main_y: 50
+gui.geometry_main_y: 49
 gui.geometry_main_width: 2139
 gui.geometry_main_height: 1357
 
@@ -66,7 +66,16 @@ gui.search_case_sensitive: FALSE
 
 # Find packet search type.
 # One of: DISPLAY_FILTER, HEX_VALUE, STRING, REGEX
-gui.search_type: DISPLAY_FILTER
+gui.search_type: STRING
+
+# Geometry and maximized state of FilterDialog window.
+# Decimal integers.
+gui.geom.FilterDialog.x: 396
+gui.geom.FilterDialog.y: 263
+gui.geom.FilterDialog.width: 1426
+gui.geom.FilterDialog.height: 904
+# TRUE or FALSE (case-insensitive).
+gui.geom.FilterDialog.maximized: FALSE
 
 # Custom colors.
 # List of custom colors selected in Qt color picker.
