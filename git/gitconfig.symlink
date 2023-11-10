@@ -117,7 +117,7 @@
 	# 	insteadOf = "git://github.com/rubenleikarnes/"
 
 [credential]
-	helper = manager
+	helper = manager-core.
 
 [filter "media"]
 	clean = git-media-clean %f
