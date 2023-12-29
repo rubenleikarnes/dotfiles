@@ -90,7 +90,7 @@ column.width:
         %d, -1,
         %p, -1,
         %L, -1,
-        %i, 1520
+        %i, 1473
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".

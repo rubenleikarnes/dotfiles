@@ -17,7 +17,7 @@ recent.capture_file: /Users/ruben/Downloads/1.pcap
 # Main window geometry.
 # Decimal numbers.
 gui.geometry_main_x: 50
-gui.geometry_main_y: 49
+gui.geometry_main_y: 50
 gui.geometry_main_width: 2139
 gui.geometry_main_height: 1357
 
@@ -76,6 +76,15 @@ gui.geom.FilterDialog.width: 1426
 gui.geom.FilterDialog.height: 904
 # TRUE or FALSE (case-insensitive).
 gui.geom.FilterDialog.maximized: FALSE
+
+# Geometry and maximized state of PacketDialog window.
+# Decimal integers.
+gui.geom.PacketDialog.x: 254
+gui.geom.PacketDialog.y: 173
+gui.geom.PacketDialog.width: 1711
+gui.geom.PacketDialog.height: 1085
+# TRUE or FALSE (case-insensitive).
+gui.geom.PacketDialog.maximized: FALSE
 
 # Custom colors.
 # List of custom colors selected in Qt color picker.
