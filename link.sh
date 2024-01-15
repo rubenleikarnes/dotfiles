@@ -45,27 +45,27 @@ done
 
 
 
-echo "\nInstalling nvim"
-echo "=============================="
-if [ ! -d $HOME/.config ]; then
-	g_list "Creating $HOME/.config"
-	mkdir -p $HOME/.config
-else
-	y_list "~/.config/ already exists... backing up."
-	mv $HOME/.config/ $BACKUPDIR/.config
-	y_list "Creating $HOME/.config"
-	mkdir -p $HOME/.config
-fi
+# echo "\nInstalling nvim"
+# echo "=============================="
+# if [ ! -d $HOME/.config ]; then
+# 	g_list "Creating $HOME/.config"
+# 	mkdir -p $HOME/.config
+# else
+# 	y_list "~/.config/ already exists... backing up."
+# 	cp -R $HOME/.config/ $BACKUPDIR/.config
+# 	y_list "Creating $HOME/.config"
+# 	mkdir -p $HOME/.config
+# fi
 
-if [ ! -d $HOME/.config/nvim ]; then
-	g_list "Creating symlink for $DOTFILES/nvim"
-	ln -s $DOTFILES/nvim $HOME/.config/nvim
-else
-	y_list "$HOME/.config/nvim already exists... Skipping."
-	mv -r $HOME/.config/nvim $BACKUPDIR/.config/nvim
-	g_list "Creating symlink for $DOTFILES/nvim"
-	ln -s $DOTFILES/nvim $HOME/.config/nvim
-fi
+# if [ ! -d $HOME/.config/nvim ]; then
+# 	g_list "Creating symlink for $DOTFILES/nvim"
+# 	ln -s $DOTFILES/nvim $HOME/.config/nvim
+# else
+# 	y_list "$HOME/.config/nvim already exists... Skipping."
+# 	mv -r $HOME/.config/nvim $BACKUPDIR/.config/nvim
+# 	g_list "Creating symlink for $DOTFILES/nvim"
+# 	ln -s $DOTFILES/nvim $HOME/.config/nvim
+# fi
 
 
 
