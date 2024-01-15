@@ -1,0 +1,48 @@
+{
+  "keymap": [
+    {
+      "key": "cmd-l",
+      "trigger": "select-line"
+    },
+    {
+      "key": "cmd-l",
+      "trigger": "-go-to-line"
+    },
+    {
+      "key": "alt-shift-d",
+      "trigger": "-duplicate-line"
+    },
+    {
+      "key": "shift-cmd-d",
+      "trigger": "duplicate-line"
+    },
+    {
+      "key": "cmd-shift-d",
+      "trigger": "-unselect-occurrence"
+    },
+    {
+      "key": "ctrl-tab",
+      "trigger": "-next-goto-tab"
+    },
+    {
+      "key": "ctrl-tab",
+      "trigger": "next-tab"
+    },
+    {
+      "key": "shift-ctrl-tab",
+      "trigger": "prev-tab"
+    },
+    {
+      "key": "ctrl-tab",
+      "trigger": "-show-switcher"
+    },
+    {
+      "key": "ctrl-shift-tab",
+      "trigger": "-show-switcher-backward"
+    },
+    {
+      "key": "shift-tab",
+      "trigger": "next-goto-tab"
+    }
+  ]
+}
