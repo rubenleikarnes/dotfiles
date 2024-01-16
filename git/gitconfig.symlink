@@ -2,6 +2,9 @@
 	name = Ruben
 	email = ruben@2110.no
 
+[includeIf "gitdir:~/code/nep-gpe"]
+  path = ~/.gitconfig-nep-gpe
+
 [core]
 	editor = nvim
 
@@ -104,6 +107,7 @@
 
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
+	credential-manager = osxkeychain
 
 [push]
 	default = simple
@@ -111,13 +115,8 @@
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
-	# Any GitHub repo with my username should be checked out r/w by default
-	# http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
-	# [url "git@github.com:rubenleikarnes/"]
-	# 	insteadOf = "git://github.com/rubenleikarnes/"
-
 [credential]
-	helper = manager-core.
+	helper = osxkeychain
 
 [filter "media"]
 	clean = git-media-clean %f
@@ -128,14 +127,21 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
+
 [http]
 	sslVerify = true
+
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+
 [init]
 	defaultBranch = main
+
 [pull]
 	rebase = true
+
+[credential "https://github.com"]
+	useHttpPath = true
