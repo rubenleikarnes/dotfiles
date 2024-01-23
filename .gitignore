@@ -59,3 +59,7 @@ sublime/User/SyncSettings.sublime-settings
 ########
 config.symlink/nvim/lazy-lock.json
 config.symlink/nvim/.netrwhist
+
+# Filezilla #
+#############
+config.symlink/filezilla
