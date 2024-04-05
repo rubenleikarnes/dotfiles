@@ -63,3 +63,9 @@ config.symlink/nvim/.netrwhist
 # Filezilla #
 #############
 config.symlink/filezilla
+
+# zed #
+#######
+config.symlink/zed/conversations
+config.symlink/zed/embeddings
+.tmp*
