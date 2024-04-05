@@ -10,12 +10,12 @@
     "buffer_font_size": 15,
     "buffer_line_height": "comfortable",
     "chat_panel": {
-        "button": false,
+        "button": false
     },
     "confirm_quit": true,
     "cursor_blink": false,
     "collaboration_panel": {
-        "button": false,
+        "button": false
     },
     "default_dock_anchor": "bottom",
     "enable_language_server": true,
@@ -65,7 +65,7 @@
     },
     "theme": "XY-Zed",
     "scrollbar": {
-      "show": "allways",
+      "show": "always",
       "git_diff": true,
       "selections": true,
       "symbols_selections": true,
