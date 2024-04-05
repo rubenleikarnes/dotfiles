@@ -9,7 +9,10 @@
             "cmd-shift-d": "editor::DuplicateLine",
             "cmd-y": "editor::Redo",
             "cmd-shift-l": "editor::SelectAllMatches",
-            "cmd-shift-t": "workspace::NewTerminal"
+            "cmd-shift-t": "workspace::NewTerminal",
+            "cmd-b": "workspace::ToggleLeftDock",
+            "cmd-r": "workspace::ToggleRightDock",
+            "cmd-j": "workspace::ToggleBottomDock"
         }
     }
 ]
