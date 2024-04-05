@@ -1,13 +1,77 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
 {
-  "base_keymap": "SublimeText",
-  "theme": "One Dark",
-  "buffer_font_size": 15
+    "active_pane_magnification": 1.0,
+    "auto_update": true,
+    "autosave": "on_focus_change",
+    "base_keymap": "SublimeText",
+    "buffer_font_family": "JetbrainsMonoNL Nerd Font Mono",
+    "buffer_font_features": {
+        "calt": true
+    },
+    "buffer_font_size": 15,
+    "buffer_line_height": "comfortable",
+    "chat_panel": {
+        "button": false,
+    },
+    "confirm_quit": true,
+    "cursor_blink": false,
+    "collaboration_panel": {
+        "button": false,
+    },
+    "default_dock_anchor": "bottom",
+    "enable_language_server": true,
+    "features": {
+        "copilot": false
+    },
+    "format_on_save": "off",
+    "git": {
+        "git_gutter": "tracked_files"
+    },
+    "gutter": {
+      "line_numbers": true,
+      "code_actions": true,
+      "folds": true
+    },
+    "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": true,
+        "show_other_hints": true
+    },
+    "hard_tabs": false,
+    "language_overrides": {
+        "JSON": {
+        "hard_tabs": false,
+        "tab_size": 4
+        }
+    },
+    "preferred_line_length": 100,
+    "prettier": {
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true
+    },
+    "project_panel": {
+        "dock": "left",
+        "git_status": true,
+        "default_width": 400,
+        "file_icons": true,
+        "folder_icons": true
+    },
+    "show_copilot_suggestions": true,
+    "show_call_status_icon": true,
+    "show_whitespaces": "all",
+    "soft_wrap": "editor_width",
+    "tab_size": 2,
+    "tabs": {
+        "git_status": true,
+        "close_position": "right"
+    },
+    "theme": "XY-Zed",
+    "ui_font_features": {
+        "calt": true
+    },
+    "ui_font_size": 15,
+    "use_autoclose": true,
+    "vertical_scroll_margin": 15
 }
