@@ -58,16 +58,23 @@
         "file_icons": true,
         "folder_icons": true
     },
-    "show_copilot_suggestions": true,
-    "show_call_status_icon": true,
-    "show_whitespaces": "all",
-    "soft_wrap": "editor_width",
     "tab_size": 2,
     "tabs": {
         "git_status": true,
         "close_position": "right"
     },
     "theme": "XY-Zed",
+    "scrollbar": {
+      "show": "allways",
+      "git_diff": true,
+      "selections": true,
+      "symbols_selections": true,
+      "diagnostics": true
+    },
+    "show_copilot_suggestions": true,
+    "show_call_status_icon": true,
+    "show_whitespaces": "all",
+    "soft_wrap": "editor_width",
     "ui_font_features": {
         "calt": true
     },
