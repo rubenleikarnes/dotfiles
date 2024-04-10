@@ -12,8 +12,21 @@
             "cmd-shift-t": "workspace::NewTerminal",
             "cmd-b": "workspace::ToggleLeftDock",
             "cmd-r": "workspace::ToggleRightDock",
-            "cmd-j": "workspace::ToggleBottomDock",
+            "cmd-j": "terminal_panel::ToggleFocus",
             "alt-z": "workspace::ToggleZoom"
+        }
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "cmd-j": "terminal_panel::ToggleFocus"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "cmd-n": "workspace::NewTerminal",
+            "cmd-k": "terminal_panel::ToggleFocus"
         }
     }
 ]
