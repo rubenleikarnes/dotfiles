@@ -88,8 +88,11 @@
 	# Commit all changes with $editor
 	ca = !git add -A && git commit -av
 
+	# Commit changes with inline message
+	cm = !git commit -am
+
 	# Commit all changes with inline message
-	cm = !git add -A && git commit -am
+	cma = !git add -A && git commit -am
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
