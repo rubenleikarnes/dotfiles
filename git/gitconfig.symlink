@@ -89,7 +89,7 @@
 	ca = !git add -A && git commit -av
 
 	# Commit changes with inline message
-	cm = !git commit -am
+	cm = !git commit -m
 
 	# Commit all changes with inline message
 	cma = !git add -A && git commit -am
