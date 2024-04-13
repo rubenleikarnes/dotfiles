@@ -18,7 +18,7 @@ recent.capture_file: /Users/ruben/Downloads/1.pcap
 # Decimal numbers.
 gui.geometry_main_x: 50
 gui.geometry_main_y: 50
-gui.geometry_main_width: 2139
+gui.geometry_main_width: 1474
 gui.geometry_main_height: 1357
 
 # Main window maximized.
