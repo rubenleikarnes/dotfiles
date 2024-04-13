@@ -6,7 +6,7 @@
             "ctrl-tab": "pane::ActivateNextItem",
             "ctrl-alt-up": "editor::AddSelectionAbove",
             "ctrl-alt-down": "editor::AddSelectionBelow",
-            "cmd-shift-d": "editor::DuplicateLine",
+            "cmd-shift-d": "editor::DuplicateLineDown",
             "cmd-y": "editor::Redo",
             "alt-shift-l": "editor::SelectAllMatches",
             "cmd-shift-t": "workspace::NewTerminal",

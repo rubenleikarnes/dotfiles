@@ -79,7 +79,7 @@ gui.geometry_main_upper_pane: 614
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 1065
+gui.geometry_main_lower_pane: 733
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
