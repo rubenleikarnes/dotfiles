@@ -3,7 +3,7 @@
     "auto_update": true,
     "autosave": "on_focus_change",
     "base_keymap": "SublimeText",
-    "buffer_font_family": "JetbrainsMonoNL Nerd Font Mono",
+    "buffer_font_family": "JetBrainsMonoNL Nerd Font",
     "buffer_font_features": {
         "calt": true
     },
@@ -22,14 +22,18 @@
     "features": {
         "copilot": false
     },
+    "file_types": {
+        "CSS": ["scss"]
+    },
     "format_on_save": "off",
+    "formatter": "auto",
     "git": {
         "git_gutter": "tracked_files"
     },
     "gutter": {
-      "line_numbers": true,
-      "code_actions": true,
-      "folds": true
+        "line_numbers": true,
+        "code_actions": true,
+        "folds": true
     },
     "inlay_hints": {
         "enabled": true,
@@ -40,10 +44,11 @@
     "hard_tabs": false,
     "language_overrides": {
         "JSON": {
-        "hard_tabs": false,
-        "tab_size": 4
+            "hard_tabs": false,
+            "tab_size": 4
         }
     },
+    "line_indicator_format": "long",
     "preferred_line_length": 100,
     "prettier": {
         "trailingComma": "es5",
@@ -58,6 +63,11 @@
         "file_icons": true,
         "folder_icons": true
     },
+    "project_panel.auto_fold_dirs": true,
+    "restore_on_startup": "last_workspace",
+    "tab_bar": {
+        "show_nav_history_buttons": false
+    },
     "tab_size": 2,
     "tabs": {
         "git_status": true,
@@ -65,16 +75,17 @@
     },
     "theme": "XY-Zed",
     "scrollbar": {
-      "show": "always",
-      "git_diff": true,
-      "selections": true,
-      "symbols_selections": true,
-      "diagnostics": true
+        "show": "always",
+        "git_diff": true,
+        "selections": true,
+        "symbols_selections": true,
+        "diagnostics": true
     },
     "show_copilot_suggestions": true,
     "show_call_status_icon": true,
     "show_whitespaces": "all",
     "soft_wrap": "editor_width",
+    "ui_font_family": "Inter",
     "ui_font_features": {
         "calt": true
     },
