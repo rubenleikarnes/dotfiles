@@ -22,9 +22,6 @@
     "features": {
         "copilot": false
     },
-    "file_types": {
-        "CSS": ["scss"]
-    },
     "format_on_save": "off",
     "formatter": "auto",
     "git": {
