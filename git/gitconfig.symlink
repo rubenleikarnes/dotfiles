@@ -118,7 +118,7 @@
 	followTags = true
 
 [credential]
-	helper = osxkeychain
+	helper = store
 
 [filter "media"]
 	clean = git-media-clean %f
