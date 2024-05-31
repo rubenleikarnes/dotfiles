@@ -1,9 +1,9 @@
+[includeIf "gitdir:~/code/nep-gpe"]
+  path = ~/.gitconfig-nep-gpe
+
 [user]
 	name = Ruben
 	email = ruben@2110.no
-
-[includeIf "gitdir:~/code/nep-gpe"]
-  path = ~/.gitconfig-nep-gpe
 
 [core]
 	editor = nvim
