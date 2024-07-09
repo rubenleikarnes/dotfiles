@@ -23,3 +23,7 @@ starship init fish | source
 # because fish does not honor ~/.hushlogin
 # https://fishshell.com/docs/current/faq.html#how-do-i-change-the-greeting-message
 set -U fish_greeting
+
+# hide go from home
+set -x GOPATH $HOME/.go
+set -x PATH $PATH $GOPATH/bin
