@@ -27,3 +27,6 @@ set -U fish_greeting
 # hide go from home
 set -x GOPATH $HOME/.go
 set -x PATH $PATH $GOPATH/bin
+
+# add laravel valet to path
+set -x PATH $PATH $HOME/.composer/vendor/bin
