@@ -11,7 +11,10 @@ set -g async_prompt_functions _pure_prompt_git
 
 # load asdf runtime version manager
 # https://asdf-vm.com/
-source /usr/local/opt/asdf/libexec/asdf.fish
+switch "$OSTYPE"
+    case 'darwin*'
+        source /usr/local/opt/asdf/libexec/asdf.fish
+end
 
 # load personal aliases
 source ~/.config/fish/alias.fish
@@ -30,3 +33,10 @@ set -x PATH $PATH $GOPATH/bin
 
 # add laravel valet to path
 set -x PATH $PATH $HOME/.composer/vendor/bin
+
+# add nvim to path
+switch "$OSTYPE"
+    case 'darwin*'
+    case '*'
+        export PATH="$PATH:/opt/nvim-linux64/bin"
+end
