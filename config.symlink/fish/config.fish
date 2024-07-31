@@ -34,9 +34,3 @@ set -x PATH $PATH $GOPATH/bin
 # add laravel valet to path
 set -x PATH $PATH $HOME/.composer/vendor/bin
 
-# add nvim to path
-switch "$OSTYPE"
-    case 'darwin*'
-    case '*'
-        export PATH="$PATH:/opt/nvim-linux64/bin"
-end
