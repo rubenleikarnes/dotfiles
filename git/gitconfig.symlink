@@ -150,3 +150,6 @@
 
 [credential "https://github.com"]
 	useHttpPath = true
+
+[rerere]
+	enable = true
