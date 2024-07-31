@@ -5,9 +5,6 @@
 [github]
   user = “rubenleikarnes”
 
-[core]
-  sshCommand = “ssh -i ~/.ssh/id_ed25519”
-
 [includeIf "gitdir:~/code/nep-gpe/"]
   path = ~/.gitconfig-nep-gpe
 
