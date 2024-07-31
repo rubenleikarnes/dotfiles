@@ -68,7 +68,6 @@
     "folder_icons": true
   },
   "project_panel.auto_fold_dirs": true,
-  "restore_on_startup": "last_workspace",
   "tab_bar": {
     "show_nav_history_buttons": false
   },
