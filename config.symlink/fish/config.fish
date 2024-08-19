@@ -2,7 +2,7 @@
 set -gx COLORTERM truecolor
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+  # Commands to run in interactive sessions can go here
 end
 
 # ensure git prompt updates without lag
@@ -11,9 +11,9 @@ set -g async_prompt_functions _pure_prompt_git
 
 # load asdf runtime version manager
 # https://asdf-vm.com/
-switch "$OSTYPE"
-    case 'darwin*'
-        source /usr/local/opt/asdf/libexec/asdf.fish
+switch (uname)
+  case Darwin
+    source /usr/local/opt/asdf/libexec/asdf.fish
 end
 
 # load personal aliases
@@ -33,4 +33,3 @@ set -x PATH $PATH $GOPATH/bin
 
 # add laravel valet to path
 set -x PATH $PATH $HOME/.composer/vendor/bin
-
