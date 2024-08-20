@@ -22,6 +22,9 @@
   "features": {
     "copilot": false
   },
+  "file_types": {
+    "HTML": ["svg", "njk"]
+  },
   "format_on_save": "off",
   "formatter": "auto",
   "git": {
