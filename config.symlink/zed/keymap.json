@@ -10,6 +10,7 @@
             "cmd-y": "editor::Redo",
             "alt-shift-l": "editor::SelectAllMatches",
             "cmd-shift-t": "workspace::NewTerminal",
+            "cmd-enter": "editor::NewlineBelow",
             "cmd-b": "workspace::ToggleLeftDock",
             "cmd-r": "workspace::ToggleRightDock",
             "cmd-j": "terminal_panel::ToggleFocus",
