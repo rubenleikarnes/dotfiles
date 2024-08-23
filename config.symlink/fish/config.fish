@@ -33,3 +33,6 @@ set -x PATH $PATH $GOPATH/bin
 
 # add laravel valet to path
 set -x PATH $PATH $HOME/.composer/vendor/bin
+
+# load fzf
+fzf --fish | source
