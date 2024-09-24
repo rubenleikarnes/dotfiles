@@ -14,6 +14,7 @@
   },
   "confirm_quit": true,
   "cursor_blink": false,
+  "current_line_highlight": "all",
   "collaboration_panel": {
     "button": false
   },
@@ -68,7 +69,13 @@
     "git_status": true,
     "default_width": 400,
     "file_icons": true,
-    "folder_icons": true
+    "folder_icons": true,
+    "indent_size": 25,
+    "auto_reveal_entries": true,
+    "auto_fold_dirs": true,
+    "scrollbar": {
+      "show": "always"
+    }
   },
   "project_panel.auto_fold_dirs": true,
   "tab_bar": {
@@ -80,6 +87,19 @@
     "close_position": "right"
   },
   "theme": "XY-Zed",
+  "experimental.theme_overrides": {
+    "editor.active_line.background": "#7de48620",
+    "editor.document_highlight.read_background": "#7de48615",
+    "editor.document_highlight.write_background": "#7de48610",
+    "players": [
+      {
+        // "cursor": "#7de486ff",
+        "cursor": "#FFFFFFFF",
+        "background": "#7de486ff",
+        "selection": "#7de4863d"
+      }
+    ]
+  },
   "scroll_beyond_last_line": "one_page",
   "scrollbar": {
     "show": "always",
