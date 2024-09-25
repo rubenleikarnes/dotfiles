@@ -89,8 +89,9 @@
   "theme": "XY-Zed",
   "experimental.theme_overrides": {
     "editor.active_line.background": "#7de48620",
+    "search.match_background": "#975c3220",
     "editor.document_highlight.read_background": "#7de48615",
-    "editor.document_highlight.write_background": "#7de48610",
+    "editor.document_highlight.write_background": "#7de48607",
     "players": [
       {
         // "cursor": "#7de486ff",
