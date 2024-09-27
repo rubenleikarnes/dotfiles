@@ -14,6 +14,7 @@
   },
   "confirm_quit": true,
   "cursor_blink": false,
+  "cursor_shape": "bar",
   "current_line_highlight": "all",
   "collaboration_panel": {
     "button": false
