@@ -36,3 +36,7 @@ set -x PATH $PATH $HOME/.composer/vendor/bin
 
 # load fzf
 fzf --fish | source
+
+# kubectl plugin manager https://krew.sigs.k8s.io/docs/user-guide/quickstart/
+set -gx PATH $PATH $HOME/.krew/bin
+set -q KREW_ROOT; and set -gx PATH $PATH $KREW_ROOT/.krew/bin; or set -gx PATH $PATH $HOME/.krew/bin
