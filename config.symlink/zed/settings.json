@@ -94,8 +94,8 @@
     "git_status": true,
     "close_position": "right"
   },
-  "theme": "XY-Zed",
-  "experimental.theme_overrides": {
+  "theme": "One Dark Pro",
+/*  "experimental.theme_overrides": {
     "editor.active_line.background": "#7de48620",
     "search.match_background": "#db5cc360",
     /// Read-access of a symbol, like reading a variable.
@@ -122,7 +122,7 @@
         "selection": "#7de4863d"
       }
     ]
-  },
+  },*/
   "scroll_beyond_last_line": "one_page",
   "scrollbar": {
     "show": "always",
