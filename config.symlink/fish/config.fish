@@ -9,13 +9,6 @@ end
 # https://github.com/pure-fish/pure/wiki/Async-git-Prompt
 set -g async_prompt_functions _pure_prompt_git
 
-# load asdf runtime version manager
-# https://asdf-vm.com/
-switch (uname)
-  case Darwin
-    source /usr/local/opt/asdf/libexec/asdf.fish
-end
-
 # load personal aliases
 source ~/.config/fish/alias.fish
 
@@ -40,3 +33,13 @@ fzf --fish | source
 # kubectl plugin manager https://krew.sigs.k8s.io/docs/user-guide/quickstart/
 set -gx PATH $PATH $HOME/.krew/bin
 set -q KREW_ROOT; and set -gx PATH $PATH $KREW_ROOT/.krew/bin; or set -gx PATH $PATH $HOME/.krew/bin
+
+# Ruby gem paths in home to ease permissions
+#set -x GEM_HOME $HOME/.gem
+
+# always load asdf runtime version manager last
+# https://asdf-vm.com/
+switch (uname)
+  case Darwin
+    source /usr/local/opt/asdf/libexec/asdf.fish
+end
