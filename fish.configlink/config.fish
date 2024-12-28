@@ -1,3 +1,10 @@
+# add nix bin to path?
+set -x PATH $PATH /run/current-system/sw/bin
+
+# add homebrew to path?
+set -x PATH $PATH /opt/homebrew/bin
+
+
 # enables truecolor for fish shell
 set -gx COLORTERM truecolor
 
@@ -41,5 +48,7 @@ set -q KREW_ROOT; and set -gx PATH $PATH $KREW_ROOT/.krew/bin; or set -gx PATH $
 # https://asdf-vm.com/
 switch (uname)
   case Darwin
-    source /usr/local/opt/asdf/libexec/asdf.fish
+    # source /usr/local/opt/asdf/libexec/asdf.fish
+    #source /opt/homebrew/opt/asdf/libexec/asdf.fish
+    source $HOME/.asdf/asdf.fish
 end
