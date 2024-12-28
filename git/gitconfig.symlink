@@ -1,11 +1,14 @@
 [user]
-	name = Ruben
-	email = ruben@2110.no
+	name = Ruben Leikarnes
+	email = rleikarnes@nepgroup.com
 
 [github]
   user = “rubenleikarnes”
 
 [includeIf "gitdir:~/code/nep-gpe/"]
+  path = ~/.gitconfig-nep-gpe
+
+[includeIf "gitdir:~/code/nep-temp/"]
   path = ~/.gitconfig-nep-gpe
 
 [core]
