@@ -9,6 +9,8 @@ coreutils
 fish
 git
 nvim
+fzf
+ripgrep
 ```
 
 ## Install
@@ -19,7 +21,7 @@ git clone --recursive git://github.com/rub1/dotfiles.git $HOME/dotfiles
 git submodule update --init --recursive
 ```
 
-Use the link.sh file to install all '.symlink' files.
+Use the link.sh file to install all '.symlink' and '.configlink' files.
 
 ```
 sh ./link.sh
@@ -45,18 +47,10 @@ I do have some custom files in the customs folder Ive also added a customs.lua a
 vim.cmd('runtime! lua/custom/*.lua')
 ````
 
-### Tmux
-
-```
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
-
-Press ```prefix + I``` (capital i, as in Install) to fetch the plugin.
-
 ## Terminal settings
 
-- Theme: [Snazzy](https://github.com/sindresorhus/iterm2-snazzy) ~~[Oceanic Next](https://github.com/voronianski/oceanic-next-color-scheme)~~
-- Font: [JetBrains Mono](https://www.jetbrains.com/lp/mono/) ~~[Hack](https://github.com/chrissimpkins/hack)~~
+- Theme: [Snazzy](https://github.com/sindresorhus/iterm2-snazzy)
+- Font: [JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 - [Use ⌥ ← and ⌥→ to jump forwards/backwards words in iTerm](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x)
 
 ```
@@ -66,6 +60,15 @@ FOR  ACTION         SEND
 ⌥←  "SEND ESC SEQ"  b
 ⌥→  "SEND ESC SEQ"  f
 ```
+
+## Kubectl
+
+[kubectl-config-import](https://github.com/rafi/kubectl-config-import/) tool
+
+```
+kubectl config-import -f ~/.kube/config
+```
+
 ## Sources
 
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
