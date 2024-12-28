@@ -15,6 +15,7 @@ $cmd_duration\
 $line_break\
 $python\
 $character"""
+
 command_timeout = 1000
 
 [directory]
@@ -24,4 +25,3 @@ style = "green"
 success_symbol = "[❯](purple)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
-
