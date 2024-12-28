@@ -44,44 +44,21 @@ for file in $linkables ; do
 done
 
 
-
-# echo "\nInstalling nvim"
-# echo "=============================="
-# if [ ! -d $HOME/.config ]; then
-# 	g_list "Creating $HOME/.config"
-# 	mkdir -p $HOME/.config
-# else
-# 	y_list "~/.config/ already exists... backing up."
-# 	cp -R $HOME/.config/ $BACKUPDIR/.config
-# 	y_list "Creating $HOME/.config"
-# 	mkdir -p $HOME/.config
-# fi
-
-# if [ ! -d $HOME/.config/nvim ]; then
-# 	g_list "Creating symlink for $DOTFILES/nvim"
-# 	ln -s $DOTFILES/nvim $HOME/.config/nvim
-# else
-# 	y_list "$HOME/.config/nvim already exists... Skipping."
-# 	mv -r $HOME/.config/nvim $BACKUPDIR/.config/nvim
-# 	g_list "Creating symlink for $DOTFILES/nvim"
-# 	ln -s $DOTFILES/nvim $HOME/.config/nvim
-# fi
-
-
-
-# echo "\nInstalling Sublime Text"
-# echo "=============================="
-# if [ ! -d  $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages ]; then
-# 	g_list "Creating Sublimee Packages folder"
-# 	mkdir -p $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages
-# fi
-
-# if [ ! -d $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]; then
-# 	g_list "Creating symlink for Sublime Text"
-# 	ln -s $DOTFILES/sublime/User $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-# else
-# 	y_list "Sublime Text User folder already exists... Skipping."
-# fi
+echo "\nCreating .config symlinks"
+echo "=============================="
+linkables=$( find -H "$DOTFILES" -maxdepth 3 -name '*.configlink' )
+for file in $linkables ; do
+	target="$HOME/.config/$( basename $file '.configlink' )"
+	if [ -e $target ]; then
+		y_list "~${target#$HOME} already exists... backing up."
+		mv $target $BACKUPDIR
+		g_list "Creating symlink for $file"
+		ln -s $file $target
+	else
+		g_list "Creating symlink for $file"
+		ln -s $file $target
+	fi
+done
 
 
 
@@ -98,14 +75,4 @@ if [ -d $HOME/Sync/.auth ]; then
 			ln -s $file $target
 		fi
 	done
-fi
-
-
-
-echo "\nChecking if ZPlug is installed"
-echo "=============================="
-if [ ! -d $ZPLUG_HOME/init.zsh ]; then
-	y_list "ZPlug is installed"
-else
-	e_list "ZPlug not found please install"
 fi
