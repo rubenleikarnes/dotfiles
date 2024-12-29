@@ -39,6 +39,7 @@ brew bundle
 ### nvim
 
 Uses [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) with smaller changes and a few plugins
+Uncomment line so custom files can be loaded.
 I do have some custom files in the customs folder Ive also added a customs.lua and the snippet below to override some settings and make it easier to "update" kickstart to a newer version
 
 ```
