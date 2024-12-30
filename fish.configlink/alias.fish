@@ -10,3 +10,9 @@ alias kubectl-orbstack="kubectl config use-context orbstack"
 
 # nix-darwin switch
 alias nds="darwin-rebuild switch --flake ~/.config/nix-darwin#mbp"
+
+# so usefull to just have saved
+alias nxs="nix run .#homeConfigurations.debian.activationPackage --extra-experimental-features nix-command --extra-experimental-features flakes -- switch"
+
+# home-manager switch
+alias hms="home-manager switch --flake ~/.config/nix#debian"
