@@ -125,24 +125,24 @@ set -g status-bg default
 set -g status-fg blue
 
 # set color for status bar
-set -g status-style bg=colour2,fg=default
+set -g status-style bg=default,fg=default
 
 
 # Status window
-setw -g window-status-format "#[bg=default]#{?window_activity_flag,#{?window_bell_flag,#[fg=brightred] #I: #W ,#[fg=colour231] #I: #W #T },#[fg=colour0] #I: #T }#[bg=default]"
+setw -g window-status-format "#[bg=default]#{?window_activity_flag,#{?window_bell_flag,#[fg=brightred] #I: #W ,#[fg=colour231] #I: #W #T },#[fg=white] #I: #T }#[bg=default]"
 setw -g window-status-current-format "#{?window_zoomed_flag,#[fg=magenta][ #W ], #I: #T }#[bg=default]"
-setw -g window-status-activity-style bg=default,fg=colour250
+setw -g window-status-activity-style bg=default,fg=colour202
 setw -g window-status-bell-style bg=default,fg=brightred
 setw -g window-status-current-style bg=black,fg=colour039
 
 # Left status
 set -g status-left-length 70
-set -g status-left "#[fg=colour237]#{?client_prefix,#[fg=white]#[bg=colour202],#[fg=colour0]} #(echo $(tmux show-option -gqv prefix | tr \"[:lower:]\" \"[:upper:]\" | sed 's/C-/\^/')) #[fg=colour237] "
+set -g status-left "#[fg=colour237]#{?client_prefix,#[fg=white]#[bg=colour202],#[fg=white]} #(echo $(tmux show-option -gqv prefix | tr \"[:lower:]\" \"[:upper:]\" | sed 's/C-/\^/')) #[fg=colour239] "
 
 # Right status
-status_prefix="#{?client_prefix,#[fg=colour0]#(echo $(tmux show-option -gqv prefix | tr \"[:lower:]\" \"[:upper:]\" | sed 's/C-/\^/'))#[fg=colour237] • ,}"
+status_prefix="#{?client_prefix,#[fg=white]#(echo $(tmux show-option -gqv prefix | tr \"[:lower:]\" \"[:upper:]\" | sed 's/C-/\^/'))#[fg=colour237] • ,}"
 zoomed="#{?window_zoomed_flag,#[fg=magenta][zoomed] #[fg=colour237]• ,}"
-status_date_time="#[fg=colour237]#[fg=colour0]%d %b, %H:%M#[fg=colour237]"
+status_date_time="#[fg=colour237]#[fg=white]%d %b, %H:%M#[fg=colour237]"
 
 set -g status-right "${status_prefix}${zoomed}${status_date_time}"
 
