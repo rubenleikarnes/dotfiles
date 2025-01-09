@@ -14,7 +14,8 @@
             "cmd-b": "workspace::ToggleLeftDock",
             "cmd-r": "workspace::ToggleRightDock",
             "cmd-j": "terminal_panel::ToggleFocus",
-            "alt-z": "workspace::ToggleZoom"
+            "alt-z": "workspace::ToggleZoom",
+            "cmd-/": ["editor::ToggleComments", { "advance_downwards": false }]
         }
     },
     {
