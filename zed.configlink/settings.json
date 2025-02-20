@@ -1,4 +1,5 @@
 {
+  "icon_theme": "Material Icon Theme",
   "assistant": {
     "default_model": {
       "provider": "copilot_chat",
@@ -29,7 +30,7 @@
   "default_dock_anchor": "bottom",
   "enable_language_server": true,
   "features": {
-    "inline_completion_provider": "zed",
+    "edit_prediction_provider": "zed",
     "copilot": false
   },
   "file_types": {
@@ -97,34 +98,6 @@
     "close_position": "right"
   },
   "theme": "One Dark Pro",
-/*  "experimental.theme_overrides": {
-    "editor.active_line.background": "#7de48620",
-    "search.match_background": "#db5cc360",
-    /// Read-access of a symbol, like reading a variable.
-    ///
-    /// A document highlight is a range inside a text document which deserves
-    /// special attention. Usually a document highlight is visualized by changing
-    /// the background color of its range.
-    "editor.document_highlight.read_background": "#9bdae90f",
-    /// Read-access of a symbol, like reading a variable.
-    ///
-    /// A document highlight is a range inside a text document which deserves
-    /// special attention. Usually a document highlight is visualized by changing
-    /// the background color of its range.
-    "editor.document_highlight.bracket_background": "#7de48650",
-    /// Highlighted brackets background color.
-    ///
-    /// Matching brackets in the cursor scope are highlighted with this background color.
-    "editor.document_highlight.write_background": "#7de486f7",
-    "editor.": "ff00ffff",
-    "players": [
-      {
-        "cursor": "#ffffffff",
-        "background": "#7de486ff",
-        "selection": "#7de4863d"
-      }
-    ]
-  },*/
   "scroll_beyond_last_line": "one_page",
   "scrollbar": {
     "show": "always",
@@ -133,7 +106,7 @@
     "symbols_selections": true,
     "diagnostics": true
   },
-  "show_inline_completions": true,
+  "show_edit_predictions": true,
   "show_call_status_icon": true,
   "show_whitespaces": "all",
   "soft_wrap": "editor_width",
