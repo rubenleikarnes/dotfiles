@@ -29,6 +29,7 @@
   "default_dock_anchor": "bottom",
   "enable_language_server": true,
   "features": {
+    "inline_completion_provider": "zed",
     "copilot": false
   },
   "file_types": {
@@ -86,6 +87,7 @@
     }
   },
   "project_panel.auto_fold_dirs": true,
+  "restore_on_startup": "last_session",
   "tab_bar": {
     "show_nav_history_buttons": false
   },
