@@ -30,6 +30,8 @@
   pager = delta
 
 	whitespace = trailing-space,space-before-tab
+	fsmonitor = true
+	untrackedCache = true
 
 [interactive]
   diffFilter = delta --color-only
@@ -64,7 +66,10 @@
 
 [diff]
 	# Detect copies as well as renames
-	renames = copies
+	renames = true
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
 
 [diff "bin"]
 	# Use `hexdump` to diff binary files
@@ -74,7 +79,7 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
-  conflictstyle = diff3
+	conflictstyle = zdiff3
 
 [help]
 	# Automatically correct and execute mistyped commands
@@ -122,6 +127,7 @@
 
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+	autoSetupRemote = true
 
 [credential]
 	helper = store
@@ -154,5 +160,28 @@
 [credential "https://github.com"]
 	useHttpPath = true
 
+# Lots of neat tricks from these:
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/
+# https://news.ycombinator.com/item?id=43169435
 [rerere]
 	enable = true
+	enabled = true
+	autoupdate = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[commit]
+	verbose = true
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[log]
+  date = iso
