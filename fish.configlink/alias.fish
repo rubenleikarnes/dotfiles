@@ -16,6 +16,3 @@ alias nxs="nix run .#homeConfigurations.debian.activationPackage --extra-experim
 
 # home-manager switch
 alias hms="home-manager switch --flake ~/.config/nix#debian"
-
-# force tmux to use user path instead of login path
-alias tmux="tmux new-session fish"
