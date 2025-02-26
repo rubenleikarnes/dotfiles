@@ -95,6 +95,9 @@
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD; git diff --patch-with-stat"
 
+	# Commit changes with $editor
+	cv = !git commit -v
+
 	# Commit all changes with $editor
 	ca = !git add -A && git commit -av
 
