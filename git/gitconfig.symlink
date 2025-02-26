@@ -181,6 +181,7 @@
 	pruneTags = true
 	all = true
 [commit]
+	template = ~/.gitmessage
 	verbose = true
 [rebase]
 	autoSquash = true
