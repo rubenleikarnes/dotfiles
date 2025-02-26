@@ -12,12 +12,13 @@ SETUVAR --export __ABBR_TIPS_KEYS:a__dot\x1ea__dt\x1ea__g\x1ea__gp\x1ea__hms\x1e
 SETUVAR --export __ABBR_TIPS_VALUES:cd\x20\x7e/dotfiles\x1ecd\x20\x7e/Desktop\x1egit\x1egit\x20push\x1ehome\x2dmanager\x20switch\x20\x2d\x2dflake\x20\x7e/\x2econfig/nix\x23debian\x1ekubectl\x20config\x20get\x2dcontexts\x1ekubectl\x20config\x20use\x2dcontext\x20orbstack\x1ekubectl\x20config\x20use\x2dcontext\x20obc\x2dapp\x1ekubectl\x20config\x20use\x2dcontext\x20obc\x2dmonitor\x1edarwin\x2drebuild\x20switch\x20\x2d\x2dflake\x20\x7e/\x2econfig/nix\x2ddarwin\x23mbp\x1e\x1eopen\x1esubl\x1etmux\x20new\x2dsession\x20fish\x1envim\x1ezed
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_acomagu_2F_fish_2D_async_2D_prompt_files:\x7e/\x2econfig/fish/conf\x2ed/__async_prompt\x2efish
+SETUVAR _fisher_decors_2F_fish_2D_colored_2D_man_files:\x7e/\x2econfig/fish/functions/man\x2efish
 SETUVAR _fisher_gazorby_2F_fish_2D_abbreviation_2D_tips_files:\x7e/\x2econfig/fish/functions/__abbr_tips_bind_newline\x2efish\x1e\x7e/\x2econfig/fish/functions/__abbr_tips_bind_space\x2efish\x1e\x7e/\x2econfig/fish/functions/__abbr_tips_clean\x2efish\x1e\x7e/\x2econfig/fish/functions/__abbr_tips_init\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/abbr_tips\x2efish
 SETUVAR _fisher_jethrokuan_2F_fzf_files:\x7e/\x2econfig/fish/functions/__fzf_cd\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_complete\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_complete_preview\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_find_file\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_get_dir\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_open\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_parse_commandline\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_reverse_isearch\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzfcmd\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fzf\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_lilyball_2F_nix_2D_env_2E_fish_files:\x7e/\x2econfig/fish/conf\x2ed/nix\x2denv\x2efish
 SETUVAR _fisher_nickeb96_2F_puffer_2D_fish_files:\x7e/\x2econfig/fish/functions/_puffer_fish_expand_bang\x2efish\x1e\x7e/\x2econfig/fish/functions/_puffer_fish_expand_dots\x2efish\x1e\x7e/\x2econfig/fish/functions/_puffer_fish_expand_lastarg\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/puffer_fish_key_bindings\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1egazorby/fish\x2dabbreviation\x2dtips\x1enickeb96/puffer\x2dfish\x1eacomagu/fish\x2dasync\x2dprompt\x1elilyball/nix\x2denv\x2efish\x1ejethrokuan/fzf
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1egazorby/fish\x2dabbreviation\x2dtips\x1enickeb96/puffer\x2dfish\x1eacomagu/fish\x2dasync\x2dprompt\x1elilyball/nix\x2denv\x2efish\x1ejethrokuan/fzf\x1edecors/fish\x2dcolored\x2dman
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
