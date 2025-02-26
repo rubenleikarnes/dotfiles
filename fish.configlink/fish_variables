@@ -8,8 +8,8 @@ SETUVAR FZF_LEGACY_KEYBINDINGS:1
 SETUVAR FZF_PREVIEW_DIR_CMD:ls
 SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
-SETUVAR --export __ABBR_TIPS_KEYS:a__g\x1ea__o\x1ea__s
-SETUVAR --export __ABBR_TIPS_VALUES:git\x1eopen\x1esubl
+SETUVAR --export __ABBR_TIPS_KEYS:a__dot\x1ea__dt\x1ea__g\x1ea__gp\x1ea__hms\x1ea__kubectl\x2dconfigs\x1ea__kubectl\x2dorbstack\x1ea__kubectl\x2dtfc\x1ea__kubectl\x2dtfc\x2dmonitoring\x1ea__nds\x1ea__\x1ea__o\x1ea__s\x1ea__tmux\x1ea__v\x1ea__z
+SETUVAR --export __ABBR_TIPS_VALUES:cd\x20\x7e/dotfiles\x1ecd\x20\x7e/Desktop\x1egit\x1egit\x20push\x1ehome\x2dmanager\x20switch\x20\x2d\x2dflake\x20\x7e/\x2econfig/nix\x23debian\x1ekubectl\x20config\x20get\x2dcontexts\x1ekubectl\x20config\x20use\x2dcontext\x20orbstack\x1ekubectl\x20config\x20use\x2dcontext\x20obc\x2dapp\x1ekubectl\x20config\x20use\x2dcontext\x20obc\x2dmonitor\x1edarwin\x2drebuild\x20switch\x20\x2d\x2dflake\x20\x7e/\x2econfig/nix\x2ddarwin\x23mbp\x1e\x1eopen\x1esubl\x1etmux\x20new\x2dsession\x20fish\x1envim\x1ezed
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_acomagu_2F_fish_2D_async_2D_prompt_files:\x7e/\x2econfig/fish/conf\x2ed/__async_prompt\x2efish
 SETUVAR _fisher_gazorby_2F_fish_2D_abbreviation_2D_tips_files:\x7e/\x2econfig/fish/functions/__abbr_tips_bind_newline\x2efish\x1e\x7e/\x2econfig/fish/functions/__abbr_tips_bind_space\x2efish\x1e\x7e/\x2econfig/fish/functions/__abbr_tips_clean\x2efish\x1e\x7e/\x2econfig/fish/functions/__abbr_tips_init\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/abbr_tips\x2efish
