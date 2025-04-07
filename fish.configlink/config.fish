@@ -50,3 +50,7 @@ set -q KREW_ROOT; and set -gx PATH $PATH $KREW_ROOT/.krew/bin; or set -gx PATH $
 # for time being asdf has been installed manually and just placed in ~/.asdf, waiting for nix to update their package
 set -x ASDF_DATA_DIR $HOME/.asdf
 set -x PATH $ASDF_DATA_DIR/shims $PATH
+
+# openjdk
+set -x PATH $PATH /opt/homebrew/opt/openjdk/bin
+set -gx JAVA_HOME /opt/homebrew/opt/openjdk
