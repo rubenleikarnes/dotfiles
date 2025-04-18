@@ -18,6 +18,8 @@ abbr -a nxs "nix run .#homeConfigurations.debian.activationPackage --extra-exper
 abbr -a hms "home-manager switch --flake ~/.config/nix#debian"
 
 # ip adresses
-alias ip="echo Public IP: $(dig +short myip.opendns.com @resolver1.opendns.com)"
-alias localip="echo Local IP: $(ipconfig getifaddr en0)"
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+if test (uname) = "Darwin"
+  alias ip="echo Public IP: $(dig +short myip.opendns.com @resolver1.opendns.com)"
+  alias localip="echo Local IP: $(ipconfig getifaddr en0)"
+  alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+end
