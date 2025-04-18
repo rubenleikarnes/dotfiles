@@ -18,6 +18,9 @@ end
 # https://github.com/pure-fish/pure/wiki/Async-git-Prompt
 set -g async_prompt_functions _pure_prompt_git
 
+# set default editor
+set -Ux EDITOR nvim
+
 # load personal aliases
 source ~/.config/fish/alias.fish
 
