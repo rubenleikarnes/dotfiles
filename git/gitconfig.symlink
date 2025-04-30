@@ -3,7 +3,7 @@
 	email = ruben@2110.no
 
 [github]
-  user = “rubenleikarnes”
+  user = "rubenleikarnes"
 
 [includeIf "gitdir:~/code/nep-gpe/"]
   path = ~/.gitconfig-nep-gpe
@@ -11,27 +11,24 @@
 [includeIf "gitdir:~/code/nep-temp/"]
   path = ~/.gitconfig-nep-gpe
 
+[init]
+  defaultBranch = main
+
 [core]
-	editor = nvim
-
-	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
-
-	# Make `git rebase` safer on OS X
-	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
-	trustctime = false
-
-	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
-	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
-	precomposeunicode = false
-
-  # https://github.com/dandavison/delta
+  editor = nvim
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+  trustctime = false
+  precomposeunicode = false
+  whitespace = trailing-space,space-before-tab
+  fsmonitor = true
   pager = delta
 
-	whitespace = trailing-space,space-before-tab
-	fsmonitor = true
-	untrackedCache = true
+[credential]
+  helper = store
+
+[credential "https://github.com"]
+  useHttpPath = true
 
 [status]
   showUntrackedFiles = all
@@ -40,153 +37,116 @@
   diffFilter = delta --color-only
 
 [color]
-	# Use colors in Git commands that are capable of colored output when
-	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-	ui = true
+  ui = true
 
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+  current = yellow reverse
+  local = yellow
+  remote = green
 
 [color "diff"]
-	meta = 11
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	commit = yellow bold
-	whitespace = red reverse
+  meta = 11
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  commit = yellow bold
+  whitespace = red reverse
 
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 
 [delta]
-  navigate = true    # use n and N to move between diff sections
-  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  navigate = true
+  light = false
   line-numbers = true
 
 [diff]
-	# Detect copies as well as renames
-	renames = true
-	algorithm = histogram
-	colorMoved = plain
-	mnemonicPrefix = true
+  renames = true
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
 
 [diff "bin"]
-	# Use `hexdump` to diff binary files
-	textconv = hexdump -v -C
+  textconv = hexdump -v -C
   colorMoved = default
 
 [merge]
-	# Include summaries of merged commits in newly created merge commit messages
-	log = true
-	conflictstyle = zdiff3
+  log = true
+  conflictstyle = zdiff3
 
-[help]
-	# Automatically correct and execute mistyped commands
-	autocorrect = 1
-
-[alias]
-	# View the SHA, description, and history graph of the latest 20 commits
-	l = "log --color -n 30 --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
-	# View the current working tree status using the short format
-	s = status -s
-
-	# Show the diff between the latest commit and the current state
-	d = !"git diff-index --quiet HEAD; git diff --patch-with-stat"
-
-	# Commit changes with $editor
-	cv = !git commit -v
-
-	# Commit all changes with $editor
-	ca = !git add -A && git commit -av
-
-	# Commit changes with inline message
-	cm = !git commit -m
-
-	# Commit all changes with inline message
-	cma = !git add -A && git commit -am
-
-	# Show verbose output about tags, branches or remotes
-	tags = tag -l
-	branches = branch -a
-	remotes = remote -v
-
-	# Undo
-	undo = "reset --hard HEAD~1"
-
-	# Shows unpushed files / commited files that havent been pushed
-	unpushed = "log --branches --not --remotes --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
-	# Shorten Commit
-	c = commit -v
-
-	# List contributors with number of commits
-	contributors = shortlog --summary --numbered
-	credential-manager = osxkeychain
-
-[push]
-	default = simple
-
-	# Make `git push` push relevant annotated tags when pushing branches out.
-	followTags = true
-	autoSetupRemote = true
-
-[credential]
-	helper = store
-
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
-	process = git-lfs filter-process
-
-[http]
-	sslVerify = true
-
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-
-[init]
-	defaultBranch = main
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
 
 [pull]
-	rebase = true
+  rebase = true
 
-[credential "https://github.com"]
-	useHttpPath = true
+[push]
+  default = simple
+  followTags = true
+  autoSetupRemote = true
 
-# Lots of neat tricks from these:
-# https://blog.gitbutler.com/how-git-core-devs-configure-git/
-# https://news.ycombinator.com/item?id=43169435
-[rerere]
-	enabled = true
-	autoupdate = true
-[column]
-	ui = auto
-[branch]
-	sort = -committerdate
-[tag]
-	sort = version:refname
 [fetch]
-	prune = true
-	pruneTags = true
-	all = true
+  prune = true
+  pruneTags = true
+  all = true
+
 [commit]
-	verbose = true
-[rebase]
-	autoSquash = true
-	autoStash = true
-	updateRefs = true
+  verbose = true
+
+[rerere]
+  enabled = true
+  autoupdate = true
+
 [log]
   date = iso
+
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = version:refname
+
+[column]
+  ui = auto
+
+[help]
+  autocorrect = 1
+
+[alias]
+  l = "log --color -n 30 --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+  s = status -s
+  d = !"git diff-index --quiet HEAD; git diff --patch-with-stat"
+  cv = !git commit -v
+  ca = !git add -A && git commit -av
+  cm = !git commit -m
+  cma = !git add -A && git commit -am
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  undo = "reset --hard HEAD~1"
+  unpushed = "log --branches --not --remotes --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+  c = commit -v
+  contributors = shortlog --summary --numbered
+
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
+  process = git-lfs filter-process
+
+[http]
+  sslVerify = true
