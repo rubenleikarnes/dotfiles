@@ -33,6 +33,9 @@
 	fsmonitor = true
 	untrackedCache = true
 
+[status]
+  showUntrackedFiles = all
+
 [interactive]
   diffFilter = delta --color-only
 
