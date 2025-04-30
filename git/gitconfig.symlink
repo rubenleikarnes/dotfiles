@@ -170,7 +170,6 @@
 # https://blog.gitbutler.com/how-git-core-devs-configure-git/
 # https://news.ycombinator.com/item?id=43169435
 [rerere]
-	enable = true
 	enabled = true
 	autoupdate = true
 [column]
