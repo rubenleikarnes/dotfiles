@@ -9,13 +9,16 @@ abbr -a kubectl-tfc-monitoring "kubectl config use-context obc-monitor"
 abbr -a kubectl-orbstack "kubectl config use-context orbstack"
 
 # nix-darwin switch
-abbr -a nds "darwin-rebuild switch --flake ~/.config/nix-darwin#mbp"
+abbr -a nds "sudo darwin-rebuild switch --flake ~/.config/nix-darwin#mbp"
 
 # so usefull to just have saved
 abbr -a nxs "nix run .#homeConfigurations.debian.activationPackage --extra-experimental-features nix-command --extra-experimental-features flakes -- switch"
 
 # home-manager switch
 abbr -a hms "home-manager switch --flake ~/.config/nix#debian"
+
+# nix update stuff
+abbr -a nuf "nix flake update --flake ~/.config/nix-darwin"
 
 # ip adresses
 if test (uname) = "Darwin"
