@@ -1,7 +1,6 @@
 tap "rafi/tap"
 brew "fisher"
 brew "mas"
-brew "openjdk"
 brew "rafi/tap/kubectl-config-import"
 cask "1password"
 cask "alfred"
@@ -45,4 +44,8 @@ cask "waterfox-classic"
 cask "whatsapp"
 cask "wireshark"
 cask "zed"
-cask "zen-browser"
+cask "zen"
+mas "Hyperspace", id: 6739505345
+mas "Ivory", id: 6444602274
+mas "Jojo", id: 1659864300
+mas "Things", id: 904280696
