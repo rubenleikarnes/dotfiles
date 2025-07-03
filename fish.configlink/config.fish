@@ -57,3 +57,6 @@ set -x PATH $ASDF_DATA_DIR/shims $PATH
 # openjdk
 set -x PATH $PATH /opt/homebrew/opt/openjdk/bin
 set -gx JAVA_HOME /opt/homebrew/opt/openjdk
+
+# zoxide, and replace cd
+zoxide init fish --cmd cd | source
