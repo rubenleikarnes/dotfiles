@@ -19,7 +19,7 @@ end
 set -g async_prompt_functions _pure_prompt_git
 
 # set default editor
-set -Ux EDITOR nvim
+set -gx EDITOR hx
 
 # load personal aliases
 source ~/.config/fish/alias.fish
