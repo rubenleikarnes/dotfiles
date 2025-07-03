@@ -16,10 +16,12 @@ $line_break\
 $python\
 $character"""
 
-command_timeout = 1000
+command_timeout = 2000
 
 [directory]
 style = "green"
+truncation_length = 7
+truncate_to_repo = false
 
 [character]
 success_symbol = "[❯](purple)"
