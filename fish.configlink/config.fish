@@ -4,6 +4,9 @@ set -x PATH $PATH /run/current-system/sw/bin
 # add user ~/.bin folder to path
 set -x PATH $PATH $HOME/.bin
 
+# add user ~/.local/bin folder to path
+set -x PATH $PATH $HOME/.local/bin 
+
 # add homebrew to path?
 set -x PATH $PATH /opt/homebrew/bin
 
