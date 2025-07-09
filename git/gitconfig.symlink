@@ -15,7 +15,7 @@
   defaultBranch = main
 
 [core]
-  editor = nvim
+  editor = $EDITOR
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
   trustctime = false
