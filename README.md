@@ -8,9 +8,11 @@ My startingpoint ~~is~~ was mostly a fork of [Mathias Bynens'](https://github.co
 coreutils
 fish
 git
-nvim
 fzf
 ripgrep
+delta
+zoxide
+starship
 ```
 
 ## Install
