@@ -29,7 +29,9 @@ source ~/.config/fish/alias.fish
 
 # execute starship prompt, config is located in ~/.config/starship.toml
 # https://starship.rs/
-starship init fish | source
+if command -v starship >/dev/null
+    starship init fish | source
+end
 
 # because fish does not honor ~/.hushlogin
 # https://fishshell.com/docs/current/faq.html#how-do-i-change-the-greeting-message
@@ -43,7 +45,9 @@ set -x PATH $PATH $GOPATH/bin
 set -x PATH $PATH $HOME/.composer/vendor/bin
 
 # load fzf
-fzf --fish | source
+if command -v fzf >/dev/null
+    fzf --fish | source
+end
 
 # kubectl plugin manager https://krew.sigs.k8s.io/docs/user-guide/quickstart/
 set -gx PATH $PATH $HOME/.krew/bin
@@ -62,4 +66,6 @@ set -x PATH $PATH /opt/homebrew/opt/openjdk/bin
 set -gx JAVA_HOME /opt/homebrew/opt/openjdk
 
 # zoxide, and replace cd
-zoxide init fish --cmd cd | source
+if command -v zoxide >/dev/null
+    zoxide init fish --cmd cd | source
+end
