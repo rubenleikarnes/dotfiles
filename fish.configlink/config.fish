@@ -5,7 +5,7 @@ set -x PATH $PATH /run/current-system/sw/bin
 set -x PATH $PATH $HOME/.bin
 
 # add user ~/.local/bin folder to path
-set -x PATH $PATH $HOME/.local/bin 
+set -x PATH $PATH $HOME/.local/bin
 
 # add homebrew to path?
 set -x PATH $PATH /opt/homebrew/bin
@@ -14,7 +14,7 @@ set -x PATH $PATH /opt/homebrew/bin
 set -gx COLORTERM truecolor
 
 if status is-interactive
-  # Commands to run in interactive sessions can go here
+    # Commands to run in interactive sessions can go here
 end
 
 # ensure git prompt updates without lag
@@ -22,8 +22,11 @@ end
 set -g async_prompt_functions _pure_prompt_git
 
 # set default editor
-set -gx EDITOR hx
-
+if grep -qi arch /etc/os-release
+    set -gx EDITOR helix
+else
+    set -gx EDITOR hx
+end
 # load personal aliases
 source ~/.config/fish/alias.fish
 
