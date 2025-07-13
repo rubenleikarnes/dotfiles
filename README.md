@@ -11,6 +11,7 @@ git
 fzf
 ripgrep
 delta
+tmux
 zoxide
 starship
 ```
