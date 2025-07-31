@@ -21,6 +21,9 @@ status is-interactive; and begin
   # nix update stuff
   abbr -a nuf "nix flake update --flake ~/.config/nix-darwin"
 
+  # start a simple web server for local files with Caddy
+  alias serve="echo 'Starting local webserver with Caddy on http://localhost:8000'; caddy file-server --listen :8000 --browse"
+
   # ip adresses
   if test (uname) = Darwin
     alias ip="echo Public IP: $(dig +short myip.opendns.com @resolver1.opendns.com)"
