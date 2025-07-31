@@ -1,13 +1,11 @@
 {
   "icon_theme": "Material Icon Theme",
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-4o"
-    },
-    "version": "2"
+    }
   },
-  "active_pane_magnification": 1.0,
   "auto_update": true,
   "autosave": "on_focus_change",
   "base_keymap": "SublimeText",
@@ -18,7 +16,7 @@
   "buffer_font_size": 15,
   "buffer_line_height": "comfortable",
   "chat_panel": {
-    "button": false
+    "button": "never"
   },
   "confirm_quit": true,
   "cursor_blink": false,
@@ -27,11 +25,15 @@
   "collaboration_panel": {
     "button": false
   },
-  "default_dock_anchor": "bottom",
+  "edit_predictions": {
+    "disabled_globs": ["**/.env*", "**/*.pem", "**/*.key", "**/*.cert", "**/*.crt", "**/.dev.vars", "**/secrets.yml"],
+    // Display predictions inline only when holding a modifier key (alt by default).
+    "mode": "subtle",
+    "enabled_in_text_threads": true
+  },
   "enable_language_server": true,
   "features": {
-    "edit_prediction_provider": "zed",
-    "copilot": false
+    "edit_prediction_provider": "zed"
   },
   "file_types": {
     "HTML": ["svg", "njk"]
@@ -43,7 +45,6 @@
   },
   "gutter": {
     "line_numbers": true,
-    "code_actions": true,
     "folds": true
   },
   "indent_guides": {
@@ -87,7 +88,6 @@
       "show": "always"
     }
   },
-  "project_panel.auto_fold_dirs": true,
   "restore_on_startup": "last_session",
   "tab_bar": {
     "show_nav_history_buttons": false
@@ -102,9 +102,9 @@
   "scrollbar": {
     "show": "always",
     "git_diff": true,
-    "selections": true,
-    "symbols_selections": true,
-    "diagnostics": true
+    "diagnostics": "all",
+    "selected_text": true,
+    "selected_symbol": true
   },
   "show_edit_predictions": true,
   "show_call_status_icon": true,
