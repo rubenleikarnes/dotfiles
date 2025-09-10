@@ -2,8 +2,8 @@
   "icon_theme": "Material Icon Theme",
   "agent": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
     }
   },
   "auto_update": true,
@@ -95,7 +95,9 @@
   "tab_size": 2,
   "tabs": {
     "git_status": true,
-    "close_position": "right"
+    "close_position": "right",
+    "show_diagnostics": "off"
+
   },
   "theme": "One Dark Pro",
   "scroll_beyond_last_line": "one_page",
