@@ -10,6 +10,11 @@ set -x PATH $PATH $HOME/.local/bin
 # add homebrew to path?
 set -x PATH $PATH /opt/homebrew/bin
 
+if test (uname) = Darwin
+  # add docker desktop to path
+  set -x PATH $PATH /Applications/Docker.app/Contents/Resources/bin/
+end
+
 # enables truecolor for fish shell
 set -gx COLORTERM truecolor
 
