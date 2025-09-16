@@ -37,4 +37,9 @@ status is-interactive; and begin
       alias hx="helix"
     end
   end
+
+    # bat, and replace cat
+    if command -v bat >/dev/null
+      alias cat="bat"
+    end
 end
