@@ -15,6 +15,9 @@ if test (uname) = Darwin
   set -x PATH $PATH /Applications/Docker.app/Contents/Resources/bin/
 end
 
+# add dotfiles scripts to path
+set -x PATH $PATH $HOME/dotfiles/scripts
+
 # enables truecolor for fish shell
 set -gx COLORTERM truecolor
 
