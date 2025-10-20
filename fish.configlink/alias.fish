@@ -38,8 +38,8 @@ status is-interactive; and begin
     end
   end
 
-    # bat, and replace cat
-    if command -v bat >/dev/null
-      alias cat="bat"
-    end
+  # bat, and replace cat
+  if command -v bat >/dev/null
+    alias cat="bat"
+  end
 end
