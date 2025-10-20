@@ -42,4 +42,9 @@ status is-interactive; and begin
   if command -v bat >/dev/null
     alias cat="bat"
   end
+
+  # bat, and replace cat
+  if command -v eza >/dev/null
+    alias ls="eza"
+  end
 end
