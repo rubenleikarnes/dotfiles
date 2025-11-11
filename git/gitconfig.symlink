@@ -8,9 +8,6 @@
 [includeIf "gitdir:~/code/nep-gpe/"]
   path = ~/.gitconfig-nep-gpe
 
-[includeIf "gitdir:~/code/nep-temp/"]
-  path = ~/.gitconfig-nep-gpe
-
 [init]
   defaultBranch = main
 
