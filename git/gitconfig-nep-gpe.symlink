@@ -4,7 +4,3 @@
 
 [github]
 user = “rleikarnes_nepgroup”
-
-[core]
-sshCommand = “ssh -i ~/.ssh/id_nep_enterprice”
-
