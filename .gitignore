@@ -69,3 +69,7 @@ config.symlink/filezilla
 config.symlink/zed/conversations
 config.symlink/zed/embeddings
 .tmp*
+
+# fish #
+########
+fish_variables
