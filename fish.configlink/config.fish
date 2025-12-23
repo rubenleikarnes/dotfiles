@@ -80,4 +80,10 @@ if status is-interactive
   if command -v zoxide >/dev/null
     zoxide init fish --cmd cd | source
   end
+
+  # enables parallel downloads by default
+  set -gx HOMEBREW_DOWNLOAD_CONCURRENCY "auto"
+
+  # disable analytics
+  set -gx HOMEBREW_NO_ANALYTICS 1
 end
