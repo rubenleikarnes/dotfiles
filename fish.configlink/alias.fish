@@ -9,6 +9,7 @@ status is-interactive; and begin
   abbr -a kubectl-tfc-monitoring "kubectl config use-context obc-monitor"
   abbr -a kubectl-tfc-lab "kubectl config use-context obc-lab"
   abbr -a kubectl-hd2 "kubectl config use-context hd2-app"
+  abbr -a kubectl-hd3 "kubectl config use-context hd3-app"
 
   # nix-darwin switch
   abbr -a nds "sudo darwin-rebuild switch --flake ~/.config/nix-darwin#mbp"
