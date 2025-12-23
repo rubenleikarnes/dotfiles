@@ -1,4 +1,27 @@
 {
+  "terminal": {
+    "minimum_contrast": 0.0,
+    "cursor_shape": "bar"
+  },
+  "preview_tabs": {
+    "enable_keep_preview_on_code_navigation": true,
+    "enabled": true
+  },
+  "title_bar": {
+    "show_branch_icon": true
+  },
+  "toolbar": {
+    "quick_actions": false,
+    "breadcrumbs": false
+  },
+  "show_signature_help_after_edits": true,
+  "auto_signature_help": true,
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "show_wrap_guides": true,
+  "wrap_guides": [100],
+  "colorize_brackets": true,
   "icon_theme": "Material Icon Theme",
   "agent": {
     "always_allow_tool_actions": true,
@@ -95,6 +118,7 @@
   },
   "tab_size": 2,
   "tabs": {
+    "file_icons": false,
     "git_status": true,
     "close_position": "right",
     "show_diagnostics": "off"
@@ -103,6 +127,9 @@
   "theme": "One Dark Pro",
   "scroll_beyond_last_line": "one_page",
   "scrollbar": {
+    "axes": {
+      "horizontal": true
+    },
     "show": "always",
     "git_diff": true,
     "diagnostics": "all",
