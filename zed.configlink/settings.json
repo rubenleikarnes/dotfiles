@@ -3,8 +3,8 @@
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
     }
   },
   "auto_update": true,
