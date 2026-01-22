@@ -18,6 +18,8 @@ split-divider-color = #9a9a9f
 macos-non-native-fullscreen = visible-menu
 macos-titlebar-proxy-icon = hidden
 
+copy-on-select=clipboard
+
 shell-integration = fish
 # allows shell to use sudo
 shell-integration-features = sudo
