@@ -1,4 +1,9 @@
 {
+  "completion_menu_scrollbar": "auto",
+  "completions": {
+    "lsp_fetch_timeout_ms": 100,
+    "lsp": true
+  },
   "terminal": {
     "minimum_contrast": 0.0,
     "cursor_shape": "bar"
@@ -50,7 +55,15 @@
     "button": false
   },
   "edit_predictions": {
-    "disabled_globs": ["**/.env*", "**/*.pem", "**/*.key", "**/*.cert", "**/*.crt", "**/.dev.vars", "**/secrets.yml"],
+    "disabled_globs": [
+      "**/.env*",
+      "**/*.pem",
+      "**/*.key",
+      "**/*.cert",
+      "**/*.crt",
+      "**/.dev.vars",
+      "**/secrets.yml"
+    ],
     // Display predictions inline only when holding a modifier key (alt by default).
     "mode": "subtle",
     "enabled_in_text_threads": true
@@ -62,7 +75,7 @@
   "file_types": {
     "HTML": ["svg", "njk"]
   },
-  "format_on_save": "off",
+  "format_on_save": "on",
   "formatter": "auto",
   "git": {
     "git_gutter": "tracked_files"
@@ -89,15 +102,85 @@
     "JSON": {
       "hard_tabs": false,
       "tab_size": 2
+    },
+    "JavaScript": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "language_servers": ["typescript-language-server", "eslint"],
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "language_servers": ["typescript-language-server", "eslint"],
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true
+      }
+    },
+    "TSX": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "language_servers": ["typescript-language-server", "eslint", "tailwindcss-language-server"]
     }
   },
   "line_indicator_format": "long",
+
+  "lsp": {
+    "javascript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "includeInlayParameterNameHints": "all",
+          "includeInlayFunctionParameterTypeHints": true,
+          "includeInlayVariableTypeHints": true,
+          "includeInlayPropertyDeclarationTypeHints": true,
+          "includeInlayFunctionLikeReturnTypeHints": true,
+          "includeInlayEnumMemberValueHints": true,
+          "importModuleSpecifierPreference": "shortest",
+          "quotePreference": "single"
+        },
+        "tsserver": {
+          "maxTsServerMemory": 8192
+        }
+      }
+    },
+    "eslint": {
+      "settings": {
+        "codeActionOnSave": {
+          "rules": ["import/order", "import/first", "import/no-duplicates"]
+        }
+      }
+    },
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "includeInlayParameterNameHints": "all",
+          "includeInlayFunctionParameterTypeHints": true,
+          "includeInlayVariableTypeHints": true,
+          "includeInlayPropertyDeclarationTypeHints": true,
+          "includeInlayFunctionLikeReturnTypeHints": true,
+          "includeInlayEnumMemberValueHints": true,
+          "importModuleSpecifierPreference": "shortest",
+          "quotePreference": "single"
+        },
+        "tsserver": {
+          "maxTsServerMemory": 8192
+        }
+      }
+    }
+  },
   "preferred_line_length": 100,
   "prettier": {
-    "trailingComma": "es5",
-    "tabWidth": 4,
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
     "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "useTabs": false
   },
   "project_panel": {
     "dock": "left",
@@ -122,7 +205,6 @@
     "git_status": true,
     "close_position": "right",
     "show_diagnostics": "off"
-
   },
   "theme": "One Dark Pro",
   "scroll_beyond_last_line": "one_page",
@@ -136,6 +218,7 @@
     "selected_text": true,
     "selected_symbol": true
   },
+  "show_completions_on_input": true,
   "show_edit_predictions": true,
   "show_call_status_icon": true,
   "show_whitespaces": "all",
