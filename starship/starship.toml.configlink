@@ -29,9 +29,9 @@ error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [kubernetes]
-format = '[$context $namespace](blue) '
+format = '[$context](blue) '
 disabled = false
 
 [[kubernetes.contexts]]
-context_pattern = ".*obc-app.*"
+context_pattern = ".*OBC-TFC.*"
 context_alias = ""

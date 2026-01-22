@@ -5,11 +5,10 @@ status is-interactive; and begin
   alias v="nvim"
 
   abbr -a kubectl-configs "kubectl config get-contexts"
-  abbr -a kubectl-tfc "kubectl config use-context obc-app"
-  abbr -a kubectl-tfc-monitoring "kubectl config use-context obc-monitor"
-  abbr -a kubectl-tfc-lab "kubectl config use-context obc-lab"
-  abbr -a kubectl-hd2 "kubectl config use-context hd2-app"
-  abbr -a kubectl-hd3 "kubectl config use-context hd3-app"
+  abbr -a kubectl-obc "kubectl config use-context OBC-TFC"
+  abbr -a kubectl-obc-mon "kubectl config use-context OBC-TFC-MON"
+  abbr -a kubectl-hd2 "kubectl config use-context HD2-TFC"
+  abbr -a kubectl-hd3 "kubectl config use-context HD3-TFC"
 
   # nix-darwin switch
   abbr -a nds "sudo darwin-rebuild switch --flake ~/.config/nix-darwin#mbp"
