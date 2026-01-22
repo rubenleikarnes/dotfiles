@@ -5,6 +5,7 @@
     "lsp": true
   },
   "terminal": {
+    "copy_on_select": true,
     "minimum_contrast": 0.0,
     "cursor_shape": "bar"
   },
