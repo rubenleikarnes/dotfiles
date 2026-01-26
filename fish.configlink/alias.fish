@@ -38,12 +38,12 @@ status is-interactive; and begin
     end
   end
 
-  # bat, and replace cat
+  # bat modern cat alternative
   if command -v bat >/dev/null
     alias cat="bat"
   end
 
-  # bat, and replace cat
+  # eza mordern ls alternative
   if command -v eza >/dev/null
     alias ls="eza"
   end
