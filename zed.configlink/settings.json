@@ -2,28 +2,28 @@
   "completion_menu_scrollbar": "auto",
   "completions": {
     "lsp_fetch_timeout_ms": 100,
-    "lsp": true
+    "lsp": true,
   },
   "terminal": {
     "copy_on_select": true,
     "minimum_contrast": 0.0,
-    "cursor_shape": "bar"
+    "cursor_shape": "bar",
   },
   "preview_tabs": {
     "enable_keep_preview_on_code_navigation": true,
-    "enabled": true
+    "enabled": true,
   },
   "title_bar": {
-    "show_branch_icon": true
+    "show_branch_icon": true,
   },
   "toolbar": {
     "quick_actions": false,
-    "breadcrumbs": false
+    "breadcrumbs": false,
   },
   "show_signature_help_after_edits": true,
   "auto_signature_help": true,
   "sticky_scroll": {
-    "enabled": true
+    "enabled": true,
   },
   "show_wrap_guides": true,
   "wrap_guides": [100],
@@ -33,27 +33,27 @@
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
-    }
+      "model": "gpt-4.1",
+    },
   },
   "auto_update": true,
   "autosave": "on_focus_change",
   "base_keymap": "SublimeText",
   "buffer_font_family": "JetBrainsMonoNL Nerd Font",
   "buffer_font_features": {
-    "calt": true
+    "calt": true,
   },
   "buffer_font_size": 15,
   "buffer_line_height": "comfortable",
   "chat_panel": {
-    "button": "never"
+    "button": "never",
   },
   "confirm_quit": true,
   "cursor_blink": false,
   "cursor_shape": "bar",
   "current_line_highlight": "all",
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
   "edit_predictions": {
     "disabled_globs": [
@@ -63,46 +63,46 @@
       "**/*.cert",
       "**/*.crt",
       "**/.dev.vars",
-      "**/secrets.yml"
+      "**/secrets.yml",
     ],
     // Display predictions inline only when holding a modifier key (alt by default).
     "mode": "subtle",
-    "enabled_in_text_threads": true
+    "enabled_in_text_threads": true,
   },
   "enable_language_server": true,
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "zed",
   },
   "file_types": {
-    "HTML": ["svg", "njk"]
+    "HTML": ["svg", "njk"],
   },
   "format_on_save": "on",
   "formatter": "auto",
   "git": {
-    "git_gutter": "tracked_files"
+    "git_gutter": "tracked_files",
   },
   "gutter": {
     "line_numbers": true,
-    "folds": true
+    "folds": true,
   },
   "indent_guides": {
     "active_line_width": 4,
     "enabled": true,
     "line_width": 2,
     "coloring": "indent_aware",
-    "background_coloring": "disabled"
+    "background_coloring": "disabled",
   },
   "inlay_hints": {
     "enabled": true,
     "show_type_hints": true,
     "show_parameter_hints": true,
-    "show_other_hints": true
+    "show_other_hints": true,
   },
   "hard_tabs": false,
   "languages": {
     "JSON": {
       "hard_tabs": false,
-      "tab_size": 2
+      "tab_size": 2,
     },
     "JavaScript": {
       "tab_size": 2,
@@ -110,8 +110,8 @@
       "language_servers": ["typescript-language-server", "eslint"],
       "code_actions_on_format": {
         "source.organizeImports": true,
-        "source.fixAll.eslint": true
-      }
+        "source.fixAll.eslint": true,
+      },
     },
     "TypeScript": {
       "tab_size": 2,
@@ -119,14 +119,14 @@
       "language_servers": ["typescript-language-server", "eslint"],
       "code_actions_on_format": {
         "source.organizeImports": true,
-        "source.fixAll.eslint": true
-      }
+        "source.fixAll.eslint": true,
+      },
     },
     "TSX": {
       "tab_size": 2,
       "formatter": "prettier",
-      "language_servers": ["typescript-language-server", "eslint", "tailwindcss-language-server"]
-    }
+      "language_servers": ["typescript-language-server", "eslint", "tailwindcss-language-server"],
+    },
   },
   "line_indicator_format": "long",
 
@@ -141,19 +141,19 @@
           "includeInlayFunctionLikeReturnTypeHints": true,
           "includeInlayEnumMemberValueHints": true,
           "importModuleSpecifierPreference": "shortest",
-          "quotePreference": "single"
+          "quotePreference": "single",
         },
         "tsserver": {
-          "maxTsServerMemory": 8192
-        }
-      }
+          "maxTsServerMemory": 8192,
+        },
+      },
     },
     "eslint": {
       "settings": {
         "codeActionOnSave": {
-          "rules": ["import/order", "import/first", "import/no-duplicates"]
-        }
-      }
+          "rules": ["import/order", "import/first", "import/no-duplicates"],
+        },
+      },
     },
     "typescript-language-server": {
       "initialization_options": {
@@ -165,13 +165,13 @@
           "includeInlayFunctionLikeReturnTypeHints": true,
           "includeInlayEnumMemberValueHints": true,
           "importModuleSpecifierPreference": "shortest",
-          "quotePreference": "single"
+          "quotePreference": "single",
         },
         "tsserver": {
-          "maxTsServerMemory": 8192
-        }
-      }
-    }
+          "maxTsServerMemory": 8192,
+        },
+      },
+    },
   },
   "preferred_line_length": 100,
   "prettier": {
@@ -181,7 +181,7 @@
     "singleQuote": true,
     "trailingComma": "es5",
     "tabWidth": 2,
-    "useTabs": false
+    "useTabs": false,
   },
   "project_panel": {
     "dock": "left",
@@ -193,31 +193,31 @@
     "auto_reveal_entries": true,
     "auto_fold_dirs": true,
     "scrollbar": {
-      "show": "always"
-    }
+      "show": "always",
+    },
   },
   "restore_on_startup": "last_session",
   "tab_bar": {
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
   "tab_size": 2,
   "tabs": {
     "file_icons": false,
     "git_status": true,
     "close_position": "right",
-    "show_diagnostics": "off"
+    "show_diagnostics": "off",
   },
   "theme": "One Dark Pro",
   "scroll_beyond_last_line": "one_page",
   "scrollbar": {
     "axes": {
-      "horizontal": true
+      "horizontal": true,
     },
     "show": "always",
     "git_diff": true,
     "diagnostics": "all",
     "selected_text": true,
-    "selected_symbol": true
+    "selected_symbol": true,
   },
   "show_completions_on_input": true,
   "show_edit_predictions": true,
@@ -226,9 +226,9 @@
   "soft_wrap": "editor_width",
   "ui_font_family": "Inter",
   "ui_font_features": {
-    "calt": true
+    "calt": true,
   },
   "ui_font_size": 15,
   "use_autoclose": true,
-  "vertical_scroll_margin": 15
+  "vertical_scroll_margin": 15,
 }
