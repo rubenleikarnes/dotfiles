@@ -1,4 +1,7 @@
 {
+  "git_panel": {
+    "tree_view": true,
+  },
   "completion_menu_scrollbar": "auto",
   "completions": {
     "lsp_fetch_timeout_ms": 100,
@@ -30,7 +33,9 @@
   "colorize_brackets": true,
   "icon_theme": "Material Icon Theme",
   "agent": {
-    "always_allow_tool_actions": true,
+    "tool_permissions": {
+      "default": "allow"
+    },
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-haiku-4.5",
@@ -56,6 +61,7 @@
     "button": false,
   },
   "edit_predictions": {
+    "provider": "zed",
     "disabled_globs": [
       "**/.env*",
       "**/*.pem",
@@ -70,9 +76,6 @@
     "enabled_in_text_threads": true,
   },
   "enable_language_server": true,
-  "features": {
-    "edit_prediction_provider": "zed",
-  },
   "file_types": {
     "HTML": ["svg", "njk"],
   },
