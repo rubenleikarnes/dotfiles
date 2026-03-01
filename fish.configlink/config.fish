@@ -68,12 +68,12 @@ if status is-interactive
   # execute starship prompt, config is located in ~/.config/starship.toml
   # https://starship.rs/
   if command -v starship >/dev/null
-      starship init fish | source
+    starship init fish | source
   end
 
   # load fzf
   if command -v fzf >/dev/null
-      fzf --fish | source
+    fzf --fish | source
   end
 
   # zoxide, and replace cd
