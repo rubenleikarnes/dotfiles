@@ -19,3 +19,6 @@ Thumbs.db
 
 # Node packages
 node_modules
+
+# claude
+.claude/settings.local.json
