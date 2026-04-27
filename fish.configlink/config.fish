@@ -1,22 +1,22 @@
-# add nix bin to path?
-set -x PATH $PATH /run/current-system/sw/bin
+# add nix bin to path
+set -gx PATH $PATH /run/current-system/sw/bin
 
 # add user ~/.bin folder to path
-set -x PATH $PATH $HOME/.bin
+set -gx PATH $PATH $HOME/.bin
 
 # add user ~/.local/bin folder to path
-set -x PATH $PATH $HOME/.local/bin
+set -gx PATH $PATH $HOME/.local/bin
 
-# add homebrew to path?
-set -x PATH $PATH /opt/homebrew/bin
+# add homebrew to path
+set -gx PATH $PATH /opt/homebrew/bin
 
 if test (uname) = Darwin
   # add docker desktop to path
-  set -x PATH $PATH /Applications/Docker.app/Contents/Resources/bin/
+  set -gx PATH $PATH /Applications/Docker.app/Contents/Resources/bin/
 end
 
 # add dotfiles scripts to path
-set -x PATH $PATH $HOME/dotfiles/scripts
+set -gx PATH $PATH $HOME/dotfiles/scripts
 
 # enables truecolor for fish shell
 set -gx COLORTERM truecolor
@@ -29,8 +29,7 @@ set -g async_prompt_functions _pure_prompt_git
 set -gx EDITOR hx
 
 # for some reason the helix command is "helix" instead of "hx" on arch...
-set uname (uname)
-if test "$uname" = "Linux" -a -f /etc/os-release
+if test (uname) = "Linux" -a -f /etc/os-release
   if grep -qi arch /etc/os-release
     set -gx EDITOR helix
   end
@@ -44,23 +43,22 @@ source ~/.config/fish/alias.fish
 set -U fish_greeting
 
 # hide go from home
-set -x GOPATH $HOME/.go
-set -x PATH $PATH $GOPATH/bin
+set -gx GOPATH $HOME/.go
+set -gx PATH $PATH $GOPATH/bin
 
 # add laravel valet to path
-set -x PATH $PATH $HOME/.composer/vendor/bin
+set -gx PATH $PATH $HOME/.composer/vendor/bin
 
 # kubectl plugin manager https://krew.sigs.k8s.io/docs/user-guide/quickstart/
-set -gx PATH $PATH $HOME/.krew/bin
 set -q KREW_ROOT; and set -gx PATH $PATH $KREW_ROOT/.krew/bin; or set -gx PATH $PATH $HOME/.krew/bin
 
 # asdf paths
 # for time being asdf has been installed manually and just placed in ~/.asdf, waiting for nix to update their package
-set -x ASDF_DATA_DIR $HOME/.asdf
-set -x PATH $ASDF_DATA_DIR/shims $PATH
+set -gx ASDF_DATA_DIR $HOME/.asdf
+set -gx PATH $ASDF_DATA_DIR/shims $PATH
 
 # openjdk
-set -x PATH $PATH /opt/homebrew/opt/openjdk/bin
+set -gx PATH $PATH /opt/homebrew/opt/openjdk/bin
 set -gx JAVA_HOME /opt/homebrew/opt/openjdk
 
 # Commands to run in interactive sessions can go here

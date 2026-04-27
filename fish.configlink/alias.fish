@@ -25,11 +25,25 @@ status is-interactive; and begin
   # start a simple web server for local files with Caddy
   alias serve="echo 'Starting local webserver with Caddy on http://localhost:8000'; caddy file-server --listen :8000 --browse"
 
-  # ip adresses
+  # ip addresses
+  function ip
+    echo "Public IP: "(dig +short myip.opendns.com @resolver1.opendns.com)
+  end
+
   if test (uname) = Darwin
-    alias ip="echo Public IP: $(dig +short myip.opendns.com @resolver1.opendns.com)"
-    alias localip="echo Local IP: $(ipconfig getifaddr en0)"
-    alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+    function localip
+      echo "Local IP: "(ipconfig getifaddr en0)
+    end
+    function ips
+      ifconfig | awk '/inet6? /{print $2}' | sed 's/%.*$//'
+    end
+  else
+    function localip
+      echo "Local IP: "(hostname -I | awk '{print $1}')
+    end
+    function ips
+      ip -brief addr | awk '{print $1, $3}'
+    end
   end
 
   if test -f /etc/os-release
