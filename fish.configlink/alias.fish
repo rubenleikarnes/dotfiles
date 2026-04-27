@@ -1,4 +1,4 @@
-status is-interactive; and begin
+if status is-interactive
   abbr -a dot "cd ~/dotfiles"
   abbr -a dt "cd ~/Desktop"
   abbr -a gp "git push"
