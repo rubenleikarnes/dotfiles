@@ -60,6 +60,6 @@ if status is-interactive
 
   # eza mordern ls alternative
   if command -v eza >/dev/null
-    alias ls="eza"
+    alias ls="eza --group-directories-first"
   end
 end
