@@ -1,4 +1,5 @@
 if status is-interactive
+  abbr -a refreshpath "set -e fish_user_paths"
   abbr -a dot "cd ~/dotfiles"
   abbr -a dt "cd ~/Desktop"
   abbr -a gp "git push"
