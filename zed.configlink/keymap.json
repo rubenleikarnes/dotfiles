@@ -8,7 +8,7 @@
       "ctrl-alt-down": "editor::AddSelectionBelow",
       "cmd-shift-d": "editor::DuplicateLineDown",
       "cmd-y": "editor::Redo",
-      "alt-shift-l": "editor::SelectAllMatches",
+      "alt-cmd-d": "editor::SelectAllMatches",
       "cmd-shift-t": "workspace::NewTerminal",
       "cmd-enter": "editor::NewlineBelow",
       "cmd-b": "workspace::ToggleLeftDock",
