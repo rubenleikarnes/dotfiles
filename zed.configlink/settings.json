@@ -1,4 +1,5 @@
 {
+  "diff_view_style": "unified",
   "cli_default_open_behavior": "existing_window",
   "outline_panel": {
     "dock": "left"
@@ -46,7 +47,7 @@
   "colorize_brackets": true,
   "icon_theme": "Material Icon Theme",
   "agent": {
-    "sidebar_side": "right",
+    "sidebar_side": "left",
     "dock": "right",
     "default_profile": "ask",
     "tool_permissions": {
