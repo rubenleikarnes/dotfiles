@@ -12,6 +12,7 @@
 
   networking.hostName = "vm-nixos";
 
+  networking.networkmanager.enable = false;
   networking.interfaces.ens18.ipv4.addresses = [{
     address = "192.168.1.110";
     prefixLength = 24;
@@ -29,35 +30,28 @@
 
   time.timeZone = "Europe/Oslo";
 
-  environment.sessionVariables.PATH = [ "/run/wrappers/bin" "$PATH" ];
-
   users.users.ruben = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
-    openssh.authorizedKeys.keys = [ "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDdPRFodA/fRfFnoS03TqjIQwA5VRQ/oIWkQx9NatcifIUep5nC7NfIuo9tXgXfXygpswOOXMJqf/xSOw2h3GmTP3OhHlNsPqkoy/WK6p20FSOIT+HAYlfjWSLAVM1noDvKTWxfjVTNnjjcMUwXk3BtlwNMrkIVj7VMFPZD9YJbBVZXbmWqPB4B/ocB/4E2qCqqEMtSzTaYJreS0gFlRfWgUksBt05Uo7HNAKzNA+1svlEhpVCajuQl5lv5HUDVWDTcmUN6/GxQjXSEFFOjoakWDXa2OUDYCwhV0gS2opUogYbAMGo6oAKBzkMkWdbFxy/ZfjHOOoyV7BeDWa8vA5ou8I/P8x103oqdzqi9LO56fZLlDgfeOmgh/nMln9mUQfMQ7MMiF1PUDTlXV1UW233YYN2t5Ej045HLuBJfA0Wgrs0OuI0Qp5pU2+yI7b/iGXp+n3kUZw/jc4acndvNOqRxV17HOjsIu1rUBGl3yiE2aoBdGfizTWYILtN/dMNacUjd9hZCZVt+HLB7AG+rsyhzkxVREhxtxvzn2IO3KuskOzsESIR6Z5vCp2uNUDfZFlLpjT3voW4cIIPVuJ1SPaOERD22pXhFN/u54F85yHZJCdyow87Wp54nVV1Pi7uiejsal3A8F40akRt4abIOZQ3C8HEVbGp0P5RD8jyQnVPanw== ruben.leikarnes@gmail.com
-" ];
+    openssh.authorizedKeys.keys = [ "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDdPRFodA/fRfFnoS03TqjIQwA5VRQ/oIWkQx9NatcifIUep5nC7NfIuo9tXgXfXygpswOOXMJqf/xSOw2h3GmTP3OhHlNsPqkoy/WK6p20FSOIT+HAYlfjWSLAVM1noDvKTWxfjVTNnjjcMUwXk3BtlwNMrkIVj7VMFPZD9YJbBVZXbmWqPB4B/ocB/4E2qCqqEMtSzTaYJreS0gFlRfWgUksBt05Uo7HNAKzNA+1svlEhpVCajuQl5lv5HUDVWDTcmUN6/GxQjXSEFFOjoakWDXa2OUDYCwhV0gS2opUogYbAMGo6oAKBzkMkWdbFxy/ZfjHOOoyV7BeDWa8vA5ou8I/P8x103oqdzqi9LO56fZLlDgfeOmgh/nMln9mUQfMQ7MMiF1PUDTlXV1UW233YYN2t5Ej045HLuBJfA0Wgrs0OuI0Qp5pU2+yI7b/iGXp+n3kUZw/jc4acndvNOqRxV17HOjsIu1rUBGl3yiE2aoBdGfizTWYILtN/dMNacUjd9hZCZVt+HLB7AG+rsyhzkxVREhxtxvzn2IO3KuskOzsESIR6Z5vCp2uNUDfZFlLpjT3voW4cIIPVuJ1SPaOERD22pXhFN/u54F85yHZJCdyow87Wp54nVV1Pi7uiejsal3A8F40akRt4abIOZQ3C8HEVbGp0P5RD8jyQnVPanw== ruben.leikarnes@gmail.com" ];
 
-    packages = with pkgs; [
-        bat
-        curl
-        delta
-        eza
-        fish
-        fzf
-        git
-        helix
-        starship
-        zoxide
-        wget
-    ];
     shell = pkgs.fish;
   };
 
-  users.users.root = {
-    initialPassword = "ruben";
-  };
-
   console.keyMap = "no";
+
+  environment.systemPackages = with pkgs; [
+      bat
+      curl
+      delta
+      eza
+      fzf
+      git
+      helix
+      starship
+      wget
+      zoxide
+  ];
 
   programs.fish.enable = true;
 
@@ -68,8 +62,6 @@
   };
 
   services.openssh.enable = true;
-
-  security.wrapperDir = "/run/wrappers/bin";
 
   security.sudo.enable = true;
 
