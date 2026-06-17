@@ -2,7 +2,14 @@
 # To reset all paths after removing an entry, run: set -e fish_user_paths
 
 # add nix bin to path
-fish_add_path /run/current-system/sw/bin
+if test -d /run/wrappers/bin
+    fish_add_path /run/wrappers/bin
+end
+
+# also add nix bin to path, but after wrappers
+if test -d /run/current-system/sw/bin
+    fish_add_path /run/current-system/sw/bin
+end
 
 # add user ~/.bin folder to path
 fish_add_path $HOME/.bin
@@ -14,8 +21,8 @@ fish_add_path $HOME/.local/bin
 fish_add_path /opt/homebrew/bin
 
 if test (uname) = Darwin
-  # add docker desktop to path
-  fish_add_path /Applications/Docker.app/Contents/Resources/bin
+    # add docker desktop to path
+    fish_add_path /Applications/Docker.app/Contents/Resources/bin
 end
 
 # add dotfiles scripts to path
@@ -32,9 +39,9 @@ fish_add_path $HOME/.composer/vendor/bin
 
 # kubectl plugin manager https://krew.sigs.k8s.io/docs/user-guide/quickstart/
 if set -q KREW_ROOT
-  fish_add_path $KREW_ROOT/.krew/bin
+    fish_add_path $KREW_ROOT/.krew/bin
 else
-  fish_add_path $HOME/.krew/bin
+    fish_add_path $HOME/.krew/bin
 end
 
 # asdf paths
@@ -53,10 +60,10 @@ set -g async_prompt_functions _pure_prompt_git
 set -gx EDITOR hx
 
 # for some reason the helix command is "helix" instead of "hx" on arch...
-if test (uname) = "Linux" -a -f /etc/os-release
-  if grep -qi arch /etc/os-release
-    set -gx EDITOR helix
-  end
+if test (uname) = Linux -a -f /etc/os-release
+    if grep -qi arch /etc/os-release
+        set -gx EDITOR helix
+    end
 end
 
 # load personal aliases
@@ -68,25 +75,25 @@ set -U fish_greeting
 
 # Commands to run in interactive sessions can go here
 if status is-interactive
-  # execute starship prompt, config is located in ~/.config/starship.toml
-  # https://starship.rs/
-  if command -v starship >/dev/null
-    starship init fish | source
-  end
+    # execute starship prompt, config is located in ~/.config/starship.toml
+    # https://starship.rs/
+    if command -v starship >/dev/null
+        starship init fish | source
+    end
 
-  # load fzf
-  if command -v fzf >/dev/null
-    fzf --fish | source
-  end
+    # load fzf
+    if command -v fzf >/dev/null
+        fzf --fish | source
+    end
 
-  # zoxide, and replace cd
-  if command -v zoxide >/dev/null
-    zoxide init fish --cmd cd | source
-  end
+    # zoxide, and replace cd
+    if command -v zoxide >/dev/null
+        zoxide init fish --cmd cd | source
+    end
 
-  # enables parallel downloads by default
-  set -gx HOMEBREW_DOWNLOAD_CONCURRENCY "auto"
+    # enables parallel downloads by default
+    set -gx HOMEBREW_DOWNLOAD_CONCURRENCY auto
 
-  # disable analytics
-  set -gx HOMEBREW_NO_ANALYTICS 1
+    # disable analytics
+    set -gx HOMEBREW_NO_ANALYTICS 1
 end
