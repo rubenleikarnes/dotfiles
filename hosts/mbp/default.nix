@@ -21,7 +21,6 @@
     git-lfs # git for large files
     inetutils # telnet, ftp, etc (from apple)
     kubectl # k8s cli
-    neovim # vim alternative
     net-snmp # network monitoring
     nixd # nix language server (required by nix)
     nmap # network scanner

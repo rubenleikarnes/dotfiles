@@ -3,7 +3,6 @@ if status is-interactive
     abbr -a dot "cd ~/dotfiles"
     abbr -a dt "cd ~/Desktop"
     abbr -a gp "git push"
-    alias v="nvim"
 
     abbr -a kubectl-configs "kubectl config get-contexts"
     abbr -a kubectl-obc "kubectl config use-context OBC-TFC"
