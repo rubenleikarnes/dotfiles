@@ -6,6 +6,7 @@ set -euo pipefail
 
 DOTFILES="$HOME/dotfiles"
 BACKUPDIR="$HOME/.dotfiles-backup-$(date +'%Y%m%d-%H%M%S')"
+LEGACY="$DOTFILES/legacy"
 
 g_list() { printf "  \033[1;32m✔ %s \033[0m\n" "$1"; }
 y_list() { printf "  \033[1;33m✔\033[0m %s\n" "$1"; }
@@ -28,14 +29,19 @@ printf '\nCreating symlinks\n'
 echo "=============================="
 while IFS= read -r file; do
     link_file "$file" "$HOME/.$(basename "$file" '.symlink')"
-done < <(find -H "$DOTFILES" -maxdepth 3 -name '*.symlink')
+done < <(find -H "$LEGACY" -maxdepth 3 -name '*.symlink')
 
 
 printf '\nCreating .config symlinks\n'
 echo "=============================="
-while IFS= read -r file; do
-    link_file "$file" "$HOME/.config/$(basename "$file" '.configlink')"
-done < <(find -H "$DOTFILES" -maxdepth 3 -name '*.configlink')
+while IFS= read -r dir; do
+    # Skip dirs that contain .symlink files (handled by the loop above)
+    if ls "$dir"/*.symlink >/dev/null 2>&1; then
+        continue
+    fi
+    name="$(basename "$dir")"
+    link_file "$dir" "$HOME/.config/$name"
+done < <(find "$LEGACY" -maxdepth 1 -mindepth 1 -type d)
 
 
 if [ -d "$HOME/Sync/.auth" ]; then

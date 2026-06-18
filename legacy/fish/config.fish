@@ -25,9 +25,6 @@ if test (uname) = Darwin
     fish_add_path /Applications/Docker.app/Contents/Resources/bin
 end
 
-# add dotfiles scripts to path
-fish_add_path $HOME/dotfiles/scripts
-
 # hide go from home
 set -gx GOPATH $HOME/.go
 
