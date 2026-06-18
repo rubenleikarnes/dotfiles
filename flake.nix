@@ -22,6 +22,7 @@
     # $ darwin-rebuild switch --flake .#mbp
     darwinConfigurations.mbp = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
+      specialArgs = { inherit self; };
       modules = [
         ./hosts/mbp
         nix-homebrew.darwinModules.nix-homebrew {
