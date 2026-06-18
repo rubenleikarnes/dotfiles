@@ -17,9 +17,9 @@ if status is-interactive
     # update flake inputs
     abbr -a up "nix flake update --flake ~/dotfiles"
 
-    # nix-darwin (macOS only)
+    # nix-darwin (macOS only — hostname is random on work machine)
     if test (uname) = Darwin
-        abbr -a rb "darwin-rebuild switch --flake ~/dotfiles#"(hostname)
+        abbr -a rb "darwin-rebuild switch --flake ~/dotfiles#mbp"
     end
 
     # start a simple web server for local files with Caddy
