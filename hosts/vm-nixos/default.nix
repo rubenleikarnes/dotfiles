@@ -20,7 +20,12 @@
   networking.defaultGateway = "192.168.1.1";
   networking.nameservers = [ "192.168.1.1" "1.1.1.1" ];
 
-  networking.firewall.allowedTCPPorts = [ 80 443 ];
+  networking.firewall.allowedTCPPorts = [ 80 443 8001 ];
+
+  # Create data directory for services
+  systemd.tmpfiles.rules = [
+    "d /data/git 0750 forgejo forgejo -"
+  ];
 
   # Time & Locale
   time.timeZone = "Europe/Oslo";
@@ -62,6 +67,20 @@
         root * /var/www
         file_server
       '';
+    };
+  };
+
+  services.forgejo = {
+    enable = true;
+    stateDir = "/data/git";
+    database.type = "sqlite3";
+    settings = {
+      server = {
+        HTTP_PORT = 8001;
+        DOMAIN = "192.168.1.110";
+        ROOT_URL = "http://192.168.1.110:8001/";
+      };
+      service.DISABLE_REGISTRATION = true;
     };
   };
 
