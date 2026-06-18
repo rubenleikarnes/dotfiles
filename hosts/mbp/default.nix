@@ -92,5 +92,5 @@
   system.stateVersion = 5;
 
   # Home Manager
-  home-manager.users.ruben = import ../../modules/home;
+  home-manager.users.ruben = import ./home.nix;
 }
