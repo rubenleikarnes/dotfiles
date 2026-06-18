@@ -66,4 +66,7 @@
   };
 
   system.stateVersion = "26.05";
+
+  # Home Manager
+  home-manager.users.ruben = import ../../modules/home;
 }

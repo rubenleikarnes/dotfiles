@@ -91,4 +91,7 @@
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 5;
+
+  # Home Manager
+  home-manager.users.ruben = import ../../modules/home;
 }

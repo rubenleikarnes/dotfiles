@@ -14,7 +14,10 @@
 
   nix.gc = {
     automatic = true;
-    interval = [ { Weekday = 2; Hour = 14; Minute = 0; } ];
     options = "--delete-older-than 30d";
-  };
+  } // (if pkgs.stdenv.isDarwin then {
+    interval = [ { Weekday = 2; Hour = 14; Minute = 0; } ];
+  } else {
+    dates = "weekly";
+  });
 }
