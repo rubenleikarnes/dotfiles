@@ -18,7 +18,9 @@ fish_add_path $HOME/.bin
 fish_add_path $HOME/.local/bin
 
 # add homebrew to path
-fish_add_path /opt/homebrew/bin
+if test -d /opt/homebrew/bin
+  fish_add_path /opt/homebrew/bin
+end
 
 if test (uname) = Darwin
     # add docker desktop to path
