@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }:
 
 {
-  xdg.configFile."fish".source = ../../legacy/fish;
+  home.file.".config/fish".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/legacy/fish";
 }
