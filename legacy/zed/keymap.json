@@ -27,6 +27,8 @@
   {
     "context": "Terminal",
     "bindings": {
+      "ctrl-shift-tab": "pane::ActivatePreviousItem",
+      "ctrl-tab": "pane::ActivateNextItem",
       "cmd-n": "workspace::NewTerminal",
       "cmd-k": "terminal_panel::ToggleFocus"
     }
