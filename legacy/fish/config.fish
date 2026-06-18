@@ -2,13 +2,13 @@
 # To reset all paths after removing an entry, run: set -e fish_user_paths
 
 # add nix bin to path
-if test -d /run/wrappers/bin
-    fish_add_path /run/wrappers/bin
-end
-
-# also add nix bin to path, but after wrappers
 if test -d /run/current-system/sw/bin
     fish_add_path /run/current-system/sw/bin
+end
+
+# add setuid wrappers (must come after sw/bin to take priority)
+if test -d /run/wrappers/bin
+    fish_add_path /run/wrappers/bin
 end
 
 # add user ~/.bin folder to path
