@@ -11,17 +11,16 @@ if status is-interactive
     abbr -a kubectl-hd2 "kubectl config use-context HD2-TFC"
     abbr -a kubectl-hd3 "kubectl config use-context HD3-TFC"
 
-    # nix-darwin switch
-    abbr -a nds "sudo darwin-rebuild switch --flake ~/.config/nix-darwin#mbp"
+    # rebuild system (works on any host)
+    abbr -a rb "sudo nixos-rebuild switch --flake ~/dotfiles#"(hostname)
 
-    # so usefull to just have saved
-    abbr -a nxs "nix run .#homeConfigurations.debian.activationPackage --extra-experimental-features nix-command --extra-experimental-features flakes -- switch"
+    # update flake inputs
+    abbr -a up "nix flake update --flake ~/dotfiles"
 
-    # home-manager switch
-    abbr -a hms "home-manager switch --flake ~/.config/nix#debian"
-
-    # nix update stuff
-    abbr -a nuf "nix flake update --flake ~/.config/nix-darwin"
+    # nix-darwin (macOS only)
+    if test (uname) = Darwin
+        abbr -a rb "darwin-rebuild switch --flake ~/dotfiles#"(hostname)
+    end
 
     # start a simple web server for local files with Caddy
     alias serve="echo 'Starting local webserver with Caddy on http://localhost:8000'; caddy file-server --listen :8000 --browse"
