@@ -20,11 +20,16 @@
   networking.defaultGateway = "192.168.1.1";
   networking.nameservers = [ "192.168.1.1" "1.1.1.1" ];
 
-  networking.firewall.allowedTCPPorts = [ 80 443 8001 ];
+  networking.firewall.allowedTCPPorts = [ 80 443 8001 32400 8989 8080 8081 ];
 
-  # Create data directory for services
+  # Create data directories for services
   systemd.tmpfiles.rules = [
-    "d /data/git 0750 forgejo forgejo -"
+    "d /data/git         0750 forgejo     forgejo     -"
+    "d /data/plex        0750 plex        plex        -"
+    "d /data/sonarr      0750 sonarr      sonarr      -"
+    "d /data/qbittorrent 0750 qbittorrent qbittorrent -"
+    "d /data/downloads    0770 ruben      qbittorrent -"
+    "d /data/miniflux    0750 miniflux    miniflux    -"
   ];
 
   # Time & Locale
@@ -81,6 +86,29 @@
         ROOT_URL = "http://192.168.1.110:8001/";
       };
       service.DISABLE_REGISTRATION = true;
+    };
+  };
+
+  services.plex = {
+    enable = true;
+    dataDir = "/data/plex";
+  };
+
+  services.sonarr = {
+    enable = true;
+    dataDir = "/data/sonarr";
+  };
+
+  services.qbittorrent = {
+    enable = true;
+    dataDir = "/data/qbittorrent";
+  };
+
+  services.miniflux = {
+    enable = true;
+    adminCredentialsFile = "/data/miniflux/admin-creds";
+    config = {
+      LISTEN_ADDR = "0.0.0.0:8081";
     };
   };
 
