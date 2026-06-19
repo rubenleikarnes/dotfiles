@@ -20,7 +20,15 @@
   networking.defaultGateway = "192.168.1.1";
   networking.nameservers = [ "192.168.1.1" "1.1.1.1" ];
 
-  networking.firewall.allowedTCPPorts = [ 80 443 8001 32400 8989 8080 8081 ];
+  networking.firewall.allowedTCPPorts = [
+    80     # caddy
+    443    # caddy (TLS)
+    8001   # forgejo
+    32400  # plex
+    8989   # sonarr
+    8080   # qbittorrent web UI
+    8081   # miniflux
+  ];
 
   # Create data directories for services
   systemd.tmpfiles.rules = [
