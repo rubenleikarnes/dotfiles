@@ -109,6 +109,12 @@
   services.miniflux = {
     enable = true;
     adminCredentialsFile = "/data/miniflux/admin-creds";
+    # One-time setup:
+    #   echo "ADMIN_USERNAME=admin" | sudo tee /data/miniflux/admin-creds
+    #   echo "ADMIN_PASSWORD=<6+ chars>" | sudo tee -a /data/miniflux/admin-creds
+    #   sudo chown miniflux:miniflux /data/miniflux/admin-creds
+    #   sudo chmod 600 /data/miniflux/admin-creds
+    #   sudo systemctl start miniflux
     config = {
       LISTEN_ADDR = "0.0.0.0:8081";
     };
