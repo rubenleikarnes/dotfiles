@@ -108,11 +108,9 @@
 
   services.miniflux = {
     enable = true;
-    createDatabaseLocally = false;
     adminCredentialsFile = "/data/miniflux/admin-creds";
     config = {
       LISTEN_ADDR = "0.0.0.0:8081";
-      DATABASE_URL = "/data/miniflux/db.sqlite";
     };
   };
 
