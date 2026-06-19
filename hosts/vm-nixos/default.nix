@@ -122,13 +122,9 @@
     chown forgejo:forgejo /data/git
     chmod 0750 /data/git
   '';
-  systemd.services.miniflux.preStart = ''
-    mkdir -p /data/miniflux
-    chown miniflux:miniflux /data/miniflux
-    chmod 0750 /data/miniflux
-  '';
   systemd.tmpfiles.rules = [
     "d /data/downloads 0770 ruben qbittorrent -"
+    "d /data/miniflux 0750 miniflux miniflux -"
   ];
 
   system.stateVersion = "26.05";
