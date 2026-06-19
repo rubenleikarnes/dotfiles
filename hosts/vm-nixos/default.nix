@@ -33,9 +33,6 @@
   # Create data directories for services
   systemd.tmpfiles.rules = [
     "d /data/git         0750 forgejo     forgejo     -"
-    "d /data/plex        0750 plex        plex        -"
-    "d /data/sonarr      0750 sonarr      sonarr      -"
-    "d /data/qbittorrent 0750 qbittorrent qbittorrent -"
     "d /data/downloads    0770 ruben      qbittorrent -"
     "d /data/miniflux    0750 miniflux    miniflux    -"
   ];
@@ -99,17 +96,15 @@
 
   services.plex = {
     enable = true;
-    dataDir = "/data/plex";
   };
 
   services.sonarr = {
     enable = true;
-    dataDir = "/data/sonarr";
   };
 
   services.qbittorrent = {
     enable = true;
-    dataDir = "/data/qbittorrent";
+    settings.General.SavePath = "/data/downloads";
   };
 
   services.miniflux = {
