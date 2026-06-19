@@ -109,7 +109,7 @@
   services.miniflux = {
     enable = true;
     adminCredentialsFile = "/data/miniflux/admin-creds";
-    # One-time setup:
+    # One-time setup (run 'rb' first, then these commands):
     #   echo "ADMIN_USERNAME=admin" | sudo tee /data/miniflux/admin-creds
     #   echo "ADMIN_PASSWORD=<6+ chars>" | sudo tee -a /data/miniflux/admin-creds
     #   sudo chown miniflux:miniflux /data/miniflux/admin-creds
