@@ -30,12 +30,12 @@
     8081   # miniflux
   ];
 
-  # Create data directories for services
-  systemd.tmpfiles.rules = [
-    "d /data/git         0750 forgejo     forgejo     -"
-    "d /data/downloads    0770 ruben      qbittorrent -"
-    "d /data/miniflux    0750 miniflux    miniflux    -"
-  ];
+  # Users for services that need data directories
+  users.users.miniflux = {
+    isSystemUser = true;
+    group = "miniflux";
+  };
+  users.groups.miniflux = { };
 
   # Time & Locale
   time.timeZone = "Europe/Oslo";
@@ -108,11 +108,28 @@
 
   services.miniflux = {
     enable = true;
+    createDatabaseLocally = false;
     adminCredentialsFile = "/data/miniflux/admin-creds";
     config = {
       LISTEN_ADDR = "0.0.0.0:8081";
+      DATABASE_URL = "/data/miniflux/db.sqlite";
     };
   };
+
+  # Ensure data directories exist on rebuild
+  systemd.services.forgejo.preStart = ''
+    mkdir -p /data/git
+    chown forgejo:forgejo /data/git
+    chmod 0750 /data/git
+  '';
+  systemd.services.miniflux.preStart = ''
+    mkdir -p /data/miniflux
+    chown miniflux:miniflux /data/miniflux
+    chmod 0750 /data/miniflux
+  '';
+  systemd.tmpfiles.rules = [
+    "d /data/downloads 0770 ruben qbittorrent -"
+  ];
 
   system.stateVersion = "26.05";
 
