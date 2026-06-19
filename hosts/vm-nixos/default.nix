@@ -104,7 +104,6 @@
 
   services.qbittorrent = {
     enable = true;
-    settings.General.SavePath = "/data/downloads";
   };
 
   services.miniflux = {
