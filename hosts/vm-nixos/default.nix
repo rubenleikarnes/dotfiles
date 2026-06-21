@@ -61,6 +61,8 @@
     enableSSHSupport = true;
   };
 
+  services.tailscale.enable = true;
+
   # Services
   services.openssh = {
     enable = true;
