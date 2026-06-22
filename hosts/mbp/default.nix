@@ -10,6 +10,11 @@
 
   system.primaryUser = "ruben";
 
+  users.users.ruben = {
+    name = "ruben";
+    home = "/Users/ruben";
+  };
+
   # Mac-only packages (shared CLI tools are in modules/shared/packages.nix)
   environment.systemPackages = with pkgs; [
     avahi # mDNS discovery

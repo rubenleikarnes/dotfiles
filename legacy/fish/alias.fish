@@ -18,7 +18,7 @@ if status is-interactive
 
     # nix-darwin (macOS only — hostname is random on work machine)
     if test (uname) = Darwin
-        abbr -a rb "darwin-rebuild switch --flake ~/dotfiles#mbp"
+        abbr -a rb "sudo darwin-rebuild switch --flake ~/dotfiles#mbp"
     end
 
     # start a simple web server for local files with Caddy
