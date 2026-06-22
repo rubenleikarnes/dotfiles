@@ -1,77 +1,34 @@
 # dotfiles
 
-My startingpoint ~~is~~ was mostly a fork of [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) bash files wich I've now stopped using since I've gone over to use Zsh. My Sublime config have been evolving over the past few years. Tmux inspiration from [xero](https://github.com/xero/dotfiles) and [Ahmed El Gabri](https://github.com/ahmedelgabri/dotfiles). My NVim was a fork of [Harry Roberts'](https://github.com/csswizardry/dotfiles), and some inspiration from [Nick Nisi](https://github.com/nicknisi).
-
-# Requirements
+Started as a fork of [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) bash config, evolved through Zsh, Tmux, and Vim setups inspired by [xero](https://github.com/xero/dotfiles), [Harry Roberts](https://github.com/csswizardry/dotfiles), and [Nick Nisi](https://github.com/nicknisi). Then I discovered Nix and ran a basic flake on my laptop for a while. Now everything is declarative — nix-darwin on the MacBook, NixOS on a home server VM, and more to come.
 
 ```
-coreutils
-fish
-git
-fzf
-ripgrep
-delta
-tmux
-zoxide
-starship
+mbp        macOS (nix-darwin + home-manager + nix-homebrew)
+vm-nixos   NixOS VM (forgejo, plex, sonarr, miniflux, caddy)
 ```
+
+## Requirements
+
+- [Nix](https://nixos.org/download) with [flakes enabled](https://nixos.wiki/wiki/Flakes)
 
 ## Install
 
-```
-Set default shell in System Preferences  \'/usr/local/bin/fish\'
-git clone --recursive git://github.com/rub1/dotfiles.git $HOME/dotfiles
-git submodule update --init --recursive
-```
+```bash
+# macOS
+sudo darwin-rebuild switch --flake ~/dotfiles#mbp
 
-Use the link.sh file to install all '.symlink' and '.configlink' files.
+# NixOS VM
+sudo nixos-rebuild switch --flake ~/dotfiles#vm-nixos
 
-```
+# Legacy symlinks (editorconfig, fish aliases, etc.)
 sh ./link.sh
 ```
 
-Restart terminal session
+## Terminal
 
-### Brew
-
-```
-cd ~/dotfiles
-brew bundle
-```
-
-### nvim
-
-Uses [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) with smaller changes and a few plugins
-Uncomment line so custom files can be loaded.
-I do have some custom files in the customs folder Ive also added a customs.lua and the snippet below to override some settings and make it easier to "update" kickstart to a newer version
-
-```
--- Override or set new options, autocmds, etc. in lua files placed in lua/custom/
--- See lua/custom/example_override.lua
-vim.cmd('runtime! lua/custom/*.lua')
-````
-
-## Terminal settings
-
-- Theme: [Snazzy](https://github.com/sindresorhus/iterm2-snazzy)
 - Font: [JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts)
-- [Use ⌥ ← and ⌥→ to jump forwards/backwards words in iTerm](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x)
-
-```
-FOR  ACTION         SEND
-⌘←  "SEND HEX CODE"      0x01
-⌘→  "SEND HEX CODE"      0x05
-⌥←  "SEND ESC SEQ"  b
-⌥→  "SEND ESC SEQ"  f
-```
-
-## Kubectl
-
-[kubectl-config-import](https://github.com/rafi/kubectl-config-import/) tool
-
-```
-kubectl config-import -f ~/.kube/config
-```
+- Shell: fish + starship prompt
+- Editor: helix
 
 ## Sources
 
