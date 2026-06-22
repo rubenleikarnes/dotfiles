@@ -15,7 +15,7 @@ link_file() {
     local file="$1"
     local target="$2"
 
-    if [ -e "$target" ]; then
+    if [ -e "$target" ] || [ -L "$target" ]; then
         y_list "~${target#$HOME} already exists... backing up."
         mkdir -p "$BACKUPDIR"
         mv "$target" "$BACKUPDIR/"
@@ -50,7 +50,7 @@ if [ -d "$HOME/Sync/.auth" ]; then
     while IFS= read -r file; do
         target="$HOME/.$(basename "$file" '.symlink')"
 
-        if [ -e "$target" ]; then
+        if [ -e "$target" ] || [ -L "$target" ]; then
             y_list "~${target#$HOME} already exists... Skipping."
         else
             g_list "Creating symlink for $file"
