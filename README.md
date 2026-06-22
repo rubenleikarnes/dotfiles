@@ -26,6 +26,7 @@ sh ./link.sh
 
 ## Terminal
 
+- Theme: [Snazzy](https://github.com/sindresorhus/iterm2-snazzy)
 - Font: [JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 - Shell: fish + starship prompt
 - Editor: helix
