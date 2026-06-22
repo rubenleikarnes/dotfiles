@@ -4,7 +4,7 @@ Started as a fork of [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles
 
 ```
 mbp        macOS (nix-darwin + home-manager + nix-homebrew)
-vm-nixos   NixOS VM (forgejo, plex, sonarr, miniflux, caddy)
+vm-nixos   NixOS VM (forgejo, miniflux, caddy)
 ```
 
 ## Requirements
