@@ -1,6 +1,6 @@
 # dotfiles
 
-Started as a fork of [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) bash config, evolved through Zsh, Tmux, and Vim setups inspired by [xero](https://github.com/xero/dotfiles), [Harry Roberts](https://github.com/csswizardry/dotfiles), and [Nick Nisi](https://github.com/nicknisi). Then I discovered Nix and ran a basic flake on my laptop for a while. Now everything is declarative — nix-darwin on the MacBook, NixOS on a home server VM, and more to come.
+Evolved through years of bash, Zsh, Fish, Tmux, Vim, Neovim, Sublime and Zed dotfiles. Skipped the obligatory Arch phase and went straight to Nix. Ran a basic flake on the laptop for a while. Now everything is declarative — nix-darwin on the MacBook, NixOS on a home server.
 
 ```
 mbp        macOS (nix-darwin + home-manager + nix-homebrew)
